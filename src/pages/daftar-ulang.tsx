@@ -142,6 +142,7 @@ export default function DaftarUlang() {
                                         {sessionData?.user?.name ?? ""}
                                     </Typography>
                                 </div>
+                                <Typography>user id: {sessionData.user.id}</Typography>
                                 <Button variant="text" onClick={() => void signIn("discord")}>
                                     Not You? Sign In Again
                                 </Button>
