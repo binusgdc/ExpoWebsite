@@ -133,7 +133,7 @@ export default function DaftarUlang() {
                     <Typography variant="h3" color="blue-gray" className="font-serif">
                         Finish Registration
                     </Typography>
-                    {authStatus === "authenticated" || sessionData !== null ? (
+                    {authStatus === "authenticated" && sessionData !== null ? (
                         <>
                             <div className="flex flex-col items-center">
                                 <div className="my-2 flex flex-row items-center justify-center gap-2">
