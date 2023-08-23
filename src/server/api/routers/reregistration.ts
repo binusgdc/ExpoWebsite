@@ -44,7 +44,7 @@ export const reregistrationRouter = createTRPCRouter({
 
             const appendResult = await sheetsClient.spreadsheets.values.append({
                 spreadsheetId: env.TARGET_SPREADSHEET_ID,
-                range: "FormResponses!A3:D3",
+                range: "FormResponses!A1:D1",
                 valueInputOption: "USER_ENTERED",
                 requestBody: {
                     values: [
