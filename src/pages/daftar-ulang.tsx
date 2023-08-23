@@ -138,7 +138,7 @@ export default function DaftarUlang() {
                                             {"Don't forget to fill the "}
                                             <a
                                                 className="text-cyan-90 hover:underline"
-                                                href="https://binusgdc.com/Daftar-BGDC-2023"
+                                                href="https://binusgdc.com/link/daftar"
                                             >
                                                 Google Form
                                             </a>
@@ -171,7 +171,7 @@ export default function DaftarUlang() {
                                                 {"I have filled in the "}
                                                 <a
                                                     className="text-cyan-90 hover:underline"
-                                                    href="https://binusgdc.com/Daftar-BGDC-2023"
+                                                    href="https://binusgdc.com/link/daftar"
                                                 >
                                                     Google Form
                                                 </a>{" "}
