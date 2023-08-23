@@ -201,9 +201,15 @@ export default function DaftarUlang() {
                                 ) : (
                                     <></>
                                 )}
-                                <Button color="orange" type="submit" className="mt-6" fullWidth>
-                                    Complete My Registration
-                                </Button>
+                                {submitFormMutation.isLoading ? (
+                                    <div className="flex items-center justify-center p-1">
+                                        <Spinner color="orange" className="h-14 w-14" />
+                                    </div>
+                                ) : (
+                                    <Button color="orange" type="submit" className="mt-6" fullWidth>
+                                        Complete My Registration
+                                    </Button>
+                                )}
                             </form>
                         </>
                     ) : (
