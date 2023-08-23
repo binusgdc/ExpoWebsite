@@ -11,6 +11,7 @@ import {
     DialogHeader,
     DialogBody,
     Switch,
+    Spinner,
 } from "@material-tailwind/react"
 import { signIn, useSession } from "next-auth/react"
 import { type FormEvent, useState } from "react"
@@ -99,7 +100,7 @@ export default function DaftarUlang() {
                 className={`flex min-h-screen w-full min-w-[400px] flex-col items-center bg-magenta py-5`}
             >
                 <Card
-                    className="flex max-w-md flex-col items-center bg-white p-5"
+                    className="flex w-[90vw] min-w-[350px] max-w-md flex-col items-center bg-white p-5"
                     color="transparent"
                     shadow={false}
                 >
@@ -201,14 +202,16 @@ export default function DaftarUlang() {
                                 </Button>
                             </form>
                         </>
-                    ) : authStatus === "unauthenticated" ? (
-                        <div className="p-10">
-                            <Button color="teal" onClick={() => void signIn("discord")}>
-                                To continue, please sign in with Discord
-                            </Button>
-                        </div>
                     ) : (
-                        <></>
+                        <div className="p-5">
+                            {authStatus === "unauthenticated" ? (
+                                <Button color="teal" onClick={() => void signIn("discord")}>
+                                    To continue, please sign in with Discord
+                                </Button>
+                            ) : (
+                                <Spinner className="h-16 w-16" />
+                            )}
+                        </div>
                     )}
                 </Card>
             </main>
