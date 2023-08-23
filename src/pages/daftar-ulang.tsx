@@ -18,6 +18,8 @@ import { FormEvent, use, useState } from "react"
 import { z } from "zod"
 import lodash, { parseInt } from "lodash"
 import { parser } from ".eslintrc.cjs"
+import { useMutation } from "@tanstack/react-query"
+import { api } from "~/utils/api"
 
 const formDataSchema = z.object({
     name: z.string().nonempty(),
@@ -45,6 +47,12 @@ export default function DaftarUlang() {
 
     const [successDialogOpen, setSuccessDialogOpen] = useState(false)
 
+    const submitFormMutation = api.reregistrationRouter.submit.useMutation({
+        onSuccess(_data, _variables, _context) {
+            setSuccessDialogOpen(true)
+        },
+    })
+
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
 
@@ -60,16 +68,16 @@ export default function DaftarUlang() {
         console.log(data)
         const parseResult = formDataSchema.safeParse(data)
 
-        let errorOccurred = false
+        let validationErrorOccurred = false
 
         const file = data.proofOfPayment
         if (file === undefined || !(file instanceof File) || !file.type.startsWith("image/")) {
-            errorOccurred = true
+            validationErrorOccurred = true
             setProofOfPaymentError(true)
         }
 
         if (!parseResult.success) {
-            errorOccurred = true
+            validationErrorOccurred = true
             const errorPaths = parseResult.error.errors.flatMap((err) => err.path)
             if (errorPaths.includes("name")) {
                 setNameError(true)
@@ -86,27 +94,32 @@ export default function DaftarUlang() {
         }
         if (parseResult.success) {
             if (!Array.from(parseResult.data.nim).every((char) => char >= "0" && char <= "9")) {
-                errorOccurred = true
+                validationErrorOccurred = true
                 setNimError(true)
             }
             if (
                 !parseResult.data.binusEmail.endsWith("@binus.ac.id") ||
                 !(parseResult.data.binusEmail.length > "@binus.ac.id".length)
             ) {
-                errorOccurred = true
+                validationErrorOccurred = true
                 setBinusEmailError(true)
             }
         }
 
         if (!googleFormConfirmationChecked || !registrationFeeConfirmationChecked) {
-            errorOccurred = true
+            validationErrorOccurred = true
         }
 
-        if (errorOccurred) {
+        if (!parseResult.success || validationErrorOccurred || sessionData === null) {
             return
         }
 
-        setSuccessDialogOpen(true)
+        submitFormMutation.mutate({
+            fullName: parseResult.data.name,
+            nim: parseResult.data.nim,
+            discordUserName: sessionData.user.name ?? "NO_USERNAME_FOUND",
+            discordUserId: sessionData.user.id,
+        })
     }
 
     function handleSuccessDialog() {
