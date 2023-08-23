@@ -46,6 +46,10 @@ export default function DaftarUlang() {
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
 
+        if (submitFormMutation.isLoading) {
+            return
+        }
+
         setNameError(false)
         setNimError(false)
 
