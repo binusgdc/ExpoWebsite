@@ -10,22 +10,16 @@ import {
     Dialog,
     DialogHeader,
     DialogBody,
-    DialogFooter,
     Switch,
 } from "@material-tailwind/react"
 import { signIn, useSession } from "next-auth/react"
-import { FormEvent, use, useState } from "react"
+import { type FormEvent, useState } from "react"
 import { z } from "zod"
-import lodash, { parseInt } from "lodash"
-import { parser } from ".eslintrc.cjs"
-import { useMutation } from "@tanstack/react-query"
 import { api } from "~/utils/api"
 
 const formDataSchema = z.object({
     name: z.string().nonempty(),
     nim: z.string().nonempty(),
-    personalEmail: z.string().nonempty().email(),
-    binusEmail: z.string().nonempty().email(),
 })
 
 type FormData = z.infer<typeof formDataSchema>
@@ -37,13 +31,8 @@ export default function DaftarUlang() {
 
     const [nameError, setNameError] = useState(false)
     const [nimError, setNimError] = useState(false)
-    const [personalEmailError, setPersonalEmailError] = useState(false)
-    const [binusEmailError, setBinusEmailError] = useState(false)
-    const [proofOfPaymentError, setProofOfPaymentError] = useState(false)
 
     const [googleFormConfirmationChecked, setgoogleFormConfirmationChecked] = useState(false)
-    const [registrationFeeConfirmationChecked, setregistrationFeeConfirmationChecked] =
-        useState(false)
 
     const [successDialogOpen, setSuccessDialogOpen] = useState(false)
 
@@ -58,9 +47,6 @@ export default function DaftarUlang() {
 
         setNameError(false)
         setNimError(false)
-        setPersonalEmailError(false)
-        setBinusEmailError(false)
-        setProofOfPaymentError(false)
 
         setHasAttemptedToSubmit(true)
 
@@ -69,12 +55,6 @@ export default function DaftarUlang() {
         const parseResult = formDataSchema.safeParse(data)
 
         let validationErrorOccurred = false
-
-        const file = data.proofOfPayment
-        if (file === undefined || !(file instanceof File) || !file.type.startsWith("image/")) {
-            validationErrorOccurred = true
-            setProofOfPaymentError(true)
-        }
 
         if (!parseResult.success) {
             validationErrorOccurred = true
@@ -85,28 +65,15 @@ export default function DaftarUlang() {
             if (errorPaths.includes("nim")) {
                 setNimError(true)
             }
-            if (errorPaths.includes("personalEmail")) {
-                setPersonalEmailError(true)
-            }
-            if (errorPaths.includes("binusEmail")) {
-                setBinusEmailError(true)
-            }
         }
         if (parseResult.success) {
             if (!Array.from(parseResult.data.nim).every((char) => char >= "0" && char <= "9")) {
                 validationErrorOccurred = true
                 setNimError(true)
             }
-            if (
-                !parseResult.data.binusEmail.endsWith("@binus.ac.id") ||
-                !(parseResult.data.binusEmail.length > "@binus.ac.id".length)
-            ) {
-                validationErrorOccurred = true
-                setBinusEmailError(true)
-            }
         }
 
-        if (!googleFormConfirmationChecked || !registrationFeeConfirmationChecked) {
+        if (!googleFormConfirmationChecked) {
             validationErrorOccurred = true
         }
 
@@ -191,32 +158,9 @@ export default function DaftarUlang() {
                                         label="NIM"
                                         error={nimError}
                                     />
-                                    <Input
-                                        name="personalEmail"
-                                        variant="static"
-                                        size="md"
-                                        label="Personal Email"
-                                        placeholder="username@domain"
-                                        error={personalEmailError}
-                                    />
-                                    <Input
-                                        name="binusEmail"
-                                        variant="static"
-                                        size="md"
-                                        label="Binus Email"
-                                        placeholder="name@binus.ac.id"
-                                        error={binusEmailError}
-                                    />
                                 </div>
                                 <br></br>
                                 <div className="flex flex-col gap-3">
-                                    <Input
-                                        accept="image/*"
-                                        name="proofOfPayment"
-                                        label="Proof of Payment"
-                                        type="file"
-                                        error={proofOfPaymentError}
-                                    />
                                     <Checkbox
                                         label={
                                             <Typography
@@ -239,35 +183,15 @@ export default function DaftarUlang() {
                                             setgoogleFormConfirmationChecked(e.target.checked)
                                         }
                                     />
-                                    <Checkbox
-                                        label={
-                                            <Typography
-                                                variant="small"
-                                                color="gray"
-                                                className="flex items-center font-normal"
-                                            >
-                                                I have paid the registration fee and submitted valid
-                                                proof.
-                                            </Typography>
-                                        }
-                                        containerProps={{ className: "-ml-2.5" }}
-                                        onChange={(e) =>
-                                            setregistrationFeeConfirmationChecked(e.target.checked)
-                                        }
-                                    />
                                 </div>
 
-                                {hasAttemptedToSubmit &&
-                                (!googleFormConfirmationChecked ||
-                                    !registrationFeeConfirmationChecked) ? (
+                                {hasAttemptedToSubmit && !googleFormConfirmationChecked ? (
                                     <Alert
                                         color="red"
                                         icon={<ExclamationTriangleIcon className="h-5 w-5" />}
                                         className="my-2"
                                     >
-                                        {!googleFormConfirmationChecked
-                                            ? "Fill in the google form before completing registration"
-                                            : "Please submit valid proof of payment"}
+                                        {"Fill in the google form before completing registration"}
                                     </Alert>
                                 ) : (
                                     <></>
