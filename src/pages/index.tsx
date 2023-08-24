@@ -401,6 +401,7 @@ export default function Home() {
                         </Tabs>
                     </div>
                 </div>
+
                 {/* <div id="kelas" className="flex flex-col items-center bg-magenta px-5 py-16">
                     <Typography variant="h2">Skill Up!</Typography>
                     <Typography variant="paragraph" className="my-2">

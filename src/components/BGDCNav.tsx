@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid"
 import { Navbar, Typography, Button, IconButton, MobileNav } from "@material-tailwind/react"
 import Image from "next/image"
 import Link from "next/link"
@@ -42,9 +43,10 @@ export default function BgdcNav() {
             </Typography> */}
 
             <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal">
-                <a href="#" className="flex items-center">
+                <Link href="/faq" className="flex items-center">
                     FAQ
-                </a>
+                    <ArrowUpRightIcon className="h-3 w-3" />
+                </Link>
             </Typography>
         </ul>
     )
@@ -54,8 +56,8 @@ export default function BgdcNav() {
             className="sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4"
         >
             <div className="flex items-center justify-between text-blue-gray-900">
-                <div className="flex flex-row items-center gap-5">
-                    <Link href="/#">
+                <Link href="/">
+                    <div className="flex flex-row items-center gap-5">
                         <Image
                             className=""
                             src="/bgdc-logo_small.png"
@@ -63,14 +65,15 @@ export default function BgdcNav() {
                             height={50}
                             alt="BGDC Logo"
                         />
-                    </Link>
-                    <Typography
-                        variant="small"
-                        className="mr-4 cursor-pointer py-1.5 font-medium lg:text-xl"
-                    >
-                        Binus Game Development Club
-                    </Typography>
-                </div>
+
+                        <Typography
+                            variant="small"
+                            className="mr-4 cursor-pointer py-1.5 font-medium lg:text-xl"
+                        >
+                            Binus Game Development Club
+                        </Typography>
+                    </div>
+                </Link>
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{navList}</div>
                     <Button color="orange" size="lg" className="hidden lg:inline-block">
