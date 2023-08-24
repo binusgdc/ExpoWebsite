@@ -1,11 +1,7 @@
 import {
-    Avatar,
     Button,
     Card,
     Carousel,
-    IconButton,
-    MobileNav,
-    Navbar,
     Tab,
     TabPanel,
     Tabs,
@@ -23,23 +19,17 @@ import {
     BeakerIcon,
     CodeBracketIcon,
     PaintBrushIcon,
-    GlobeAltIcon,
-    WifiIcon,
     CubeIcon,
     SpeakerWaveIcon,
-    ArrowDownIcon,
-    ArrowSmallDownIcon,
     ChevronDownIcon,
-    MapIcon,
     MapPinIcon,
     ClockIcon,
-    ArrowUpRightIcon,
 } from "@heroicons/react/24/solid"
 import Head from "next/head"
 import Image from "next/image"
-import { useState } from "react"
 import BgdcNav from "~/components/BGDCNav"
 import Link from "next/link"
+import BgdcFooter from "~/components/BGDCFooter"
 
 export default function Home() {
     return (
@@ -84,17 +74,12 @@ export default function Home() {
                             >
                                 Binus Game Development Club
                             </Typography>
-                            <Typography variant="h5" color="white" className="text-xl font-medium">
+                            <Typography variant="h5" color="white" className="text-2xl font-medium">
                                 A community that celebrates games and creative passion.
                             </Typography>
-                            {/* <Link href="/daftar-ulang" target="_blank" className="w-full px-10">
-                                <Button fullWidth color="orange" size="lg">
-                                    Join Up
-                                </Button>
-                            </Link> */}
                             <div className="my-1 flex w-full flex-row items-center justify-center gap-x-10 px-10">
                                 <a href="#find-us" className="flex-grow">
-                                    <Button fullWidth color="cyan" size="lg">
+                                    <Button fullWidth color="cyan" size="lg" className="sm:text-xl">
                                         Find Us
                                     </Button>
                                 </a>
@@ -103,7 +88,12 @@ export default function Home() {
                                     className="flex-grow"
                                     target="_blank"
                                 >
-                                    <Button fullWidth color="deep-orange" size="lg">
+                                    <Button
+                                        fullWidth
+                                        color="deep-orange"
+                                        size="lg"
+                                        className="sm:text-xl"
+                                    >
                                         Our Games
                                     </Button>
                                 </Link>
@@ -120,32 +110,18 @@ export default function Home() {
                     </Typography>
                     <a className="hidden" href="#">
                         <ChevronDownIcon className="h-6 w-6" />
-                        {/* <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1.5}
-                            stroke="white"
-                            className="h-6 w-6"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                            />
-                        </svg> */}
                     </a>
                 </div>
                 <div
                     id="find-us"
-                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-16"
+                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-20"
                 >
                     <Image
-                        className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
-                        src={"/observe.webp"}
+                        className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
+                        src={"/play.webp"}
                         width={518 / 2}
                         height={705 / 2}
-                        alt="mascot observe"
+                        alt=""
                     />
                     <div className="w-full max-w-4xl">
                         <div>
@@ -402,296 +378,193 @@ export default function Home() {
                         </Tabs>
                     </div>
                 </div>
-                <div id="kelas" className="flex flex-col items-center bg-magenta px-8 py-16">
-                    <Typography variant="h2">Skill Up!</Typography>
-                    <Typography variant="paragraph" className="my-2 text-center">
-                        One-time price. Unlimited access to mentors and classes for{" "}
-                        <strong>all</strong> skillsets, forever*.
-                    </Typography>
-                    <Typography variant="small" className="w-full text-left text-gray-400">
-                        *As long as BGDC exists.
-                    </Typography>
-                    <br />
-                    <div className="flex flex-col">
-                        {[
-                            {
-                                icon: BeakerIcon,
-                                title: "Game Design",
-                                imageRef: "/class-prog-1.png",
-                            },
-                            {
-                                icon: CodeBracketIcon,
-                                title: "Game Programming",
-                                imageRef: "/class-prog-1.png",
-                            },
-                            {
-                                icon: PaintBrushIcon,
-                                title: "2D Art & Animation",
-                                imageRef: "/class-prog-1.png",
-                            },
-                            {
-                                icon: CubeIcon,
-                                title: "3D Art & Animation",
-                                imageRef: "/class-prog-1.png",
-                            },
-                            {
-                                icon: SpeakerWaveIcon,
-                                title: "Game Sound",
-                                imageRef: "/class-prog-1.png",
-                            },
-                        ].map((element) => (
-                            <figure key={element.title} className="relative h-96 w-full p-5">
-                                <Image
-                                    className="h-full w-full rounded-xl object-cover object-center shadow-xl"
-                                    src={element.imageRef}
-                                    alt={element.title}
-                                    width={250}
-                                    height={140}
-                                />
-                                <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 flex-row items-center justify-between gap-2 rounded-xl border border-white bg-white/75 px-6 py-4 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                                    <element.icon className="h-6 w-6" color="black" />
-                                    <Typography
-                                        variant="h5"
-                                        color="blue-gray"
-                                        className="flex-grow"
-                                    >
-                                        {element.title}
-                                    </Typography>
-                                </figcaption>
-                            </figure>
-                        ))}
+                <div
+                    id="kelas"
+                    className="relative flex flex-col items-center bg-magenta px-8 py-20"
+                >
+                    <Image
+                        className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
+                        src={"/observe.webp"}
+                        width={518 / 2}
+                        height={705 / 2}
+                        alt=""
+                    />
+                    <div className="max-w-5xl">
+                        <Typography
+                            variant="h2"
+                            className="text-center font-serif text-6xl font-medium"
+                        >
+                            Skill Up!
+                        </Typography>
+                        <Typography
+                            variant="lead"
+                            className="my-2 text-center sm:text-3xl lg:text-4xl"
+                        >
+                            One-time price. Unlimited access to mentors and classes for{" "}
+                            <strong>all</strong> skillsets, forever*.
+                        </Typography>
+                        <Typography variant="small" className="w-full text-center text-gray-400">
+                            *As long as BGDC exists.
+                        </Typography>
+                        <hr className="mx-auto my-2 h-1 max-w-md rounded border-0 bg-gray-100 md:my-4" />
+                        <div className="flex flex-row flex-wrap justify-center">
+                            {[
+                                {
+                                    icon: BeakerIcon,
+                                    title: "Game Design",
+                                    imageRef: "/class-prog-1.png",
+                                },
+                                {
+                                    icon: CodeBracketIcon,
+                                    title: "Game Programming",
+                                    imageRef: "/class-prog-1.png",
+                                },
+                                {
+                                    icon: PaintBrushIcon,
+                                    title: "2D Art & Animation",
+                                    imageRef: "/class-prog-1.png",
+                                },
+                                {
+                                    icon: CubeIcon,
+                                    title: "3D Art & Animation",
+                                    imageRef: "/class-prog-1.png",
+                                },
+                                {
+                                    icon: SpeakerWaveIcon,
+                                    title: "Game Sound",
+                                    imageRef: "/class-prog-1.png",
+                                },
+                            ].map((element) => (
+                                <figure key={element.title} className="relative h-96 w-96 p-5">
+                                    <Image
+                                        className="h-full w-full rounded-xl object-cover object-center shadow-xl"
+                                        src={element.imageRef}
+                                        alt={element.title}
+                                        width={250}
+                                        height={140}
+                                    />
+                                    <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 flex-row items-center justify-between gap-2 rounded-xl border border-white bg-white/75 px-6 py-4 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
+                                        <element.icon className="h-6 w-6" color="black" />
+                                        <Typography
+                                            variant="h5"
+                                            color="blue-gray"
+                                            className="flex-grow"
+                                        >
+                                            {element.title}
+                                        </Typography>
+                                    </figcaption>
+                                </figure>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div
                     id="talent-group"
-                    className="flex flex-col items-center bg-[#544e67] px-5 py-16"
+                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-16 py-20"
                 >
-                    <Typography variant="h2" className="text-center font-serif">
+                    <Image
+                        className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
+                        src={"/develop.webp"}
+                        width={518 / 2}
+                        height={705 / 2}
+                        alt=""
+                    />
+                    <Typography
+                        variant="h2"
+                        className="text-center font-serif font-medium sm:text-6xl"
+                    >
                         Create and Publish Games
                     </Typography>
-                    <Typography variant="paragraph" className="my-2">
+                    <Typography variant="lead" className="my-2 text-center sm:text-3xl lg:text-4xl">
                         Talent Group lorem ipsum ap simet
                     </Typography>
-                    <br></br>
-                    {[
-                        {
-                            gameTitle: "Highway Core",
-                            studioName: "Lifelessplay Productions",
-                            batch: "5",
-                            screenshotRefs: [
-                                "/highway-core-1.png",
-                                "/highway-core-1.png",
-                                "/highway-core-3.png",
-                            ],
-                            itchIoLink: "https://bgdc.itch.io/highway-core",
-                        },
-                        {
-                            gameTitle: "Game 2",
-                            studioName: "Studio Name",
-                            batch: "X",
-                            screenshotRefs: [
-                                "/highway-core-1.png",
-                                "/highway-core-1.png",
-                                "/highway-core-3.png",
-                            ],
-                            itchIoLink: "https://bgdc.itch.io/",
-                        },
-                        {
-                            gameTitle: "Game 3",
-                            studioName: "Studio Name 3",
-                            batch: "X",
-                            screenshotRefs: [
-                                "/highway-core-1.png",
-                                "/highway-core-1.png",
-                                "/highway-core-3.png",
-                            ],
-                            itchIoLink: "https://bgdc.itch.io/",
-                        },
-                    ].map((element, i) => (
-                        <div key={i}>
-                            <div className="flex flex-col items-center gap-3">
-                                <div>
-                                    <Typography variant="h3" className="text-center font-serif">
-                                        {element.gameTitle}
-                                    </Typography>
-                                    <Typography variant="small">{`${element.studioName} | Batch ${element.batch}`}</Typography>
-                                </div>
-                                <Carousel
-                                    className="rounded-xl"
-                                    autoplayDelay={8000 + i * 1000}
-                                    autoplay
-                                    loop
-                                >
-                                    {element.screenshotRefs.map((ssRef, i) => (
-                                        <img
-                                            key={i}
-                                            src={ssRef}
-                                            alt="image 1"
-                                            className="h-full w-full object-cover"
-                                            width={250}
-                                            height={235}
-                                        />
-                                    ))}
-                                </Carousel>
-                                <a href={element.itchIoLink}>
-                                    <Button className="my-2" color="cyan">
-                                        Try on Itch.io
-                                    </Button>
-                                </a>
-                            </div>
-                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                        </div>
-                    ))}
-                    <a href="https://bgdc.itch.io/">
-                        <Button color="orange">Check Out All BGDC Games</Button>
-                    </a>
-                </div>
-                {/* <div id="kelas" className="flex flex-col items-center bg-magenta px-5 py-16">
-                    <Typography variant="h2">Skill Up!</Typography>
-                    <Typography variant="paragraph" className="my-2">
-                        One-time price. Unlimited access to mentors and classes for{" "}
-                        <strong>all</strong> skillsets, forever*.
-                    </Typography>
-                    <br></br>
-                    <div className="flex flex-col">
+                    <Typography variant="h2" className="text-center font-serif"></Typography>
+                    <Typography variant="paragraph" className="my-2"></Typography>
+                    <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                    <div className="max-w-xl">
                         {[
                             {
-                                icon: BeakerIcon,
-                                title: "Game Design",
-                                imageRef: "/class-prog-1.png",
+                                gameTitle: "Highway Core",
+                                studioName: "Lifelessplay Productions",
+                                batch: "5",
+                                screenshotRefs: [
+                                    "/highway-core-1.png",
+                                    "/highway-core-1.png",
+                                    "/highway-core-3.png",
+                                ],
+                                description:
+                                    "You are in the middle of a busy highway filled with trucks and cars. Shoot your way through an infinite horde of enemies with the various weapons that you can use! Can you set the highest score out of everyone else?",
+                                itchIoLink: "https://bgdc.itch.io/highway-core",
                             },
                             {
-                                icon: CodeBracketIcon,
-                                title: "Game Programming",
-                                imageRef: "/class-prog-1.png",
+                                gameTitle: "Wobble",
+                                studioName: "Studio Name",
+                                batch: "X",
+                                screenshotRefs: ["/wobble-1.png", "/wobble-2.png"],
+                                description:
+                                    "Welcome to Wobble where your life is on the edge, literally. You are on an ever-changing platform. Your goal is to keep the platform relatively stable by moving around to different spots on the platform until all of the blocks are set in stone.",
+                                itchIoLink: "https://bgdc.itch.io/",
                             },
                             {
-                                icon: PaintBrushIcon,
-                                title: "2D Art & Animation",
-                                imageRef: "/class-prog-1.png",
+                                gameTitle: "Ruins of the Schecnavian",
+                                studioName: "Protecat",
+                                batch: "X",
+                                screenshotRefs: ["/ruins-1.png", "/ruins-2.png"],
+                                description:
+                                    "You are Upin, an adventurous scavenger for ScavenGo Inc. One day, you received a task from the higher-ups to scavenge the Ruins of the Schecnavians. In order to complete the task, you are given a device that allows you to warp between worlds. With a blazing adventurous spirit, you set off to the Ruins of the Schecnavians, unaware of the horrors within. Ruins of the Schecnavians is a tile-based puzzle game where you must use a warping device to pass through obstacles to win the game.",
+                                itchIoLink: "https://bgdc.itch.io/",
                             },
-                            {
-                                icon: CubeIcon,
-                                title: "3D Art & Animation",
-                                imageRef: "/class-prog-1.png",
-                            },
-                            {
-                                icon: SpeakerWaveIcon,
-                                title: "Game Sound",
-                                imageRef: "/class-prog-1.png",
-                            },
-                        ].map((element) => (
-                            <figure key={element.title} className="relative h-96 w-full p-5">
-                                <Image
-                                    className="h-full w-full rounded-xl object-cover object-center shadow-xl"
-                                    src={element.imageRef}
-                                    alt={element.title}
-                                    width={250}
-                                    height={140}
-                                />
-                                <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 flex-row items-center justify-between gap-2 rounded-xl border border-white bg-white/75 px-6 py-4 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                                    <element.icon className="h-6 w-6" color="black" />
-                                    <Typography
-                                        variant="h5"
-                                        color="blue-gray"
-                                        className="flex-grow"
+                        ].map((element, i) => (
+                            <div key={i}>
+                                <div className="flex flex-col items-center gap-3 text-center">
+                                    <div>
+                                        <Typography
+                                            variant="h3"
+                                            className="text-center font-serif font-medium sm:text-5xl"
+                                        >
+                                            {element.gameTitle}
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="sm:text-xl"
+                                        >{`${element.studioName} | Batch ${element.batch}`}</Typography>
+                                    </div>
+                                    <Carousel
+                                        className="rounded-xl"
+                                        autoplayDelay={8000 + i * 1000}
+                                        autoplay
+                                        loop
                                     >
-                                        {element.title}
+                                        {element.screenshotRefs.map((ssRef, i) => (
+                                            <Image
+                                                key={i}
+                                                src={ssRef}
+                                                alt={`${
+                                                    element.gameTitle
+                                                }-screenshot${i.toString()}`}
+                                                className="h-full w-full object-cover"
+                                                width={1200}
+                                                height={680}
+                                            />
+                                        ))}
+                                    </Carousel>
+                                    <Typography variant="paragraph" className="w-full text-left">
+                                        {element.description}
                                     </Typography>
-                                </figcaption>
-                            </figure>
+                                    <a href={element.itchIoLink}>
+                                        <Button className="my-2" color="orange">
+                                            Try on Itch.io
+                                        </Button>
+                                    </a>
+                                </div>
+                                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                            </div>
                         ))}
                     </div>
-                    <Typography variant="small" className="w-full text-left text-gray-400">
-                        *As long as BGDC exists.
-                    </Typography>
                 </div>
-                <div id="talent-group" className="flex flex-col items-center bg-magenta px-5 py-16">
-                    <Typography variant="h2" className="text-center font-serif">
-                        Create and Publish Games
-                    </Typography>
-                    <Typography variant="paragraph" className="my-2">
-                        Talent Group lorem ipsum ap simet
-                    </Typography>
-                    <br></br>
-                    {[
-                        {
-                            gameTitle: "Highway Core",
-                            studioName: "Lifelessplay Productions",
-                            batch: "5",
-                            screenshotRefs: [
-                                "/highway-core-1.png",
-                                "/highway-core-1.png",
-                                "/highway-core-3.png",
-                            ],
-                            itchIoLink: "https://bgdc.itch.io/highway-core",
-                        },
-                        {
-                            gameTitle: "Game 2",
-                            studioName: "Studio Name",
-                            batch: "X",
-                            screenshotRefs: [
-                                "/highway-core-1.png",
-                                "/highway-core-1.png",
-                                "/highway-core-3.png",
-                            ],
-                            itchIoLink: "https://bgdc.itch.io/",
-                        },
-                        {
-                            gameTitle: "Game 3",
-                            studioName: "Studio Name 3",
-                            batch: "X",
-                            screenshotRefs: [
-                                "/highway-core-1.png",
-                                "/highway-core-1.png",
-                                "/highway-core-3.png",
-                            ],
-                            itchIoLink: "https://bgdc.itch.io/",
-                        },
-                    ].map((element, i) => (
-                        <div key={i}>
-                            <div className="flex flex-col items-center gap-3">
-                                <div>
-                                    <Typography variant="h3" className="text-center font-serif">
-                                        {element.gameTitle}
-                                    </Typography>
-                                    <Typography variant="small">{`${element.studioName} | Batch ${element.batch}`}</Typography>
-                                </div>
-                                <Carousel
-                                    className="rounded-xl"
-                                    autoplayDelay={8000 + i * 1000}
-                                    autoplay
-                                    loop
-                                >
-                                    {element.screenshotRefs.map((ssRef, i) => (
-                                        <img
-                                            key={i}
-                                            src={ssRef}
-                                            alt="image 1"
-                                            className="h-full w-full object-cover"
-                                            width={250}
-                                            height={235}
-                                        />
-                                    ))}
-                                </Carousel>
-                                <a href={element.itchIoLink}>
-                                    <Button className="my-2" color="cyan">
-                                        Try on Itch.io
-                                    </Button>
-                                </a>
-                            </div>
-                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                        </div>
-                    ))}
-                    <a href="https://bgdc.itch.io/">
-                        <Button color="orange">Check Out All BGDC Games</Button>
-                    </a>
-                </div> 
-                <div
-                    id="jam-buddies"
-                    className="flex flex-col items-center bg-magenta px-5 py-16"
-                ></div>*/}
+                <div id="footer"></div>
             </main>
+            <BgdcFooter />
         </>
     )
 }

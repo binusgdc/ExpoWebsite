@@ -9,6 +9,7 @@ import {
 import Head from "next/head"
 import Image from "next/image"
 import { useState } from "react"
+import BgdcFooter from "~/components/BGDCFooter"
 import BgdcNav from "~/components/BGDCNav"
 
 export default function Faq() {
@@ -141,6 +142,7 @@ export default function Faq() {
                     </div>
                 </div>
             </main>
+            <BgdcFooter />
         </>
     )
 }

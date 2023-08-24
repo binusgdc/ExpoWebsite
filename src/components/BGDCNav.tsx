@@ -13,23 +13,23 @@ export default function BgdcNav() {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="flex flex-row items-center p-1 font-normal"
+                className="flex flex-row items-center p-1 text-xl font-normal"
             >
                 <Link href={"/#find-us"}>Find Us</Link>
-            </Typography>
-            {/* <Typography
-                as="li"
-                variant="small"
-                color="blue-gray"
-                className="flex flex-row items-center p-1 font-normal"
-            >
-                <Link href={"/#kelas"}>Learn</Link>
             </Typography>
             <Typography
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="flex flex-row items-center p-1 font-normal"
+                className="flex flex-row items-center p-1 text-xl font-normal"
+            >
+                <Link href={"/#kelas"}>Class</Link>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="flex flex-row items-center p-1 text-xl font-normal"
             >
                 <Link href={"/#talent-group"}>Talent Group</Link>
             </Typography>
@@ -37,15 +37,11 @@ export default function BgdcNav() {
                 as="li"
                 variant="small"
                 color="blue-gray"
-                className="flex flex-row items-center p-1 font-normal"
+                className="p-1 text-xl font-normal"
             >
-                <Link href={"/#jam-buddies"}>Jam Buddies</Link>
-            </Typography> */}
-
-            <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal">
                 <Link href="/faq" className="flex items-center">
                     FAQ
-                    <ArrowUpRightIcon className="h-3 w-3" />
+                    <ArrowUpRightIcon className="h-5 w-5" />
                 </Link>
             </Typography>
         </ul>
