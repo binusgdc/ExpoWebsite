@@ -77,7 +77,7 @@ export default function Home() {
                             <Typography variant="h5" color="white" className="text-2xl font-medium">
                                 A community that celebrates games and creative passion.
                             </Typography>
-                            <div className="my-1 flex w-full flex-row items-center justify-center gap-x-10 px-10">
+                            <div className="my-1 flex w-full flex-row items-center justify-center gap-x-10 px-10 lg:justify-start lg:px-0 lg:pr-20">
                                 <a href="#find-us" className="flex-grow">
                                     <Button fullWidth color="cyan" size="lg" className="sm:text-xl">
                                         Find Us
@@ -114,10 +114,10 @@ export default function Home() {
                 </div>
                 <div
                     id="find-us"
-                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-20"
+                    className="relative flex min-h-screen flex-col items-center bg-[#544e67] px-5 py-20"
                 >
                     <Image
-                        className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
+                        className="left-10 top-80 hidden 2xl:absolute 2xl:block"
                         src={"/play.webp"}
                         width={518 / 2}
                         height={705 / 2}
@@ -134,7 +134,7 @@ export default function Home() {
                         </div>
                         <Tabs className="my-2" value="KMG">
                             <TabsHeader
-                                className="bg-transparent"
+                                className="bg-background"
                                 indicatorProps={{
                                     className: "bg-cyan-90 shadow-none",
                                 }}
@@ -491,7 +491,7 @@ export default function Home() {
                         </Typography>
                     </div>
                     <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                    <div className="max-w-xl">
+                    <div className="max-w-3xl">
                         {[
                             {
                                 gameTitle: "Highway Core",
