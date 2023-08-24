@@ -301,7 +301,7 @@ export default function Home() {
                                                 </Button>
                                             </a>
                                         </div>
-                                        <Card color="brown" className="my-4 max-w-lg px-5 py-2">
+                                        <Card className="my-4 max-w-lg bg-purple-90 px-5 py-2">
                                             <Timeline className="my-4">
                                                 {[
                                                     {
@@ -371,7 +371,10 @@ export default function Home() {
                                                             <div className="flex flex-col justify-between">
                                                                 <div className="">
                                                                     <div className="flex flex-row items-center gap-1">
-                                                                        <ClockIcon className="h-4 w-4" />
+                                                                        <ClockIcon
+                                                                            color="white"
+                                                                            className="h-4 w-4"
+                                                                        />
                                                                         <Typography
                                                                             variant="small"
                                                                             color="white"
