@@ -391,8 +391,6 @@ export default function Home() {
                                                                     </Typography>
                                                                 </div>
                                                             </div>
-                                                            {/* <br></br>
-                                            <Button color="orange">Add to Calendar</Button> */}
                                                         </TimelineBody>
                                                     </TimelineItem>
                                                 ))}
@@ -404,7 +402,150 @@ export default function Home() {
                         </Tabs>
                     </div>
                 </div>
-
+                <div id="kelas" className="flex flex-col items-center bg-magenta px-8 py-16">
+                    <Typography variant="h2">Skill Up!</Typography>
+                    <Typography variant="paragraph" className="my-2 text-center">
+                        One-time price. Unlimited access to mentors and classes for{" "}
+                        <strong>all</strong> skillsets, forever*.
+                    </Typography>
+                    <Typography variant="small" className="w-full text-left text-gray-400">
+                        *As long as BGDC exists.
+                    </Typography>
+                    <br />
+                    <div className="flex flex-col">
+                        {[
+                            {
+                                icon: BeakerIcon,
+                                title: "Game Design",
+                                imageRef: "/class-prog-1.png",
+                            },
+                            {
+                                icon: CodeBracketIcon,
+                                title: "Game Programming",
+                                imageRef: "/class-prog-1.png",
+                            },
+                            {
+                                icon: PaintBrushIcon,
+                                title: "2D Art & Animation",
+                                imageRef: "/class-prog-1.png",
+                            },
+                            {
+                                icon: CubeIcon,
+                                title: "3D Art & Animation",
+                                imageRef: "/class-prog-1.png",
+                            },
+                            {
+                                icon: SpeakerWaveIcon,
+                                title: "Game Sound",
+                                imageRef: "/class-prog-1.png",
+                            },
+                        ].map((element) => (
+                            <figure key={element.title} className="relative h-96 w-full p-5">
+                                <Image
+                                    className="h-full w-full rounded-xl object-cover object-center shadow-xl"
+                                    src={element.imageRef}
+                                    alt={element.title}
+                                    width={250}
+                                    height={140}
+                                />
+                                <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 flex-row items-center justify-between gap-2 rounded-xl border border-white bg-white/75 px-6 py-4 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
+                                    <element.icon className="h-6 w-6" color="black" />
+                                    <Typography
+                                        variant="h5"
+                                        color="blue-gray"
+                                        className="flex-grow"
+                                    >
+                                        {element.title}
+                                    </Typography>
+                                </figcaption>
+                            </figure>
+                        ))}
+                    </div>
+                </div>
+                <div
+                    id="talent-group"
+                    className="flex flex-col items-center bg-[#544e67] px-5 py-16"
+                >
+                    <Typography variant="h2" className="text-center font-serif">
+                        Create and Publish Games
+                    </Typography>
+                    <Typography variant="paragraph" className="my-2">
+                        Talent Group lorem ipsum ap simet
+                    </Typography>
+                    <br></br>
+                    {[
+                        {
+                            gameTitle: "Highway Core",
+                            studioName: "Lifelessplay Productions",
+                            batch: "5",
+                            screenshotRefs: [
+                                "/highway-core-1.png",
+                                "/highway-core-1.png",
+                                "/highway-core-3.png",
+                            ],
+                            itchIoLink: "https://bgdc.itch.io/highway-core",
+                        },
+                        {
+                            gameTitle: "Game 2",
+                            studioName: "Studio Name",
+                            batch: "X",
+                            screenshotRefs: [
+                                "/highway-core-1.png",
+                                "/highway-core-1.png",
+                                "/highway-core-3.png",
+                            ],
+                            itchIoLink: "https://bgdc.itch.io/",
+                        },
+                        {
+                            gameTitle: "Game 3",
+                            studioName: "Studio Name 3",
+                            batch: "X",
+                            screenshotRefs: [
+                                "/highway-core-1.png",
+                                "/highway-core-1.png",
+                                "/highway-core-3.png",
+                            ],
+                            itchIoLink: "https://bgdc.itch.io/",
+                        },
+                    ].map((element, i) => (
+                        <div key={i}>
+                            <div className="flex flex-col items-center gap-3">
+                                <div>
+                                    <Typography variant="h3" className="text-center font-serif">
+                                        {element.gameTitle}
+                                    </Typography>
+                                    <Typography variant="small">{`${element.studioName} | Batch ${element.batch}`}</Typography>
+                                </div>
+                                <Carousel
+                                    className="rounded-xl"
+                                    autoplayDelay={8000 + i * 1000}
+                                    autoplay
+                                    loop
+                                >
+                                    {element.screenshotRefs.map((ssRef, i) => (
+                                        <img
+                                            key={i}
+                                            src={ssRef}
+                                            alt="image 1"
+                                            className="h-full w-full object-cover"
+                                            width={250}
+                                            height={235}
+                                        />
+                                    ))}
+                                </Carousel>
+                                <a href={element.itchIoLink}>
+                                    <Button className="my-2" color="cyan">
+                                        Try on Itch.io
+                                    </Button>
+                                </a>
+                            </div>
+                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                        </div>
+                    ))}
+                    <a href="https://bgdc.itch.io/">
+                        <Button color="orange">Check Out All BGDC Games</Button>
+                    </a>
+                </div>
                 {/* <div id="kelas" className="flex flex-col items-center bg-magenta px-5 py-16">
                     <Typography variant="h2">Skill Up!</Typography>
                     <Typography variant="paragraph" className="my-2">
