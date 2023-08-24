@@ -292,7 +292,7 @@ export default function Home() {
                                                 target="_blank"
                                             >
                                                 <Button
-                                                    size="sm"
+                                                    size="lg"
                                                     color="orange"
                                                     className="m-1 flex items-center gap-1"
                                                 >
