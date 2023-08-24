@@ -389,12 +389,15 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
-                    <div className="max-w-5xl">
+                    <div className="flex max-w-5xl flex-col gap-2">
                         <Typography
                             variant="h2"
                             className="text-center font-serif text-6xl font-medium"
                         >
                             Skill Up!
+                        </Typography>
+                        <Typography variant="small" color="light-gray" className="text-center">
+                            Class
                         </Typography>
                         <Typography
                             variant="lead"
@@ -460,7 +463,7 @@ export default function Home() {
                 </div>
                 <div
                     id="talent-group"
-                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-16 py-20"
+                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-20"
                 >
                     <Image
                         className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -469,17 +472,24 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
-                    <Typography
-                        variant="h2"
-                        className="text-center font-serif font-medium sm:text-6xl"
-                    >
-                        Create and Publish Games
-                    </Typography>
-                    <Typography variant="lead" className="my-2 text-center sm:text-3xl lg:text-4xl">
-                        Talent Group lorem ipsum ap simet
-                    </Typography>
-                    <Typography variant="h2" className="text-center font-serif"></Typography>
-                    <Typography variant="paragraph" className="my-2"></Typography>
+                    <div className="flex max-w-5xl flex-col gap-2">
+                        <Typography
+                            variant="h2"
+                            className="text-center font-serif font-medium sm:text-6xl"
+                        >
+                            Create and Publish Games
+                        </Typography>
+                        <Typography variant="small" color="light-gray" className="text-center">
+                            Talent Group
+                        </Typography>
+                        <Typography
+                            variant="lead"
+                            className="my-2 text-center sm:text-3xl lg:text-4xl"
+                        >
+                            Develop a game with a team from ideation to publishing. No experience
+                            required.
+                        </Typography>
+                    </div>
                     <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
                     <div className="max-w-xl">
                         {[
