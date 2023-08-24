@@ -132,7 +132,7 @@ export default function Home() {
                                 Find Us
                             </Typography>
                         </div>
-                        <Tabs className="my-2" value="KMG">
+                        <Tabs className="my-2" value="Online">
                             <TabsHeader
                                 className="bg-background"
                                 indicatorProps={{
@@ -140,6 +140,10 @@ export default function Home() {
                                 }}
                             >
                                 {[
+                                    {
+                                        shortLabel: "Online",
+                                        fullLabel: "Online",
+                                    },
                                     {
                                         shortLabel: "KMG",
                                         fullLabel: "Kemanggisan",
@@ -151,10 +155,6 @@ export default function Home() {
                                     {
                                         shortLabel: "AS",
                                         fullLabel: "Alam Sutera",
-                                    },
-                                    {
-                                        shortLabel: "Online",
-                                        fullLabel: "Online",
                                     },
                                 ].map((element) => (
                                     <Tab key={element.shortLabel} value={element.shortLabel}>
@@ -175,84 +175,6 @@ export default function Home() {
                             </TabsHeader>
                             <hr className="mx-auto my-2 h-1 max-w-md rounded border-0 bg-gray-100 md:my-4" />
                             <TabsBody>
-                                <TabPanel value={"KMG"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Anggrek Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            Balkon Lantai 3 (#8)
-                                        </Typography>
-                                    </div>
-                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-kmg.png"}
-                                            alt={""}
-                                            width={1213}
-                                            height={559}
-                                        />
-                                    </Carousel>
-                                </TabPanel>
-                                <TabPanel value={"BDG"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Bandung Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            Atrium Lantai 4 (#23)
-                                        </Typography>
-                                    </div>
-                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={""}
-                                            alt={""}
-                                            width={880}
-                                            height={495}
-                                        />
-                                    </Carousel>
-                                </TabPanel>
-                                <TabPanel value={"AS"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Alam Sutera Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            GOR Alam Sutera (#35)
-                                        </Typography>
-                                    </div>
-                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-as.png"}
-                                            alt={""}
-                                            width={1267}
-                                            height={631}
-                                        />
-                                    </Carousel>
-                                </TabPanel>
                                 <TabPanel value={"Online"} className="p-2">
                                     <div className="flex flex-col items-center">
                                         <div className="flex flex-col items-center gap-2">
@@ -373,6 +295,84 @@ export default function Home() {
                                             </Timeline>
                                         </Card>
                                     </div>
+                                </TabPanel>
+                                <TabPanel value={"KMG"} className="p-2">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Typography
+                                            variant="h4"
+                                            className="text-center"
+                                            color="white"
+                                        >
+                                            Anggrek Campus
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="text-center text-gray-200"
+                                        >
+                                            Balkon Lantai 3 (#8)
+                                        </Typography>
+                                    </div>
+                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
+                                        <Image
+                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
+                                            src={"/position-kmg.png"}
+                                            alt={""}
+                                            width={1213}
+                                            height={559}
+                                        />
+                                    </Carousel>
+                                </TabPanel>
+                                <TabPanel value={"BDG"} className="p-2">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Typography
+                                            variant="h4"
+                                            className="text-center"
+                                            color="white"
+                                        >
+                                            Bandung Campus
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="text-center text-gray-200"
+                                        >
+                                            Atrium Lantai 4 (#23)
+                                        </Typography>
+                                    </div>
+                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
+                                        <Image
+                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
+                                            src={""}
+                                            alt={""}
+                                            width={880}
+                                            height={495}
+                                        />
+                                    </Carousel>
+                                </TabPanel>
+                                <TabPanel value={"AS"} className="p-2">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Typography
+                                            variant="h4"
+                                            className="text-center"
+                                            color="white"
+                                        >
+                                            Alam Sutera Campus
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="text-center text-gray-200"
+                                        >
+                                            GOR Alam Sutera (#35)
+                                        </Typography>
+                                    </div>
+                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
+                                        <Image
+                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
+                                            src={"/position-as.png"}
+                                            alt={""}
+                                            width={1267}
+                                            height={631}
+                                        />
+                                    </Carousel>
                                 </TabPanel>
                             </TabsBody>
                         </Tabs>
