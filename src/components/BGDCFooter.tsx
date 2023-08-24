@@ -14,12 +14,15 @@ export default function BgdcFooter() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://bgdc.itch.io/">
+                    <a href="https://bgdc.itch.io/" target="_blank">
                         <FaItchIo className="h-10 w-10" />
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/company/binus-game-development-club/">
+                    <a
+                        href="https://www.linkedin.com/company/binus-game-development-club/"
+                        target="_blank"
+                    >
                         <FaLinkedin className="h-10 w-10" />
                     </a>
                 </li>
