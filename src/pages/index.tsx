@@ -69,7 +69,7 @@ export default function Home() {
                             height={501}
                             alt={"BGDC sticker"}
                         />
-                        <div className="my-5 flex max-w-[480px] flex-grow flex-col items-center gap-4 lg:justify-center">
+                        <div className="my-5 flex max-w-[480px] flex-grow flex-col items-center gap-4 text-center lg:justify-center lg:text-left">
                             <Typography
                                 variant="h1"
                                 color="white"
@@ -87,17 +87,26 @@ export default function Home() {
                             <Typography variant="h5" color="white" className="text-xl font-medium">
                                 A community that celebrates games and creative passion.
                             </Typography>
-                            <div className="my-1 flex flex-row items-center justify-center gap-x-10 px-5">
-                                <Link href="/daftar-ulang" target="_blank">
-                                    <Button color="orange" size="lg">
-                                        Join Up
-                                    </Button>
-                                </Link>
-                                <a href="#find-us">
-                                    <Button color="cyan" size="lg" className="">
+                            {/* <Link href="/daftar-ulang" target="_blank" className="w-full px-10">
+                                <Button fullWidth color="orange" size="lg">
+                                    Join Up
+                                </Button>
+                            </Link> */}
+                            <div className="my-1 flex w-full flex-row items-center justify-center gap-x-10 px-10">
+                                <a href="#find-us" className="flex-grow">
+                                    <Button fullWidth color="cyan" size="lg">
                                         Find Us
                                     </Button>
                                 </a>
+                                <Link
+                                    href="https://bgdc.itch.io/"
+                                    className="flex-grow"
+                                    target="_blank"
+                                >
+                                    <Button fullWidth color="deep-orange" size="lg">
+                                        Our Games
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -206,13 +215,13 @@ export default function Home() {
                                             Balkon Lantai 3 (#8)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4">
+                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
                                         <Image
-                                            className="h-full w-full rounded-xl object-cover object-center shadow-xl"
-                                            src={"/class-prog-1.png"}
+                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
+                                            src={"/position-kmg.png"}
                                             alt={""}
-                                            width={250}
-                                            height={140}
+                                            width={1213}
+                                            height={559}
                                         />
                                     </Carousel>
                                 </TabPanel>
@@ -232,10 +241,10 @@ export default function Home() {
                                             Atrium Lantai 4 (#23)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4">
+                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
                                         <Image
-                                            className="h-full w-full rounded-xl object-cover object-center shadow-xl"
-                                            src={"/class-prog-1.png"}
+                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
+                                            src={""}
                                             alt={""}
                                             width={880}
                                             height={495}
@@ -258,13 +267,13 @@ export default function Home() {
                                             GOR Alam Sutera (#35)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4">
+                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
                                         <Image
-                                            className="h-full w-full rounded-xl object-cover object-center shadow-xl"
-                                            src={"/class-prog-1.png"}
+                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
+                                            src={"/position-as.png"}
                                             alt={""}
-                                            width={250}
-                                            height={140}
+                                            width={1267}
+                                            height={631}
                                         />
                                     </Carousel>
                                 </TabPanel>
