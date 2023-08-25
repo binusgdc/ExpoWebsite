@@ -367,9 +367,15 @@ export default function Home() {
                                 gameTitle: "Shadow of the Relics",
                                 studioName: "QuantumGlyph Studio",
                                 batch: "6",
-                                screenshotRefs: ["/wobble-1.png", "/wobble-2.png"],
+                                screenshotRefs: [
+                                    "/relics-1.png",
+                                    "/relics-2.png",
+                                    "/relics-3.png",
+                                    "/relics-4.png",
+                                    "/relics-5.png",
+                                ],
                                 description:
-                                    "Welcome to Wobble where your life is on the edge, literally. You are on an ever-changing platform. Your goal is to keep the platform relatively stable by moving around to different spots on the platform until all of the blocks are set in stone.",
+                                    "In a world of shadows and secrets, meet Ucup — a thief like no other. For years stealing things with finesse has been Ucup's bread & butter. But life takes a twist when he learns that the things he's stolen belong to his master, Lupin.  Yet it was too late to return it since the prized treasures are now in the hands of the Sinister Shadows. For once our main character, who has been stealing all his life, would use his skills for good. Join Ucup's journey to collect the stolen relics in this 2D side-scrolling platforming adventure game.",
                                 itchIoLink: "https://bgdc.itch.io/",
                             },
                             {
