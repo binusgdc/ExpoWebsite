@@ -623,11 +623,11 @@ export default function Home() {
                                             Balkon Lantai 3 (#8)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
+                                    <Carousel className="my-4 w-full">
                                         <Image
                                             className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
                                             src={"/position-kmg.png"}
-                                            alt={""}
+                                            alt={"position of BGDC in kemanggisan expo"}
                                             width={1213}
                                             height={559}
                                         />
@@ -649,11 +649,11 @@ export default function Home() {
                                             Atrium Lantai 4 (#23)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
+                                    <Carousel className="my-4 w-full">
                                         <Image
                                             className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={""}
-                                            alt={""}
+                                            src={"/position-bdg.jpg"}
+                                            alt={"position of BGDC in bandung expo"}
                                             width={880}
                                             height={495}
                                         />
@@ -675,11 +675,11 @@ export default function Home() {
                                             GOR Alam Sutera (#35)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4 h-[150px] lg:h-[400px]">
+                                    <Carousel className="my-4 w-full">
                                         <Image
                                             className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
                                             src={"/position-as.png"}
-                                            alt={""}
+                                            alt={"position of BGDC in alam sutera expo"}
                                             width={1267}
                                             height={631}
                                         />
