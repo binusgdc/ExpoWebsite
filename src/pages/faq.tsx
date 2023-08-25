@@ -1,4 +1,4 @@
-import { ArrowsPointingInIcon } from "@heroicons/react/24/solid"
+import { ArrowsPointingInIcon, ChevronDownIcon } from "@heroicons/react/24/solid"
 import {
     Accordion,
     AccordionHeader,
@@ -56,10 +56,20 @@ export default function Faq() {
                     </Typography>
                     <div id="faq" className="mx-auto w-full max-w-4xl px-16 py-6">
                         <Accordion open={aboutOpen}>
-                            <AccordionHeader onClick={() => setAboutOpen(!aboutOpen)}>
-                                <Typography variant="h2" color="white">
-                                    Tentang BGDC
-                                </Typography>
+                            <AccordionHeader className="" onClick={() => setAboutOpen(!aboutOpen)}>
+                                <div className="flex w-full flex-row justify-between">
+                                    <Typography variant="h2" color="white">
+                                        Tentang BGDC
+                                    </Typography>
+                                    <ChevronDownIcon
+                                        className="h-12 w-12"
+                                        color="white"
+                                        style={{
+                                            transform: `rotate(${aboutOpen ? 180 : 0}deg)`,
+                                            transition: "transform 0.2s",
+                                        }}
+                                    />
+                                </div>
                             </AccordionHeader>
                             <AccordionBody>
                                 <Card className="bg-purple-90 p-5">
@@ -86,9 +96,19 @@ export default function Faq() {
                         </Accordion>
                         <Accordion open={registrationOpen}>
                             <AccordionHeader onClick={() => setRegistrationOpen(!registrationOpen)}>
-                                <Typography variant="h2" color="white">
-                                    Registrasi
-                                </Typography>
+                                <div className="flex w-full flex-row justify-between">
+                                    <Typography variant="h2" color="white">
+                                        Registrasi
+                                    </Typography>
+                                    <ChevronDownIcon
+                                        className="h-12 w-12"
+                                        color="white"
+                                        style={{
+                                            transform: `rotate(${registrationOpen ? 180 : 0}deg)`,
+                                            transition: "transform 0.2s",
+                                        }}
+                                    />
+                                </div>
                             </AccordionHeader>
                             <AccordionBody>
                                 <Card className="bg-purple-90 p-5">
@@ -114,9 +134,19 @@ export default function Faq() {
                         </Accordion>
                         <Accordion open={classOpen}>
                             <AccordionHeader onClick={() => setClassOpen(!classOpen)}>
-                                <Typography variant="h2" color="white">
-                                    Kelas
-                                </Typography>
+                                <div className="flex w-full flex-row justify-between">
+                                    <Typography variant="h2" color="white">
+                                        Kelas
+                                    </Typography>
+                                    <ChevronDownIcon
+                                        className="h-12 w-12"
+                                        color="white"
+                                        style={{
+                                            transform: `rotate(${classOpen ? 180 : 0}deg)`,
+                                            transition: "transform 0.2s",
+                                        }}
+                                    />
+                                </div>
                             </AccordionHeader>
                             <AccordionBody>
                                 <Card className="bg-purple-90 p-5">

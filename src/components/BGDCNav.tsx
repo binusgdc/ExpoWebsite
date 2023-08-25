@@ -15,7 +15,7 @@ export default function BgdcNav() {
                 color="blue-gray"
                 className="flex flex-row items-center p-1 text-xl font-normal"
             >
-                <Link href={"/#about-us"}>About</Link>
+                <Link href={"/#about-bgdc"}>About</Link>
             </Typography>
             <Typography
                 as="li"

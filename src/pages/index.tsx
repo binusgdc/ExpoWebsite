@@ -26,6 +26,8 @@ import {
     ChevronDownIcon,
     MapPinIcon,
     ClockIcon,
+    CalendarIcon,
+    CalendarDaysIcon,
 } from "@heroicons/react/24/solid"
 import Head from "next/head"
 import Image from "next/image"
@@ -141,11 +143,11 @@ export default function Home() {
                             <div>
                                 <Typography
                                     variant="h3"
-                                    className="text-center font-serif font-medium"
+                                    className="mb-1 text-left font-serif font-medium"
                                 >
                                     A Passion for Games
                                 </Typography>
-                                <Typography variant="paragraph">
+                                <Typography variant="paragraph" className="pr-5 text-justify">
                                     history. principles. who this club is for and what we do.
                                     mention the indonesian game dev industry.
                                 </Typography>
@@ -162,12 +164,14 @@ export default function Home() {
                             <div>
                                 <Typography
                                     variant="h3"
-                                    className="text-center font-serif font-medium"
+                                    className="mb-1 text-left font-serif font-medium"
                                 >
                                     Community
                                 </Typography>
-                                <Typography variant="paragraph">
-                                    discord server community. gathering. subcommunities. meetups.
+                                <Typography variant="paragraph" className="pr-5 text-justify">
+                                    {
+                                        "As a Discord-based organisation, BGDC facilitates its members to interact with ease according to their interests; including art corner, our own Minecraft server, a variety of games, and networking. Every month, BGDC hosts gatherings (both online and onsite) full of fun activities."
+                                    }
                                 </Typography>
                             </div>
                         </div>
@@ -176,12 +180,14 @@ export default function Home() {
                             <div>
                                 <Typography
                                     variant="h3"
-                                    className="text-center font-serif font-medium"
+                                    className="mb-1 text-left font-serif font-medium"
                                 >
                                     Events
                                 </Typography>
-                                <Typography variant="paragraph">
-                                    webinar. workshop. IGF. all proker.
+                                <Typography variant="paragraph" className="pr-5 text-justify">
+                                    {
+                                        "Indonesia’s game development industry has a great potential as its people gains fluency in technology. On 12 Januari 2015, BINUS Game Development Club (BGDC) was officially established to educate and accommodate any Binusian interested in game development."
+                                    }
                                 </Typography>
                             </div>
                             <div className="w-full border">
@@ -228,37 +234,42 @@ export default function Home() {
                                 {
                                     icon: BeakerIcon,
                                     title: "Game Design",
-                                    imageRef: "/class-prog-1.png",
-                                    lead: "this is a lead text",
-                                    description: "this is a description text",
+                                    imageRef: "/game-design-1.png",
+                                    lead: "Get Creative",
+                                    description:
+                                        "Discover the essence of what makes games great. Learn about mechanics, story, and other design elements through vivid case studies.",
                                 },
                                 {
                                     icon: CodeBracketIcon,
                                     title: "Game Programming",
                                     imageRef: "/class-prog-1.png",
-                                    lead: "",
-                                    description: "",
+                                    lead: "Four Eyes Gang",
+                                    description:
+                                        "This class tutors the basis of game creation that is programming in Unity, both 2D and 3D with C# language.",
                                 },
                                 {
                                     icon: PaintBrushIcon,
                                     title: "2D Art & Animation",
-                                    imageRef: "/class-prog-1.png",
-                                    lead: "",
-                                    description: "",
+                                    imageRef: "/2d-art-1.png",
+                                    lead: "Any Pen, Any Paper",
+                                    description:
+                                        "Our 2D class tutors on 2-dimensional fundamentals, background, character design, and implementing them into Unity.",
                                 },
                                 {
                                     icon: CubeIcon,
                                     title: "3D Art & Animation",
-                                    imageRef: "/class-prog-1.png",
-                                    lead: "",
-                                    description: "",
+                                    imageRef: "/3d-art-1.png",
+                                    lead: "Don’t Crash-",
+                                    description:
+                                        "Our 3D class tutors modelling with Blender, from the bottom up! Includes objects, environments, characters, and how to import them in Unity.                                    ",
                                 },
                                 {
                                     icon: SpeakerWaveIcon,
                                     title: "Game Sound",
-                                    imageRef: "/class-prog-1.png",
-                                    lead: "",
-                                    description: "",
+                                    imageRef: "/sound-1.png",
+                                    lead: "Music Galore",
+                                    description:
+                                        "The sound class focuses on musics and sound effects with Audacity and Ableton. Experiment on various themes and techniques to immerse the audience~",
                                 },
                             ].map((element) => {
                                 return (
@@ -271,10 +282,12 @@ export default function Home() {
                                             floated={false}
                                             className="m-0 w-2/5 shrink-0 rounded-r-none"
                                         >
-                                            <img
+                                            <Image
                                                 src={element.imageRef}
                                                 alt={element.title}
-                                                className="h-full w-full object-cover"
+                                                className="h-full w-full object-cover object-left"
+                                                width={1920}
+                                                height={1080}
                                             />
                                         </CardHeader>
                                         <CardBody>
@@ -330,8 +343,8 @@ export default function Home() {
                             variant="lead"
                             className="my-2 text-center sm:text-3xl lg:text-4xl"
                         >
-                            Develop a game with a team from ideation to publishing. No experience
-                            required.
+                            Develop a game with a team from ideation to publishing.{" "}
+                            <span className="underline">No experience required.</span>
                         </Typography>
                     </div>
                     <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
@@ -351,9 +364,9 @@ export default function Home() {
                                 itchIoLink: "https://bgdc.itch.io/highway-core",
                             },
                             {
-                                gameTitle: "Wobble",
-                                studioName: "Studio Name",
-                                batch: "X",
+                                gameTitle: "Shadow of the Relics",
+                                studioName: "QuantumGlyph Studio",
+                                batch: "6",
                                 screenshotRefs: ["/wobble-1.png", "/wobble-2.png"],
                                 description:
                                     "Welcome to Wobble where your life is on the edge, literally. You are on an ever-changing platform. Your goal is to keep the platform relatively stable by moving around to different spots on the platform until all of the blocks are set in stone.",
@@ -405,7 +418,7 @@ export default function Home() {
                                     <Typography variant="paragraph" className="w-full text-left">
                                         {element.description}
                                     </Typography>
-                                    <a href={element.itchIoLink}>
+                                    <a href={element.itchIoLink} target="_blank">
                                         <Button className="my-2" color="orange">
                                             Try on Itch.io
                                         </Button>
@@ -457,20 +470,20 @@ export default function Home() {
                                     <Tab key={element.shortLabel} value={element.shortLabel}>
                                         <Typography
                                             variant="h5"
-                                            className="font-2xl font-semibold sm:hidden"
+                                            className="font-2xl font-semibold md:hidden"
                                         >
                                             {element.shortLabel}
                                         </Typography>
                                         <Typography
                                             variant="h5"
-                                            className="hidden text-2xl font-semibold sm:block"
+                                            className="hidden text-2xl font-semibold md:block"
                                         >
                                             {element.fullLabel}
                                         </Typography>
                                     </Tab>
                                 ))}
                             </TabsHeader>
-                            <hr className="mx-auto my-2 h-1 max-w-md rounded border-0 bg-gray-100 md:my-4" />
+                            <hr className=" my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
                             <TabsBody>
                                 <TabPanel value={"Online"} className="p-2">
                                     <div className="flex flex-col items-center">
@@ -501,7 +514,7 @@ export default function Home() {
                                                 {[
                                                     {
                                                         title: "Get to Know BGDC",
-                                                        timeSub: "29/07/2023 | 19:00 - 20:30",
+                                                        timeSub: "29th August 2023 | 19:00 - 20:30",
                                                         body: `The key to more success is to have a lot
                                                     of pillows. Put it this way, it took me
                                                     twenty five years to get these plants,
@@ -512,7 +525,7 @@ export default function Home() {
                                                     },
                                                     {
                                                         title: "Talent Group Showcase",
-                                                        timeSub: "30/07/2023 | 19:00 - 20:30",
+                                                        timeSub: "30th August 2023 | 19:00 - 20:30",
                                                         body: `The key to more success is to have a lot
                                                     of pillows. Put it this way, it took me
                                                     twenty five years to get these plants,
@@ -523,7 +536,7 @@ export default function Home() {
                                                     },
                                                     {
                                                         title: "Talent Group Showcase",
-                                                        timeSub: "31/07/2023 | 19:00 - 20:30",
+                                                        timeSub: "31st August 2023 | 19:00 - 20:30",
                                                         body: `The key to more success is to have a lot
                                                     of pillows. Put it this way, it took me
                                                     twenty five years to get these plants,
@@ -534,7 +547,8 @@ export default function Home() {
                                                     },
                                                     {
                                                         title: "Coffee Talk",
-                                                        timeSub: "01/08/2023 | 19:00 - 20:30",
+                                                        timeSub:
+                                                            "1st September 2023 | 19:00 - 20:30",
                                                         body: `The key to more success is to have a lot
                                                 of pillows. Put it this way, it took me
                                                 twenty five years to get these plants,
@@ -566,9 +580,9 @@ export default function Home() {
                                                             <div className="flex flex-col justify-between">
                                                                 <div className="">
                                                                     <div className="flex flex-row items-center gap-1">
-                                                                        <ClockIcon
+                                                                        <CalendarDaysIcon
                                                                             color="white"
-                                                                            className="h-4 w-4"
+                                                                            className="h-5 w-5 -translate-y-0.5"
                                                                         />
                                                                         <Typography
                                                                             variant="small"
