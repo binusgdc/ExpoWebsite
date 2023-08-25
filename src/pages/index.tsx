@@ -203,7 +203,7 @@ export default function Home() {
                                             <Timeline className="my-4">
                                                 {[
                                                     {
-                                                        title: "Introduction to BGDC",
+                                                        title: "Get to Know BGDC",
                                                         timeSub: "29/07/2023 | 19:00 - 20:30",
                                                         body: `The key to more success is to have a lot
                                                     of pillows. Put it this way, it took me
