@@ -12,6 +12,8 @@ import {
     DialogBody,
     Switch,
     Spinner,
+    Select,
+    Option,
 } from "@material-tailwind/react"
 import { signIn, useSession } from "next-auth/react"
 import { type FormEvent, useState } from "react"
@@ -116,7 +118,7 @@ export default function DaftarUlang() {
                         </div>
                     </div>
                     <Typography variant="h3" color="blue-gray" className="font-serif">
-                        Finish Registration
+                        Register
                     </Typography>
                     {authStatus === "authenticated" && sessionData !== null ? (
                         <>
@@ -140,28 +142,53 @@ export default function DaftarUlang() {
                                 <div className="mb-4 flex flex-col gap-6">
                                     <Alert variant="ghost">
                                         <Typography variant="small">
-                                            {"Don't forget to fill the "}
+                                            {"Don't forget to fill "}
                                             <a
                                                 className="text-cyan-90 hover:underline"
                                                 href="https://binusgdc.com/link/daftar"
+                                                target="_blank"
                                             >
-                                                Google Form
+                                                the Expo Google Form
                                             </a>
+                                            {". "}
                                         </Typography>
                                     </Alert>
                                     <Input
                                         name="name"
                                         variant="static"
                                         size="md"
-                                        label="Full Name"
+                                        label="Full Name*"
                                         error={nameError}
                                     />
                                     <Input
                                         name="nim"
                                         variant="static"
                                         size="md"
-                                        label="NIM"
+                                        label="NIM*"
                                         error={nimError}
+                                    />
+                                    <Select variant="static" label="Region*">
+                                        <Option>Alam Sutera</Option>
+                                        <Option>Bandung</Option>
+                                        <Option>Bekasi</Option>
+                                        <Option>Kemanggisan</Option>
+                                        <Option>Malang</Option>
+                                        <Option>Semarang</Option>
+                                        <Option>Senayan</Option>
+                                    </Select>
+                                    <Input
+                                        name="personalEmail"
+                                        variant="static"
+                                        size="md"
+                                        label="Personal Email*"
+                                        type="email"
+                                    />
+                                    <Input
+                                        name="binusEmail"
+                                        variant="static"
+                                        size="md"
+                                        label="Binus Email*"
+                                        type="email"
                                     />
                                 </div>
                                 <br></br>

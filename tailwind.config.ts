@@ -12,6 +12,7 @@ export default withMT({
         },
         colors: {
             magenta: "#423C55",
+            smagenta: "#544e67",
             pink: {
                 30: "#FFC0D5",
                 60: "#FF96B9",

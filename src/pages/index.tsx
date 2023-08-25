@@ -1,6 +1,8 @@
 import {
     Button,
     Card,
+    CardBody,
+    CardHeader,
     Carousel,
     Tab,
     TabPanel,
@@ -30,6 +32,7 @@ import Image from "next/image"
 import BgdcNav from "~/components/BGDCNav"
 import Link from "next/link"
 import BgdcFooter from "~/components/BGDCFooter"
+import { useState } from "react"
 
 export default function Home() {
     return (
@@ -63,7 +66,7 @@ export default function Home() {
                             <Typography
                                 variant="h1"
                                 color="white"
-                                className="font-serif lg:text-7xl"
+                                className="font-serif font-medium lg:text-7xl"
                             >
                                 Games are dreams to life
                             </Typography>
@@ -113,8 +116,8 @@ export default function Home() {
                     </a>
                 </div>
                 <div
-                    id="find-us"
-                    className="relative flex min-h-screen flex-col items-center bg-[#544e67] px-5 py-20"
+                    id="about-bgdc"
+                    className="relative flex min-h-screen flex-col items-center bg-smagenta px-5 py-20"
                 >
                     <Image
                         className="left-10 top-80 hidden 2xl:absolute 2xl:block"
@@ -123,13 +126,307 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
+                    <Typography
+                        variant="h2"
+                        className="text-center font-serif text-5xl font-medium"
+                    >
+                        About BGDC
+                    </Typography>
+                    <Typography variant="small" color="light-gray" className="text-center">
+                        Play. Observe. Develop.
+                    </Typography>
+                    <br />
+                    <div className="flex w-full max-w-3xl flex-col items-center justify-start gap-10">
+                        <div className="grid h-64 w-full grid-cols-2 place-items-stretch gap-10">
+                            <div>
+                                <Typography
+                                    variant="h3"
+                                    className="text-center font-serif font-medium"
+                                >
+                                    A Passion for Games
+                                </Typography>
+                                <Typography variant="paragraph">
+                                    history. principles. who this club is for and what we do.
+                                    mention the indonesian game dev industry.
+                                </Typography>
+                            </div>
+                            <div className="w-full border">
+                                <img className="object-cover" src="/" />
+                            </div>
+                        </div>
+
+                        <div className="grid h-64 w-full grid-cols-2 place-items-stretch gap-10">
+                            <div className="w-full border">
+                                <img className="object-cover" src="/" />
+                            </div>
+                            <div>
+                                <Typography
+                                    variant="h3"
+                                    className="text-center font-serif font-medium"
+                                >
+                                    Community
+                                </Typography>
+                                <Typography variant="paragraph">
+                                    discord server community. gathering. subcommunities. meetups.
+                                </Typography>
+                            </div>
+                        </div>
+
+                        <div className="grid h-64 w-full grid-cols-2 place-items-stretch gap-10">
+                            <div>
+                                <Typography
+                                    variant="h3"
+                                    className="text-center font-serif font-medium"
+                                >
+                                    Events
+                                </Typography>
+                                <Typography variant="paragraph">
+                                    webinar. workshop. IGF. all proker.
+                                </Typography>
+                            </div>
+                            <div className="w-full border">
+                                <img className="object-cover" src="/" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    id="kelas"
+                    className="relative flex flex-col items-center bg-magenta px-8 py-20"
+                >
+                    <Image
+                        className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
+                        src={"/observe.webp"}
+                        width={518 / 2}
+                        height={705 / 2}
+                        alt=""
+                    />
+                    <div className="flex max-w-5xl flex-col gap-2">
+                        <Typography
+                            variant="h2"
+                            className="text-center font-serif text-6xl font-medium"
+                        >
+                            Skill Up!
+                        </Typography>
+                        <Typography variant="small" color="light-gray" className="text-center">
+                            Class
+                        </Typography>
+                        <Typography
+                            variant="lead"
+                            className="my-2 text-center sm:text-3xl lg:text-4xl"
+                        >
+                            One-time price. Unlimited access to mentors and classes for{" "}
+                            <strong>all</strong> skillsets, forever*.
+                        </Typography>
+                        <Typography variant="small" className="w-full text-center text-gray-400">
+                            *As long as BGDC exists.
+                        </Typography>
+                        <hr className="mx-auto my-2 h-1 max-w-md rounded border-0 bg-gray-100 md:my-4" />
+                        <div className="flex flex-row flex-wrap justify-center gap-10">
+                            {[
+                                {
+                                    icon: BeakerIcon,
+                                    title: "Game Design",
+                                    imageRef: "/class-prog-1.png",
+                                    lead: "this is a lead text",
+                                    description: "this is a description text",
+                                },
+                                {
+                                    icon: CodeBracketIcon,
+                                    title: "Game Programming",
+                                    imageRef: "/class-prog-1.png",
+                                    lead: "",
+                                    description: "",
+                                },
+                                {
+                                    icon: PaintBrushIcon,
+                                    title: "2D Art & Animation",
+                                    imageRef: "/class-prog-1.png",
+                                    lead: "",
+                                    description: "",
+                                },
+                                {
+                                    icon: CubeIcon,
+                                    title: "3D Art & Animation",
+                                    imageRef: "/class-prog-1.png",
+                                    lead: "",
+                                    description: "",
+                                },
+                                {
+                                    icon: SpeakerWaveIcon,
+                                    title: "Game Sound",
+                                    imageRef: "/class-prog-1.png",
+                                    lead: "",
+                                    description: "",
+                                },
+                            ].map((element) => {
+                                return (
+                                    <Card
+                                        key={element.title}
+                                        className="w-full max-w-[36rem] flex-row"
+                                    >
+                                        <CardHeader
+                                            shadow={false}
+                                            floated={false}
+                                            className="m-0 w-2/5 shrink-0 rounded-r-none"
+                                        >
+                                            <img
+                                                src={element.imageRef}
+                                                alt={element.title}
+                                                className="h-full w-full object-cover"
+                                            />
+                                        </CardHeader>
+                                        <CardBody>
+                                            <div className="mb-4 flex flex-row items-center gap-2">
+                                                <element.icon className="h-5 w-5" />
+                                                <Typography
+                                                    variant="h6"
+                                                    color="gray"
+                                                    className="uppercase"
+                                                >
+                                                    {element.title}
+                                                </Typography>
+                                            </div>
+                                            <Typography
+                                                variant="h4"
+                                                color="blue-gray"
+                                                className="mb-2"
+                                            >
+                                                {element.lead}
+                                            </Typography>
+                                            <Typography color="gray" className="mb-8 font-normal">
+                                                {element.description}
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="talent-group"
+                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-20"
+                >
+                    <Image
+                        className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
+                        src={"/develop.webp"}
+                        width={518 / 2}
+                        height={705 / 2}
+                        alt=""
+                    />
+                    <div className="flex max-w-5xl flex-col gap-2">
+                        <Typography
+                            variant="h2"
+                            className="text-center font-serif font-medium sm:text-6xl"
+                        >
+                            Create and Publish Games
+                        </Typography>
+                        <Typography variant="small" color="light-gray" className="text-center">
+                            Talent Group
+                        </Typography>
+                        <Typography
+                            variant="lead"
+                            className="my-2 text-center sm:text-3xl lg:text-4xl"
+                        >
+                            Develop a game with a team from ideation to publishing. No experience
+                            required.
+                        </Typography>
+                    </div>
+                    <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                    <div className="max-w-3xl">
+                        {[
+                            {
+                                gameTitle: "Highway Core",
+                                studioName: "Lifelessplay Productions",
+                                batch: "5",
+                                screenshotRefs: [
+                                    "/highway-core-1.png",
+                                    "/highway-core-1.png",
+                                    "/highway-core-3.png",
+                                ],
+                                description:
+                                    "You are in the middle of a busy highway filled with trucks and cars. Shoot your way through an infinite horde of enemies with the various weapons that you can use! Can you set the highest score out of everyone else?",
+                                itchIoLink: "https://bgdc.itch.io/highway-core",
+                            },
+                            {
+                                gameTitle: "Wobble",
+                                studioName: "Studio Name",
+                                batch: "X",
+                                screenshotRefs: ["/wobble-1.png", "/wobble-2.png"],
+                                description:
+                                    "Welcome to Wobble where your life is on the edge, literally. You are on an ever-changing platform. Your goal is to keep the platform relatively stable by moving around to different spots on the platform until all of the blocks are set in stone.",
+                                itchIoLink: "https://bgdc.itch.io/",
+                            },
+                            {
+                                gameTitle: "Ruins of the Schecnavian",
+                                studioName: "Protecat",
+                                batch: "X",
+                                screenshotRefs: ["/ruins-1.png", "/ruins-2.png"],
+                                description:
+                                    "You are Upin, an adventurous scavenger for ScavenGo Inc. One day, you received a task from the higher-ups to scavenge the Ruins of the Schecnavians. In order to complete the task, you are given a device that allows you to warp between worlds. With a blazing adventurous spirit, you set off to the Ruins of the Schecnavians, unaware of the horrors within. Ruins of the Schecnavians is a tile-based puzzle game where you must use a warping device to pass through obstacles to win the game.",
+                                itchIoLink: "https://bgdc.itch.io/",
+                            },
+                        ].map((element, i) => (
+                            <div key={i}>
+                                <div className="flex flex-col items-center gap-3 text-center">
+                                    <div>
+                                        <Typography
+                                            variant="h3"
+                                            className="text-center font-serif font-medium sm:text-5xl"
+                                        >
+                                            {element.gameTitle}
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="sm:text-xl"
+                                        >{`${element.studioName} | Batch ${element.batch}`}</Typography>
+                                    </div>
+                                    <Carousel
+                                        className="rounded-xl"
+                                        autoplayDelay={8000 + i * 1000}
+                                        autoplay
+                                        loop
+                                    >
+                                        {element.screenshotRefs.map((ssRef, i) => (
+                                            <Image
+                                                key={i}
+                                                src={ssRef}
+                                                alt={`${
+                                                    element.gameTitle
+                                                }-screenshot${i.toString()}`}
+                                                className="h-full w-full object-cover"
+                                                width={1200}
+                                                height={680}
+                                            />
+                                        ))}
+                                    </Carousel>
+                                    <Typography variant="paragraph" className="w-full text-left">
+                                        {element.description}
+                                    </Typography>
+                                    <a href={element.itchIoLink}>
+                                        <Button className="my-2" color="orange">
+                                            Try on Itch.io
+                                        </Button>
+                                    </a>
+                                </div>
+                                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div
+                    id="find-us"
+                    className="relative flex min-h-screen flex-col items-center bg-magenta px-5 py-20"
+                >
                     <div className="w-full max-w-4xl">
                         <div>
                             <Typography
                                 variant="h2"
                                 className="text-center font-serif text-5xl font-medium"
                             >
-                                Find Us
+                                {"Find Us at Expo!"}
                             </Typography>
                         </div>
                         <Tabs className="my-2" value="Online">
@@ -376,200 +673,6 @@ export default function Home() {
                                 </TabPanel>
                             </TabsBody>
                         </Tabs>
-                    </div>
-                </div>
-                <div
-                    id="kelas"
-                    className="relative flex flex-col items-center bg-magenta px-8 py-20"
-                >
-                    <Image
-                        className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
-                        src={"/observe.webp"}
-                        width={518 / 2}
-                        height={705 / 2}
-                        alt=""
-                    />
-                    <div className="flex max-w-5xl flex-col gap-2">
-                        <Typography
-                            variant="h2"
-                            className="text-center font-serif text-6xl font-medium"
-                        >
-                            Skill Up!
-                        </Typography>
-                        <Typography variant="small" color="light-gray" className="text-center">
-                            Class
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            className="my-2 text-center sm:text-3xl lg:text-4xl"
-                        >
-                            One-time price. Unlimited access to mentors and classes for{" "}
-                            <strong>all</strong> skillsets, forever*.
-                        </Typography>
-                        <Typography variant="small" className="w-full text-center text-gray-400">
-                            *As long as BGDC exists.
-                        </Typography>
-                        <hr className="mx-auto my-2 h-1 max-w-md rounded border-0 bg-gray-100 md:my-4" />
-                        <div className="flex flex-row flex-wrap justify-center">
-                            {[
-                                {
-                                    icon: BeakerIcon,
-                                    title: "Game Design",
-                                    imageRef: "/class-prog-1.png",
-                                },
-                                {
-                                    icon: CodeBracketIcon,
-                                    title: "Game Programming",
-                                    imageRef: "/class-prog-1.png",
-                                },
-                                {
-                                    icon: PaintBrushIcon,
-                                    title: "2D Art & Animation",
-                                    imageRef: "/class-prog-1.png",
-                                },
-                                {
-                                    icon: CubeIcon,
-                                    title: "3D Art & Animation",
-                                    imageRef: "/class-prog-1.png",
-                                },
-                                {
-                                    icon: SpeakerWaveIcon,
-                                    title: "Game Sound",
-                                    imageRef: "/class-prog-1.png",
-                                },
-                            ].map((element) => (
-                                <figure key={element.title} className="relative h-96 w-96 p-5">
-                                    <Image
-                                        className="h-full w-full rounded-xl object-cover object-center shadow-xl"
-                                        src={element.imageRef}
-                                        alt={element.title}
-                                        width={250}
-                                        height={140}
-                                    />
-                                    <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 flex-row items-center justify-between gap-2 rounded-xl border border-white bg-white/75 px-6 py-4 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                                        <element.icon className="h-6 w-6" color="black" />
-                                        <Typography
-                                            variant="h5"
-                                            color="blue-gray"
-                                            className="flex-grow"
-                                        >
-                                            {element.title}
-                                        </Typography>
-                                    </figcaption>
-                                </figure>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div
-                    id="talent-group"
-                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-20"
-                >
-                    <Image
-                        className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
-                        src={"/develop.webp"}
-                        width={518 / 2}
-                        height={705 / 2}
-                        alt=""
-                    />
-                    <div className="flex max-w-5xl flex-col gap-2">
-                        <Typography
-                            variant="h2"
-                            className="text-center font-serif font-medium sm:text-6xl"
-                        >
-                            Create and Publish Games
-                        </Typography>
-                        <Typography variant="small" color="light-gray" className="text-center">
-                            Talent Group
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            className="my-2 text-center sm:text-3xl lg:text-4xl"
-                        >
-                            Develop a game with a team from ideation to publishing. No experience
-                            required.
-                        </Typography>
-                    </div>
-                    <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                    <div className="max-w-3xl">
-                        {[
-                            {
-                                gameTitle: "Highway Core",
-                                studioName: "Lifelessplay Productions",
-                                batch: "5",
-                                screenshotRefs: [
-                                    "/highway-core-1.png",
-                                    "/highway-core-1.png",
-                                    "/highway-core-3.png",
-                                ],
-                                description:
-                                    "You are in the middle of a busy highway filled with trucks and cars. Shoot your way through an infinite horde of enemies with the various weapons that you can use! Can you set the highest score out of everyone else?",
-                                itchIoLink: "https://bgdc.itch.io/highway-core",
-                            },
-                            {
-                                gameTitle: "Wobble",
-                                studioName: "Studio Name",
-                                batch: "X",
-                                screenshotRefs: ["/wobble-1.png", "/wobble-2.png"],
-                                description:
-                                    "Welcome to Wobble where your life is on the edge, literally. You are on an ever-changing platform. Your goal is to keep the platform relatively stable by moving around to different spots on the platform until all of the blocks are set in stone.",
-                                itchIoLink: "https://bgdc.itch.io/",
-                            },
-                            {
-                                gameTitle: "Ruins of the Schecnavian",
-                                studioName: "Protecat",
-                                batch: "X",
-                                screenshotRefs: ["/ruins-1.png", "/ruins-2.png"],
-                                description:
-                                    "You are Upin, an adventurous scavenger for ScavenGo Inc. One day, you received a task from the higher-ups to scavenge the Ruins of the Schecnavians. In order to complete the task, you are given a device that allows you to warp between worlds. With a blazing adventurous spirit, you set off to the Ruins of the Schecnavians, unaware of the horrors within. Ruins of the Schecnavians is a tile-based puzzle game where you must use a warping device to pass through obstacles to win the game.",
-                                itchIoLink: "https://bgdc.itch.io/",
-                            },
-                        ].map((element, i) => (
-                            <div key={i}>
-                                <div className="flex flex-col items-center gap-3 text-center">
-                                    <div>
-                                        <Typography
-                                            variant="h3"
-                                            className="text-center font-serif font-medium sm:text-5xl"
-                                        >
-                                            {element.gameTitle}
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="sm:text-xl"
-                                        >{`${element.studioName} | Batch ${element.batch}`}</Typography>
-                                    </div>
-                                    <Carousel
-                                        className="rounded-xl"
-                                        autoplayDelay={8000 + i * 1000}
-                                        autoplay
-                                        loop
-                                    >
-                                        {element.screenshotRefs.map((ssRef, i) => (
-                                            <Image
-                                                key={i}
-                                                src={ssRef}
-                                                alt={`${
-                                                    element.gameTitle
-                                                }-screenshot${i.toString()}`}
-                                                className="h-full w-full object-cover"
-                                                width={1200}
-                                                height={680}
-                                            />
-                                        ))}
-                                    </Carousel>
-                                    <Typography variant="paragraph" className="w-full text-left">
-                                        {element.description}
-                                    </Typography>
-                                    <a href={element.itchIoLink}>
-                                        <Button className="my-2" color="orange">
-                                            Try on Itch.io
-                                        </Button>
-                                    </a>
-                                </div>
-                                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                            </div>
-                        ))}
                     </div>
                 </div>
                 <div id="footer"></div>

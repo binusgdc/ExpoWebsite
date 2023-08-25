@@ -15,7 +15,7 @@ export default function BgdcNav() {
                 color="blue-gray"
                 className="flex flex-row items-center p-1 text-xl font-normal"
             >
-                <Link href={"/#find-us"}>Find Us</Link>
+                <Link href={"/#about-us"}>About</Link>
             </Typography>
             <Typography
                 as="li"
@@ -32,6 +32,14 @@ export default function BgdcNav() {
                 className="flex flex-row items-center p-1 text-xl font-normal"
             >
                 <Link href={"/#talent-group"}>Talent Group</Link>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="flex flex-row items-center p-1 text-xl font-normal"
+            >
+                <Link href={"/#find-us"}>Find Us</Link>
             </Typography>
             <Typography
                 as="li"
@@ -64,7 +72,7 @@ export default function BgdcNav() {
 
                         <Typography
                             variant="small"
-                            className="mr-4 cursor-pointer py-1.5 font-medium lg:text-xl"
+                            className="mr-4 cursor-pointer py-1.5 font-medium lg:text-xs xl:text-xl"
                         >
                             Binus Game Development Club
                         </Typography>
