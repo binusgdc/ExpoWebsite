@@ -34,6 +34,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
                         name="description"
                         content="Meet Binus Game Development Club at Expo 2023"
                     />
+                    <meta property="og:image" content="/play-observe-develop-1.jpg" />
                 </Head>
                 <Component {...pageProps} />
             </ThemeProvider>
