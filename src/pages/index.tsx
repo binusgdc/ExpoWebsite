@@ -431,12 +431,12 @@ export default function Home() {
                                 studioName: "Pink Salamander Productions",
                                 batch: "6",
                                 screenshotRefs: [
-                                    "/yami-6.png",
-                                    "/yami-1.png",
-                                    "/yami-2.png",
-                                    "/yami-3.png",
-                                    "/yami-4.png",
-                                    "/yami-5.png",
+                                    "/yami-6.webp",
+                                    "/yami-1.webp",
+                                    "/yami-2.webp",
+                                    "/yami-3.webp",
+                                    "/yami-4.webp",
+                                    "/yami-5.webp",
                                 ],
                                 description:
                                     "In this game, the player takes on the character named Yami. She receives a strange vision that she believes to be her mother calling her to the surface. Before she has a chance to reach out, her vision gets increasingly blurry as she wakes up from her slumber. Determined, she has set a new goal to reach the surface to follow the vision that she saw, as she tries to search for her long-lost mother. She gathers all her items along with her trusty staff to try to escape the underworld.",
@@ -485,7 +485,7 @@ export default function Home() {
                                                 ).toString()}`}
                                                 className="h-full w-full object-cover"
                                                 width={1200}
-                                                height={680}
+                                                height={720}
                                             />
                                         ))}
                                     </Carousel>
