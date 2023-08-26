@@ -341,7 +341,7 @@ export default function Home() {
                                         <CardHeader
                                             shadow={false}
                                             floated={false}
-                                            className="m-0 w-full flex-grow rounded-r-none"
+                                            className="m-0 w-full flex-grow rounded-lg sm:rounded-r-none"
                                         >
                                             <Image
                                                 src={element.imageRef}
