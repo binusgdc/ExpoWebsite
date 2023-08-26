@@ -138,9 +138,9 @@ export default function Home() {
                         Play. Observe. Develop.
                     </Typography>
                     <br />
-                    <div className="flex w-full max-w-3xl flex-col items-center justify-start gap-10">
-                        <div className="grid h-64 w-full grid-cols-2 place-items-stretch gap-10">
-                            <div>
+                    <div className="flex w-full max-w-3xl flex-col items-center justify-start gap-14 2xl:gap-10">
+                        <div className="grid w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
+                            <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
                                     className="mb-1 text-left font-serif font-medium"
@@ -148,36 +148,88 @@ export default function Home() {
                                     A Passion for Games
                                 </Typography>
                                 <Typography variant="paragraph" className="pr-5 text-justify">
-                                    history. principles. who this club is for and what we do.
-                                    mention the indonesian game dev industry.
+                                    Founded in 2013, BGDC is a welcoming and supportive place for
+                                    people passionate and creative about games. We strive to unlock
+                                    the potential of the game development industry in Indonesia
+                                    through education, public events and member activities.
                                 </Typography>
                             </div>
-                            <div className="w-full border">
-                                <img className="object-cover" src="/" />
+                            <div className="mx-auto max-h-96 w-full max-w-md rounded-xl bg-[#62afe7]">
+                                <Image
+                                    className="h-full w-full rounded-xl object-scale-down object-center"
+                                    src="/play-observe-develop-1.jpg"
+                                    alt="mascots: play, observe, develop"
+                                    width={1500}
+                                    height={900}
+                                />
                             </div>
                         </div>
-
-                        <div className="grid h-64 w-full grid-cols-2 place-items-stretch gap-10">
-                            <div className="w-full border">
-                                <img className="object-cover" src="/" />
-                            </div>
-                            <div>
+                        <hr className="mx-auto h-1 w-full max-w-sm rounded border-0 bg-gray-100 2xl:hidden" />
+                        <div className="grid h-fit w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
+                            <Carousel
+                                className="mx-auto max-h-96 max-w-md"
+                                navigation={(_props) => <></>}
+                                loop
+                                autoplay
+                                autoplayDelay={10000}
+                            >
+                                <div className="flex h-full w-full flex-col items-stretch gap-2">
+                                    <Image
+                                        className="h-full w-full rounded-xl object-cover"
+                                        src="/boms-polka.png"
+                                        alt="BGDC Minecraft Skyblock"
+                                        width={1080}
+                                        height={720}
+                                    />
+                                    <Typography variant="small" color="white">
+                                        {"BGDC Minecraft Skyblock. Credit: Xevi"}
+                                    </Typography>
+                                </div>
+                                <div className="flex h-full w-full flex-col items-stretch gap-2">
+                                    <Image
+                                        className="h-full w-full rounded-xl object-cover"
+                                        src="/gathering-omega-strikers.png"
+                                        alt="Omega Strikers Gathering"
+                                        width={1080}
+                                        height={720}
+                                    />
+                                    <Typography variant="small" color="white">
+                                        {"Gathering: Omega Strikers"}
+                                    </Typography>
+                                </div>
+                                <div className="flex h-full w-full flex-col items-stretch gap-2">
+                                    <Image
+                                        className="h-full w-full rounded-xl object-cover"
+                                        src="/ikea-raid-1.jpg"
+                                        alt="BGDC Ikea Raid 2022"
+                                        width={1080}
+                                        height={720}
+                                    />
+                                    <Typography variant="small" color="white">
+                                        {"BGDC Ikea Raid 2022"}
+                                    </Typography>
+                                </div>
+                            </Carousel>
+                            <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
                                     className="mb-1 text-left font-serif font-medium"
                                 >
                                     Community
                                 </Typography>
-                                <Typography variant="paragraph" className="pr-5 text-justify">
-                                    {
-                                        "As a Discord-based organisation, BGDC facilitates its members to interact with ease according to their interests; including art corner, our own Minecraft server, a variety of games, and networking. Every month, BGDC hosts gatherings (both online and onsite) full of fun activities."
-                                    }
+                                <Typography
+                                    variant="paragraph"
+                                    className="pr-5 text-left 2xl:text-justify"
+                                >
+                                    {`Community is the lifeblood of BGDC. Join a vibrant and diverse collection of enthusiasts who love to share their many passions. 
+                                        Connect with fellow writers, designers, artists, programmers and more, some of which have industry experience.
+                                        Bond with monthly member gatherings and subcommunities. There's a little something for everyone here.`}
                                 </Typography>
                             </div>
                         </div>
-
-                        <div className="grid h-64 w-full grid-cols-2 place-items-stretch gap-10">
-                            <div>
+                        <hr className="mx-auto h-1 w-full max-w-sm rounded border-0 bg-gray-100 2xl:hidden" />
+                        <div className="grid w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
+                            <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
                                     className="mb-1 text-left font-serif font-medium"
@@ -185,13 +237,29 @@ export default function Home() {
                                     Events
                                 </Typography>
                                 <Typography variant="paragraph" className="pr-5 text-justify">
-                                    {
-                                        "Indonesia’s game development industry has a great potential as its people gains fluency in technology. On 12 Januari 2015, BINUS Game Development Club (BGDC) was officially established to educate and accommodate any Binusian interested in game development."
-                                    }
+                                    {`As a Binus UKM, we hold yearly events to further our vision and
+                                    mission, from `}
+                                    <Link
+                                        href="/#talent-group"
+                                        className="underline hover:text-blue-300"
+                                    >
+                                        mentoring programs
+                                    </Link>
+                                    {` to webinars to indie game festivals: our contributions to Indonesia's game development industry.
+                                    For members, it's a fantastic opportunity to level up critical soft skills and hard skills, and to have fun working together.`}
                                 </Typography>
                             </div>
-                            <div className="w-full border">
-                                <img className="object-cover" src="/" />
+                            <div className="mx-auto flex max-h-96 w-full max-w-md flex-col items-stretch gap-2">
+                                <Image
+                                    className="h-full w-full rounded-xl object-cover"
+                                    src="/webinar-igf-2022.png"
+                                    alt="Webinar IGF 2022: Insight on Indonesia's Game Industry"
+                                    width={1080}
+                                    height={720}
+                                />
+                                <Typography variant="small" color="white">
+                                    {"Webinar IGF 2022: Insight on Indonesia's Game Industry"}
+                                </Typography>
                             </div>
                         </div>
                     </div>
@@ -208,7 +276,7 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
-                    <div className="flex max-w-5xl flex-col gap-2">
+                    <div className="flex max-w-5xl flex-col gap-3">
                         <Typography
                             variant="h2"
                             className="text-center font-serif text-6xl font-medium"
@@ -237,15 +305,15 @@ export default function Home() {
                                     imageRef: "/game-design-1.png",
                                     lead: "Get Creative",
                                     description:
-                                        "Discover the essence of what makes games great. Learn about mechanics, story, and other design elements through vivid case studies.",
+                                        "Discover the essence of what makes games great. Learn about mechanics, story, balance and other key design concepts through vivid case studies.",
                                 },
                                 {
                                     icon: CodeBracketIcon,
                                     title: "Game Programming",
                                     imageRef: "/class-prog-1.png",
-                                    lead: "Four Eyes Gang",
+                                    lead: "It's Alive!",
                                     description:
-                                        "This class tutors the basis of game creation that is programming in Unity, both 2D and 3D with C# language.",
+                                        "Bring games to life in 2D and 3D with the Unity game engine and the C# programming language.",
                                 },
                                 {
                                     icon: PaintBrushIcon,
@@ -259,7 +327,7 @@ export default function Home() {
                                     icon: CubeIcon,
                                     title: "3D Art & Animation",
                                     imageRef: "/3d-art-1.png",
-                                    lead: "Don’t Crash-",
+                                    lead: "Sculpt the World",
                                     description:
                                         "Our 3D class tutors modelling with Blender, from the bottom up! Includes objects, environments, characters, and how to import them in Unity.                                    ",
                                 },
@@ -267,20 +335,17 @@ export default function Home() {
                                     icon: SpeakerWaveIcon,
                                     title: "Game Sound",
                                     imageRef: "/sound-1.png",
-                                    lead: "Music Galore",
+                                    lead: "Hey, Listen!",
                                     description:
-                                        "The sound class focuses on musics and sound effects with Audacity and Ableton. Experiment on various themes and techniques to immerse the audience~",
+                                        "Compose music and sound effects with Audacity and Ableton. Experiment with various themes and techniques for that immersive player experience.",
                                 },
                             ].map((element) => {
                                 return (
-                                    <Card
-                                        key={element.title}
-                                        className="w-full max-w-[36rem] flex-row"
-                                    >
+                                    <Card key={element.title} className="w-full max-w-3xl flex-row">
                                         <CardHeader
                                             shadow={false}
                                             floated={false}
-                                            className="m-0 w-2/5 shrink-0 rounded-r-none"
+                                            className="m-0 w-full flex-grow rounded-r-none"
                                         >
                                             <Image
                                                 src={element.imageRef}
@@ -290,7 +355,7 @@ export default function Home() {
                                                 height={1080}
                                             />
                                         </CardHeader>
-                                        <CardBody>
+                                        <CardBody className="w-96">
                                             <div className="mb-4 flex flex-row items-center gap-2">
                                                 <element.icon className="h-5 w-5" />
                                                 <Typography
@@ -329,7 +394,7 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
-                    <div className="flex max-w-5xl flex-col gap-2">
+                    <div className="flex max-w-5xl flex-col gap-3">
                         <Typography
                             variant="h2"
                             className="text-center font-serif font-medium sm:text-6xl"
@@ -351,19 +416,6 @@ export default function Home() {
                     <div className="max-w-3xl">
                         {[
                             {
-                                gameTitle: "Highway Core",
-                                studioName: "Lifelessplay Productions",
-                                batch: "5",
-                                screenshotRefs: [
-                                    "/highway-core-1.png",
-                                    "/highway-core-1.png",
-                                    "/highway-core-3.png",
-                                ],
-                                description:
-                                    "You are in the middle of a busy highway filled with trucks and cars. Shoot your way through an infinite horde of enemies with the various weapons that you can use! Can you set the highest score out of everyone else?",
-                                itchIoLink: "https://bgdc.itch.io/highway-core",
-                            },
-                            {
                                 gameTitle: "Shadow of the Relics",
                                 studioName: "QuantumGlyph Studio",
                                 batch: "6",
@@ -379,13 +431,33 @@ export default function Home() {
                                 itchIoLink: "https://bgdc.itch.io/",
                             },
                             {
-                                gameTitle: "Ruins of the Schecnavian",
-                                studioName: "Protecat",
-                                batch: "X",
-                                screenshotRefs: ["/ruins-1.png", "/ruins-2.png"],
+                                gameTitle: "Yami Hop",
+                                studioName: "Pink Salamander Productions",
+                                batch: "6",
+                                screenshotRefs: [
+                                    "/yami-6.png",
+                                    "/yami-1.png",
+                                    "/yami-2.png",
+                                    "/yami-3.png",
+                                    "/yami-4.png",
+                                    "/yami-5.png",
+                                ],
                                 description:
-                                    "You are Upin, an adventurous scavenger for ScavenGo Inc. One day, you received a task from the higher-ups to scavenge the Ruins of the Schecnavians. In order to complete the task, you are given a device that allows you to warp between worlds. With a blazing adventurous spirit, you set off to the Ruins of the Schecnavians, unaware of the horrors within. Ruins of the Schecnavians is a tile-based puzzle game where you must use a warping device to pass through obstacles to win the game.",
+                                    "In this game, the player takes on the character named Yami. She receives a strange vision that she believes to be her mother calling her to the surface. Before she has a chance to reach out, her vision gets increasingly blurry as she wakes up from her slumber. Determined, she has set a new goal to reach the surface to follow the vision that she saw, as she tries to search for her long-lost mother. She gathers all her items along with her trusty staff to try to escape the underworld.",
                                 itchIoLink: "https://bgdc.itch.io/",
+                            },
+                            {
+                                gameTitle: "Highway Core",
+                                studioName: "Lifelessplay Productions",
+                                batch: "5",
+                                screenshotRefs: [
+                                    "/highway-core-1.png",
+                                    "/highway-core-2.png",
+                                    "/highway-core-3.png",
+                                ],
+                                description:
+                                    "You are in the middle of a busy highway filled with trucks and cars. Shoot your way through an infinite horde of enemies with the various weapons that you can use! Can you set the highest score out of everyone else?",
+                                itchIoLink: "https://bgdc.itch.io/highway-core",
                             },
                         ].map((element, i) => (
                             <div key={i}>
@@ -412,9 +484,9 @@ export default function Home() {
                                             <Image
                                                 key={i}
                                                 src={ssRef}
-                                                alt={`${
-                                                    element.gameTitle
-                                                }-screenshot${i.toString()}`}
+                                                alt={`${element.gameTitle}-screenshot${(
+                                                    i + 1
+                                                ).toString()}`}
                                                 className="h-full w-full object-cover"
                                                 width={1200}
                                                 height={680}
@@ -425,9 +497,9 @@ export default function Home() {
                                         {element.description}
                                     </Typography>
                                     <a href={element.itchIoLink} target="_blank">
-                                        <Button className="my-2" color="orange">
+                                        {/* <Button className="my-2" color="orange">
                                             Try on Itch.io
-                                        </Button>
+                                        </Button> */}
                                     </a>
                                 </div>
                                 <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
@@ -521,47 +593,27 @@ export default function Home() {
                                                     {
                                                         title: "Get to Know BGDC",
                                                         timeSub: "29th August 2023 | 19:00 - 20:30",
-                                                        body: `The key to more success is to have a lot
-                                                    of pillows. Put it this way, it took me
-                                                    twenty five years to get these plants,
-                                                    twenty five years of blood sweat and
-                                                    tears, and I&apos;m never giving up,
-                                                    I&apos;m just getting started. I&apos;m
-                                                    up to something. Fan luv.`,
+                                                        body: `BGDC-curious? Have all your questions answered in this live online session with us!`,
                                                     },
                                                     {
-                                                        title: "Talent Group Showcase",
+                                                        title: "Talent Group Showcase I",
                                                         timeSub: "30th August 2023 | 19:00 - 20:30",
-                                                        body: `The key to more success is to have a lot
-                                                    of pillows. Put it this way, it took me
-                                                    twenty five years to get these plants,
-                                                    twenty five years of blood sweat and
-                                                    tears, and I&apos;m never giving up,
-                                                    I&apos;m just getting started. I&apos;m
-                                                    up to something. Fan luv.`,
+                                                        body: `Talent Group is BGDC's ultimate game dev program. 
+                                                        Three teams will share how they went from drawing board to finished game in just three months, and how you could do it too. 
+                                                        Ask them anything!`,
                                                     },
                                                     {
-                                                        title: "Talent Group Showcase",
+                                                        title: "Talent Group Showcase II",
                                                         timeSub: "31st August 2023 | 19:00 - 20:30",
-                                                        body: `The key to more success is to have a lot
-                                                    of pillows. Put it this way, it took me
-                                                    twenty five years to get these plants,
-                                                    twenty five years of blood sweat and
-                                                    tears, and I&apos;m never giving up,
-                                                    I&apos;m just getting started. I&apos;m
-                                                    up to something. Fan luv.`,
+                                                        body: `Talent Group is BGDC's ultimate game dev program. 
+                                                        Three teams will share how they went from drawing board to finished game in just three months, and how you could do it too. 
+                                                        Ask them anything!`,
                                                     },
                                                     {
                                                         title: "Coffee Talk",
                                                         timeSub:
                                                             "1st September 2023 | 19:00 - 20:30",
-                                                        body: `The key to more success is to have a lot
-                                                of pillows. Put it this way, it took me
-                                                twenty five years to get these plants,
-                                                twenty five years of blood sweat and
-                                                tears, and I&apos;m never giving up,
-                                                I&apos;m just getting started. I&apos;m
-                                                up to something. Fan luv.`,
+                                                        body: `Grab a coffee (or tea) and tune in to our expo finale. Coffee Talk is a gathering format where we come together to chat, share experiences and have a good time. Come take a seat?`,
                                                     },
                                                 ].map((element, i, arr) => (
                                                     <TimelineItem key={i}>
@@ -632,7 +684,7 @@ export default function Home() {
                                     <Carousel className="my-4 w-full">
                                         <Image
                                             className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-kmg.png"}
+                                            src={"/position-kmg-m.webp"}
                                             alt={"position of BGDC in kemanggisan expo"}
                                             width={1213}
                                             height={559}
@@ -658,7 +710,7 @@ export default function Home() {
                                     <Carousel className="my-4 w-full">
                                         <Image
                                             className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-bdg.jpg"}
+                                            src={"/position-bdg-m.webp"}
                                             alt={"position of BGDC in bandung expo"}
                                             width={880}
                                             height={495}
@@ -684,7 +736,7 @@ export default function Home() {
                                     <Carousel className="my-4 w-full">
                                         <Image
                                             className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-as.png"}
+                                            src={"/position-as-m.webp"}
                                             alt={"position of BGDC in alam sutera expo"}
                                             width={1267}
                                             height={631}
