@@ -19,10 +19,6 @@ export default function Faq() {
 
     return (
         <>
-            <Head>
-                <title>Join BGDC</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
             <BgdcNav />
             <main className="flex min-h-screen flex-col items-center bg-magenta 2xl:min-h-[1200px]">
                 <div id="content" className="relative mt-16 h-full w-full max-w-[1920px] px-5">
