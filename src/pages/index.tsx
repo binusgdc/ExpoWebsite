@@ -610,7 +610,7 @@ export default function Home() {
                                                         title: "Coffee Talk",
                                                         timeSub:
                                                             "1st September 2023 | 19:00 - 20:30",
-                                                        body: `Grab a coffee (or tea) and tune in to our expo finale. Coffee Talk is a gathering format where we come together to chat, share experiences and have a good time. Come take a seat?`,
+                                                        body: `Grab a coffee (or tea) and tune in to our expo finale. Coffee Talk is a gathering format where we come together to chat, share experiences and have a good time. Come sit with us?`,
                                                     },
                                                 ].map((element, i, arr) => (
                                                     <TimelineItem key={i}>
