@@ -30,7 +30,10 @@ const MyApp: AppType<{ session: Session | null }> = ({
                 <Head>
                     <title>Join BGDC</title>
                     <link rel="icon" href="/favicon.ico" />
-                    <meta name="description" content="Binus Game Development Club in Expo 2023" />
+                    <meta
+                        name="description"
+                        content="Meet Binus Game Development Club at Expo 2023"
+                    />
                 </Head>
                 <Component {...pageProps} />
             </ThemeProvider>
