@@ -334,7 +334,10 @@ export default function Home() {
                                 },
                             ].map((element) => {
                                 return (
-                                    <Card key={element.title} className="w-full max-w-3xl flex-row">
+                                    <Card
+                                        key={element.title}
+                                        className="w-full max-w-3xl sm:flex-row"
+                                    >
                                         <CardHeader
                                             shadow={false}
                                             floated={false}
@@ -348,7 +351,7 @@ export default function Home() {
                                                 height={1080}
                                             />
                                         </CardHeader>
-                                        <CardBody className="w-96">
+                                        <CardBody className="sm:w-96">
                                             <div className="mb-4 flex flex-row items-center gap-2">
                                                 <element.icon className="h-5 w-5" />
                                                 <Typography
