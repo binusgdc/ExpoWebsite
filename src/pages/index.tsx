@@ -336,12 +336,12 @@ export default function Home() {
                                 return (
                                     <Card
                                         key={element.title}
-                                        className="w-full max-w-3xl sm:flex-row"
+                                        className="w-full max-w-3xl md:flex-row"
                                     >
                                         <CardHeader
                                             shadow={false}
                                             floated={false}
-                                            className="m-0 w-full flex-grow rounded-lg sm:rounded-r-none"
+                                            className="m-0 w-full flex-grow rounded-lg md:rounded-r-none"
                                         >
                                             <Image
                                                 src={element.imageRef}
