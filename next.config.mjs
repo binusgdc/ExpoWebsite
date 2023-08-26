@@ -18,7 +18,14 @@ const config = {
         locales: ["en"],
         defaultLocale: "en",
     },
-    redirects: () => Promise.resolve([]),
+    redirects: () =>
+        Promise.resolve([
+            {
+                source: "/daftar-ulang",
+                destination: "/",
+                permanent: false,
+            },
+        ]),
 }
 
 export default config
