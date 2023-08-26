@@ -119,7 +119,7 @@ export default function Home() {
                 </div>
                 <div
                     id="about-bgdc"
-                    className="relative flex min-h-screen flex-col items-center bg-smagenta px-5 py-20"
+                    className="relative flex flex-col items-center bg-smagenta px-5 py-20"
                 >
                     <Image
                         className="left-10 top-80 hidden 2xl:absolute 2xl:block"
@@ -147,7 +147,7 @@ export default function Home() {
                                 >
                                     A Passion for Games
                                 </Typography>
-                                <Typography variant="paragraph" className="pr-5 text-justify">
+                                <Typography variant="paragraph" className="pr-5">
                                     Founded in 2013, BGDC is a welcoming and supportive place for
                                     people passionate and creative about games. We strive to unlock
                                     the potential of the game development industry in Indonesia
@@ -217,10 +217,7 @@ export default function Home() {
                                 >
                                     Community
                                 </Typography>
-                                <Typography
-                                    variant="paragraph"
-                                    className="pr-5 text-left 2xl:text-justify"
-                                >
+                                <Typography variant="paragraph" className="pr-5">
                                     {`Community is the lifeblood of BGDC. Join a vibrant and diverse collection of enthusiasts who love to share their many passions. 
                                         Connect with fellow writers, designers, artists, programmers and more, some of which have industry experience.
                                         Bond with monthly member gatherings and subcommunities. There's a little something for everyone here.`}
@@ -236,7 +233,7 @@ export default function Home() {
                                 >
                                     Events
                                 </Typography>
-                                <Typography variant="paragraph" className="pr-5 text-justify">
+                                <Typography variant="paragraph" className="pr-5">
                                     {`As a Binus UKM, we hold yearly events to further our vision and
                                     mission, from `}
                                     <Link
@@ -509,7 +506,7 @@ export default function Home() {
                 </div>
                 <div
                     id="find-us"
-                    className="relative flex min-h-screen flex-col items-center bg-magenta px-5 py-20"
+                    className="relative flex flex-col items-center bg-magenta px-5 py-20"
                 >
                     <div className="w-full max-w-4xl">
                         <div>
