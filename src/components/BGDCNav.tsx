@@ -80,11 +80,15 @@ export default function BgdcNav() {
                 </Link>
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{navList}</div>
-                    <a href="https://bit.ly/StudentOrganizationsRegistrationB2027" target="_blank">
-                        <Button color="orange" size="lg" className="hidden lg:inline-block">
-                            <span>Join Up</span>
-                        </Button>
-                    </a>
+                    {/* <a href="https://bit.ly/StudentOrganizationsRegistrationB2027" target="_blank"> */}
+                    <Button
+                        color="orange"
+                        size="lg"
+                        className="hidden cursor-default bg-gray-400 lg:inline-block"
+                    >
+                        <span>Join Up</span>
+                    </Button>
+                    {/* </a> */}
                     <IconButton
                         variant="text"
                         className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -126,11 +130,16 @@ export default function BgdcNav() {
             </div>
             <MobileNav open={openNav}>
                 {navList}
-                <a href="https://bit.ly/StudentOrganizationsRegistrationB2027" target="_blank">
-                    <Button color="orange" variant="gradient" size="sm" fullWidth className="mb-2">
-                        <span>Join Up</span>
-                    </Button>
-                </a>
+                {/* <a href="https://bit.ly/StudentOrganizationsRegistrationB2027" target="_blank"> */}
+                <Button
+                    color="orange"
+                    size="sm"
+                    fullWidth
+                    className="mb-2 cursor-default !bg-gray-400"
+                >
+                    <span>Join Up</span>
+                </Button>
+                {/* </a> */}
             </MobileNav>
         </Navbar>
     )
