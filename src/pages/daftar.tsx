@@ -17,7 +17,7 @@ export default function Daftar() {
                     Level Up with BGDC
                 </Typography>
                 <div className="flex flex-row flex-wrap justify-center gap-10">
-                    <Card className="flex min-h-[500px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 shadow-2xl">
+                    <Card className="flex min-h-[422px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 shadow-2xl">
                         <div className="flex flex-col items-center gap-2">
                             <Typography
                                 variant="h2"
@@ -84,7 +84,7 @@ export default function Daftar() {
                             </Button>
                         </a>
                     </Card>
-                    <Card className="relative flex min-h-[500px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 opacity-60 shadow-2xl">
+                    <Card className="relative flex min-h-[422px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 opacity-60 shadow-2xl">
                         <Typography
                             variant="h2"
                             color="black"
