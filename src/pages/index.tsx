@@ -4,6 +4,9 @@ import {
     CardBody,
     CardHeader,
     Carousel,
+    Popover,
+    PopoverContent,
+    PopoverHandler,
     Tab,
     TabPanel,
     Tabs,
@@ -28,6 +31,7 @@ import {
     ClockIcon,
     CalendarIcon,
     CalendarDaysIcon,
+    ArrowUpRightIcon,
 } from "@heroicons/react/24/solid"
 import Head from "next/head"
 import Image from "next/image"
@@ -35,10 +39,19 @@ import BgdcNav from "~/components/BGDCNav"
 import Link from "next/link"
 import BgdcFooter from "~/components/BGDCFooter"
 import { useState } from "react"
+import { FaCopy, FaDiscord, FaLine } from "react-icons/fa"
+import { setTimeout } from "timers/promises"
+import toast, { Toaster } from "react-hot-toast"
 
 export default function Home() {
+    const [lineHover, setLineHover] = useState(false)
+    const [discordHover, setDiscordHover] = useState(false)
+
     return (
         <>
+            <div>
+                <Toaster position="bottom-center" />
+            </div>
             <BgdcNav />
             <main>
                 <div
@@ -98,6 +111,60 @@ export default function Home() {
                                         Our Games
                                     </Button>
                                 </Link>
+                            </div>
+                            <div className="flex w-full flex-col gap-1">
+                                <Typography
+                                    variant="small"
+                                    className="mb-1 text-center lg:text-left"
+                                >
+                                    Contact:
+                                </Typography>
+                                <div className="flex flex-col items-center gap-2 lg:items-start lg:px-0">
+                                    <div className="flex flex-row items-center gap-2">
+                                        <FaLine />
+                                        <Typography
+                                            className="hover:cursor-pointer"
+                                            variant="small"
+                                            onMouseEnter={() => setLineHover(true)}
+                                            onMouseLeave={() => setLineHover(false)}
+                                            onClick={async () => {
+                                                await navigator.clipboard.writeText(
+                                                    "reynaldochandra61103"
+                                                )
+                                                setLineHover(false)
+                                                toast.success("LINE ID copied")
+                                            }}
+                                        >
+                                            reynaldochandra61103
+                                        </Typography>
+                                        <FaCopy
+                                            className={`${
+                                                lineHover ? `opacity-100` : `opacity-0`
+                                            } transition-opacity`}
+                                        />
+                                    </div>
+                                    <div className="flex flex-row items-center gap-2">
+                                        <FaDiscord />
+                                        <Typography
+                                            className="hover:cursor-pointer"
+                                            variant="small"
+                                            onMouseEnter={() => setDiscordHover(true)}
+                                            onMouseLeave={() => setDiscordHover(false)}
+                                            onClick={async () => {
+                                                await navigator.clipboard.writeText("pickle")
+                                                setDiscordHover(false)
+                                                toast.success("Discord username copied")
+                                            }}
+                                        >
+                                            pickle
+                                        </Typography>
+                                        <FaCopy
+                                            className={`${
+                                                discordHover ? `opacity-100` : `opacity-0`
+                                            } transition-opacity`}
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
