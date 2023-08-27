@@ -12,7 +12,7 @@ export default function Daftar() {
                 <Toaster position="bottom-center" />
             </div>
             <BgdcNav />
-            <main className="flex min-h-screen flex-col items-center gap-10 bg-magenta px-2 py-10">
+            <main className="flex min-h-screen flex-col items-center gap-5 bg-magenta px-2 py-5">
                 <Typography variant="h1" className="text-center font-serif font-medium">
                     Level Up with BGDC
                 </Typography>
@@ -90,7 +90,7 @@ export default function Daftar() {
                             color="black"
                             className="text-center font-serif text-2xl font-medium"
                         >
-                            Registration for B26
+                            Registration for B26 and lower
                         </Typography>
                         <div className="absolute left-0 top-1/2 flex w-full flex-grow items-center justify-center">
                             <Typography
