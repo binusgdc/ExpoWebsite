@@ -84,81 +84,12 @@ export default function Faq() {
                                         {" "}
                                         <strong className="font-semibold">BUKAN.</strong> BGDC
                                         merupakan organisasi kemahasiswaan yang fokus pada
-                                        pembelajaran dan pengembangan game, bukan kegiatan gaming.
+                                        pembelajaran dan pengembangan game, bukan kegiatan gaming
+                                        itu sendiri.{" "}
+                                        <strong className="font-semibold">Meskipun begitu,</strong>{" "}
+                                        kami mempunyai subkomunitas gaming yang aktif serta sering
+                                        mengadakan gathering <i>gametime</i> untuk member.
                                     </Typography>
-                                    {/* <br />
-                                    <Typography variant="h5" color="white" className="font-medium">
-                                        Apa saja aktivitas di BGDC?
-                                    </Typography>
-                                    <ul>
-                                        <li>
-                                            <Typography
-                                                variant="h6"
-                                                color="white"
-                                                className="font-medium underline"
-                                            >
-                                                Kelas Game Development
-                                            </Typography>
-                                            <Typography variant="paragraph" color="white">
-                                                {`Kelas untuk member BGDC yang ingin mempelajari ilmu
-                                                Game Development, BGDC menyediakan 6 kelas, yaitu
-                                                Game Programming, OOGP (Object Oriented Game
-                                                Programming), 2D Art, 3D Art, dan Sound.`}
-                                            </Typography>
-                                        </li>
-                                        <br />
-                                        <li>
-                                            <Typography
-                                                variant="h6"
-                                                color="white"
-                                                className="font-medium underline"
-                                            >
-                                                Talent Group
-                                            </Typography>
-                                            <Typography color="white">
-                                                {`Salah satu aktivitas bagi para member BGDC, dimana
-                                                para member yang mendaftar Talent Group akan dibagi
-                                                dalam suatu kelompok. Setiap kelompok akan bekerja
-                                                sama dalam mengembangkan sebuah game dari awal
-                                                hingga akhir, dalam jangka waktu setengah semester.`}
-                                            </Typography>
-                                        </li>
-                                        <br />
-                                        <li>
-                                            <Typography
-                                                variant="h6"
-                                                color="white"
-                                                className="font-medium underline"
-                                            >
-                                                Jam Buddies
-                                            </Typography>
-                                            <Typography color="white">
-                                                {`Program khusus bagi member BGDC yang ingin berkompetisi 
-                                                di bidang game development. Selain berpartisipasi dalam kompetisi, 
-                                                member juga akan mendapatkan dukungan, bimbingan, dan kesempatan 
-                                                untuk berkolaborasi dengan member lain. 
-                                                Program ini memungkinkan member merasakan pengalaman kompetitif 
-                                                yang seru sambil mengembangkan skill game development.`}
-                                            </Typography>
-                                        </li>
-                                        <br />
-                                        <li>
-                                            <Typography
-                                                variant="h6"
-                                                color="white"
-                                                className="font-medium underline"
-                                            >
-                                                Gathering
-                                            </Typography>
-                                            <Typography color="white">
-                                                {`BGDC mengadakan gathering online mingguan melalui server Discord, 
-                                                di mana para member dapat berinteraksi dan bermain bersama. 
-                                                Kami juga mengadakan gathering onsite di mana para member untuk 
-                                                berjumpa langsung dengan member lainnya di tempat dan waktu yang 
-                                                telah disepakati bersama.`}
-                                            </Typography>
-                                        </li>
-                                    </ul> */}
                                     <br />
                                     <Typography variant="h5" color="white" className="font-medium">
                                         BGDC membuka cabang di kampus mana saja?
@@ -332,7 +263,7 @@ export default function Faq() {
                                     </Typography>
                                     <br />
                                     <Typography variant="h5" color="white" className="font-medium">
-                                        Apakah biaya sudah termasuk seluruh kelas?
+                                        Apakah biaya kelas sudah termasuk seluruh kelas?
                                     </Typography>
                                     <Typography variant="paragraph" color="white">
                                         Iya. Jika kalian telah membayar uang kelas, maka kalian akan
