@@ -4,9 +4,6 @@ import {
     CardBody,
     CardHeader,
     Carousel,
-    Popover,
-    PopoverContent,
-    PopoverHandler,
     Tab,
     TabPanel,
     Tabs,
@@ -28,19 +25,14 @@ import {
     SpeakerWaveIcon,
     ChevronDownIcon,
     MapPinIcon,
-    ClockIcon,
-    CalendarIcon,
     CalendarDaysIcon,
-    ArrowUpRightIcon,
 } from "@heroicons/react/24/solid"
-import Head from "next/head"
 import Image from "next/image"
 import BgdcNav from "~/components/BGDCNav"
 import Link from "next/link"
 import BgdcFooter from "~/components/BGDCFooter"
 import { useState } from "react"
 import { FaCopy, FaDiscord, FaLine } from "react-icons/fa"
-import { setTimeout } from "timers/promises"
 import toast, { Toaster } from "react-hot-toast"
 
 export default function Home() {
@@ -123,11 +115,18 @@ export default function Home() {
                                     <div className="flex flex-row items-center gap-2">
                                         <FaLine />
                                         <Typography
-                                            className="hover:cursor-pointer"
+                                            className={
+                                                lineHover
+                                                    ? "hover:cursor-pointer"
+                                                    : "hover:cursor-default"
+                                            }
                                             variant="small"
                                             onMouseEnter={() => setLineHover(true)}
                                             onMouseLeave={() => setLineHover(false)}
                                             onClick={async () => {
+                                                if (!lineHover) {
+                                                    return
+                                                }
                                                 await navigator.clipboard.writeText(
                                                     "reynaldochandra61103"
                                                 )
@@ -146,11 +145,18 @@ export default function Home() {
                                     <div className="flex flex-row items-center gap-2">
                                         <FaDiscord />
                                         <Typography
-                                            className="hover:cursor-pointer"
+                                            className={
+                                                discordHover
+                                                    ? "hover:cursor-pointer"
+                                                    : "hover:cursor-default"
+                                            }
                                             variant="small"
                                             onMouseEnter={() => setDiscordHover(true)}
                                             onMouseLeave={() => setDiscordHover(false)}
                                             onClick={async () => {
+                                                if (!discordHover) {
+                                                    return
+                                                }
                                                 await navigator.clipboard.writeText("pickle")
                                                 setDiscordHover(false)
                                                 toast.success("Discord username copied")
