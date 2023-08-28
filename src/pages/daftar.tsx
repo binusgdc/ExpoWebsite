@@ -1,5 +1,6 @@
 import { ArrowUpRightIcon, ExclamationCircleIcon } from "@heroicons/react/24/solid"
 import { Alert, Button, Card, Typography } from "@material-tailwind/react"
+import { WarningRounded } from "@mui/icons-material"
 import { Toaster, toast } from "react-hot-toast"
 import { FaCopy } from "react-icons/fa"
 import BgdcFooter from "~/components/BGDCFooter"
@@ -32,7 +33,17 @@ export default function Daftar() {
                                 icon={<ExclamationCircleIcon className="h-5 w-5" />}
                             >
                                 <Typography variant="small" className="text-xs">
-                                    We can only give merch if you register on-the-spot (onsite).
+                                    - We can only give merch if you register on-the-spot (onsite).<br/>
+                                    - If your region is ALAM SUTERA,<span className="font-bold"> please make sure you register on the right day.</span>
+                                </Typography>
+                            </Alert>
+                            <Alert
+                                className="p-2"
+                                color="red"
+                                icon={<WarningRounded className="h-5 w-5" />}
+                            >
+                                <Typography variant="small" className="text-xs">
+                                    Nomor rekening on the brochure is wrong. Please use the one below.
                                 </Typography>
                             </Alert>
                         </div>
