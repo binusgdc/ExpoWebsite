@@ -34,7 +34,7 @@ export default function Daftar() {
                             >
                                 <Typography variant="small" className="text-xs">
                                     - We can only give merch if you register on-the-spot (onsite).<br/>
-                                    - If your region is ALAM SUTERA,<span className="font-bold"> please make sure you register on the right day.</span>
+                                    - Registering onsite? Please check your WoW schedule.
                                 </Typography>
                             </Alert>
                             <Alert
