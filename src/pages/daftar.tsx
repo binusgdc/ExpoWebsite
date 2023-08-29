@@ -35,7 +35,7 @@ export default function Daftar() {
                                 <Typography variant="small" className="text-xs">
                                     - We can only give merch if you register on-the-spot (onsite).<br/>
                                     - Registering onsite? Please check your WoW schedule.<br/>
-                                    - From Binus@Semarang? Please register according to SADC instruction.
+                                    - Follow registration process according to your region.
                                 </Typography>
                             </Alert>
                             <Alert
