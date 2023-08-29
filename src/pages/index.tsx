@@ -157,12 +157,12 @@ export default function Home() {
                                                 if (!discordHover) {
                                                     return
                                                 }
-                                                await navigator.clipboard.writeText("pickle")
+                                                await navigator.clipboard.writeText("greyze")
                                                 setDiscordHover(false)
                                                 toast.success("Discord username copied")
                                             }}
                                         >
-                                            pickle
+                                            greyze
                                         </Typography>
                                         <FaCopy
                                             className={`${
