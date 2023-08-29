@@ -34,7 +34,8 @@ export default function Daftar() {
                             >
                                 <Typography variant="small" className="text-xs">
                                     - We can only give merch if you register on-the-spot (onsite).<br/>
-                                    - Registering onsite? Please check your WoW schedule.
+                                    - Registering onsite? Please check your WoW schedule.<br/>
+                                    - From Binus@Semarang? Please register according to SADC instruction.
                                 </Typography>
                             </Alert>
                             <Alert
@@ -43,13 +44,13 @@ export default function Daftar() {
                                 icon={<WarningRounded className="h-5 w-5" />}
                             >
                                 <Typography variant="small" className="text-xs">
-                                    Nomor rekening on the brochure is wrong. Please use the one below.
+                                    Nomor rekening on the brochure is wrong. Please use the details below.
                                 </Typography>
                             </Alert>
                         </div>
                         <div className="w-full">
                             <Typography variant="small" className="my-1 w-full text-left">
-                                You will be asked for a registration fee:
+                                Registration fee details:
                             </Typography>
                             <div className="flex w-fit flex-col items-stretch text-left">
                                 <div className="flex flex-col text-left">
