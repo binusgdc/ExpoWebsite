@@ -33,7 +33,6 @@ export default function Daftar() {
                                 icon={<ExclamationCircleIcon className="h-5 w-5" />}
                             >
                                 <Typography variant="small" className="text-xs">
-                                    - We can only give merch if you register on-the-spot (onsite).<br/>
                                     - Registering onsite? Please check your WoW schedule.<br/>
                                     - Follow registration process according to your region.
                                 </Typography>
