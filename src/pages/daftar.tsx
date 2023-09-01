@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, ExclamationCircleIcon } from "@heroicons/react/24/solid"
+import { ArrowUpRightIcon, ExclamationCircleIcon, MapPinIcon } from "@heroicons/react/24/solid"
 import { Alert, Button, Card, Typography } from "@material-tailwind/react"
 import { WarningRounded } from "@mui/icons-material"
 import { Toaster, toast } from "react-hot-toast"
@@ -33,7 +33,15 @@ export default function Daftar() {
                                 icon={<ExclamationCircleIcon className="h-5 w-5" />}
                             >
                                 <Typography variant="small" className="text-xs">
-                                    - Registering onsite? Please check your WoW schedule.
+                                    - Registering onsite? Please check your WoW schedule.<br/>
+                                    - {"Don't forget to join the "}
+                                    <a 
+                                    href="https://binusgdc.com/link/events"
+                                    target="_blank"
+                                    className="underline"
+                                    >
+                                        {"event server."}
+                                    </a>
                                 </Typography>
                             </Alert>
                             <Alert
@@ -94,7 +102,7 @@ export default function Daftar() {
                             </Button>
                         </a>
                     </Card>
-                    <Card className="relative flex min-h-[422px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 opacity-60 shadow-2xl">
+                    <Card className="relative flex min-h-[450px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 opacity-60 shadow-2xl">
                         <Typography
                             variant="h2"
                             color="black"
