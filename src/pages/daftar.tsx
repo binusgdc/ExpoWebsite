@@ -102,8 +102,6 @@ export default function Daftar() {
                                 >
                                     Week of Welcoming (B27)
                                 </Typography>
-                            </div>
-                            <div className="flex flex-col items-center gap-5">
                                 <div className="flex flex-col items-center gap-3">
                                     <Alert
                                         className="p-2"
@@ -133,7 +131,8 @@ export default function Daftar() {
                                         </Typography>
                                     </Alert>
                                 </div>
-
+                            </div>
+                            <div className="flex w-full flex-col items-center gap-5">
                                 <div className="w-full">
                                     <Typography variant="small" className="my-1 w-full text-left">
                                         Registration fee details:
@@ -186,13 +185,15 @@ export default function Daftar() {
                                 >
                                     Open Registration
                                 </Typography>
-                                <Typography
-                                    variant="h3"
-                                    color="black"
-                                    className="text-center font-sans text-xl font-semibold"
+                                <Alert
+                                    className="my-1 p-2"
+                                    color="blue"
+                                    icon={<ExclamationCircleIcon className="h-5 w-5" />}
                                 >
-                                    All Active Student
-                                </Typography>
+                                    <Typography variant="small" className="">
+                                        Open until 11 September 2023 for all active Binusian.
+                                    </Typography>
+                                </Alert>
                             </div>
                             <div className="flex w-full flex-col items-center gap-2">
                                 <div className="w-full">
