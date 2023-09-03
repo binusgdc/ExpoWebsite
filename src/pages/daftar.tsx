@@ -191,14 +191,15 @@ export default function Daftar() {
                                     icon={<ExclamationCircleIcon className="h-5 w-5" />}
                                 >
                                     <Typography variant="small" className="">
-                                        Open until 11 September 2023 for all active Binusian.
+                                        Open until 11 September 2023 for all active Binusian
+                                        (B24-B27)
                                     </Typography>
                                 </Alert>
                             </div>
                             <div className="flex w-full flex-col items-center gap-2">
                                 <div className="w-full">
                                     <Typography variant="small" className="my-1 w-full text-left">
-                                        How To:
+                                        How to Register:
                                     </Typography>
                                     <ul className="flex w-fit flex-col items-stretch text-left">
                                         <Typography
