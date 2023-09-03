@@ -132,6 +132,7 @@ export default function Daftar() {
                                     </Alert>
                                 </div>
                             </div>
+                            <div className="flex w-full flex-col items-center gap-5"></div>
                             <div className="flex w-full flex-col items-center gap-5">
                                 <div className="w-full">
                                     <Typography variant="small" className="my-1 w-full text-left">
@@ -160,8 +161,6 @@ export default function Daftar() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="flex flex-col items-center gap-5">
                                 <Button size="sm" className="flex flex-row items-center gap-2">
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
@@ -232,6 +231,8 @@ export default function Daftar() {
                                         </Typography>
                                     </ul>
                                 </div>
+                            </div>
+                            <div className="flex w-full flex-col items-center gap-5">
                                 <div className="w-full">
                                     <Typography variant="small" className="my-1 w-full text-left">
                                         Registration fee details:
@@ -259,8 +260,6 @@ export default function Daftar() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="flex w-full flex-col items-center gap-5">
                                 <Button size="sm" className="flex flex-row items-center gap-2">
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
