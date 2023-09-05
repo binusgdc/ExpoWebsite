@@ -126,14 +126,20 @@ export default function DaftarUlang() {
                             </Typography>
                         </ul>
                         <br />
-                        <Button
-                            fullWidth
-                            color="deep-orange"
-                            size="lg"
-                            onClick={handleConfirmSubmit}
-                        >
-                            {"I'm Sure"}
-                        </Button>
+                        {submitFormMutation.isLoading ? (
+                            <div className="flex items-center justify-center p-1">
+                                <Spinner color="deep-orange" className="h-14 w-14" />
+                            </div>
+                        ) : (
+                            <Button
+                                fullWidth
+                                color="deep-orange"
+                                size="lg"
+                                onClick={handleConfirmSubmit}
+                            >
+                                {"I'm Sure"}
+                            </Button>
+                        )}
                     </DialogBody>
                 </Dialog>
                 <Card
@@ -190,21 +196,15 @@ export default function DaftarUlang() {
                                         }
                                     />
                                 </div>
-                                {submitFormMutation.isLoading ? (
-                                    <div className="flex items-center justify-center p-1">
-                                        <Spinner color="orange" className="h-14 w-14" />
-                                    </div>
-                                ) : (
-                                    <Button
-                                        color={isValidFormData(formData) ? "orange" : "gray"}
-                                        disabled={!isValidFormData(formData)}
-                                        type="submit"
-                                        className="mt-6"
-                                        fullWidth
-                                    >
-                                        Complete My Registration
-                                    </Button>
-                                )}
+                                <Button
+                                    color={isValidFormData(formData) ? "orange" : "gray"}
+                                    disabled={!isValidFormData(formData)}
+                                    type="submit"
+                                    className="mt-6"
+                                    fullWidth
+                                >
+                                    Complete My Registration
+                                </Button>
                             </form>
                         </>
                     ) : (
