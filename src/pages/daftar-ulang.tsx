@@ -35,8 +35,6 @@ export default function DaftarUlang() {
     const [nameError, setNameError] = useState(false)
     const [nimError, setNimError] = useState(false)
 
-    const [googleFormConfirmationChecked, setgoogleFormConfirmationChecked] = useState(false)
-
     const [successDialogOpen, setSuccessDialogOpen] = useState(false)
 
     const submitFormMutation = api.reregistrationRouter.submit.useMutation({
@@ -78,10 +76,6 @@ export default function DaftarUlang() {
                 validationErrorOccurred = true
                 setNimError(true)
             }
-        }
-
-        if (!googleFormConfirmationChecked) {
-            validationErrorOccurred = true
         }
 
         if (!parseResult.success || validationErrorOccurred || sessionData === null) {
@@ -167,67 +161,7 @@ export default function DaftarUlang() {
                                         label="NIM*"
                                         error={nimError}
                                     />
-                                    <Select variant="static" label="Region*">
-                                        <Option>Alam Sutera</Option>
-                                        <Option>Bandung</Option>
-                                        <Option>Bekasi</Option>
-                                        <Option>Kemanggisan</Option>
-                                        <Option>Malang</Option>
-                                        <Option>Semarang</Option>
-                                        <Option>Senayan</Option>
-                                    </Select>
-                                    <Input
-                                        name="personalEmail"
-                                        variant="static"
-                                        size="md"
-                                        label="Personal Email*"
-                                        type="email"
-                                    />
-                                    <Input
-                                        name="binusEmail"
-                                        variant="static"
-                                        size="md"
-                                        label="Binus Email*"
-                                        type="email"
-                                    />
                                 </div>
-                                <br></br>
-                                <div className="flex flex-col gap-3">
-                                    <Checkbox
-                                        label={
-                                            <Typography
-                                                variant="small"
-                                                color="gray"
-                                                className="font-normal"
-                                            >
-                                                {"I have filled in the "}
-                                                <a
-                                                    className="text-cyan-90 hover:underline"
-                                                    href="https://binusgdc.com/link/daftar"
-                                                >
-                                                    Google Form
-                                                </a>{" "}
-                                                {" with matching info"}.
-                                            </Typography>
-                                        }
-                                        containerProps={{ className: "-ml-2.5" }}
-                                        onChange={(e) =>
-                                            setgoogleFormConfirmationChecked(e.target.checked)
-                                        }
-                                    />
-                                </div>
-
-                                {hasAttemptedToSubmit && !googleFormConfirmationChecked ? (
-                                    <Alert
-                                        color="red"
-                                        icon={<ExclamationTriangleIcon className="h-5 w-5" />}
-                                        className="my-2"
-                                    >
-                                        {"Fill in the google form before completing registration"}
-                                    </Alert>
-                                ) : (
-                                    <></>
-                                )}
                                 {submitFormMutation.isLoading ? (
                                     <div className="flex items-center justify-center p-1">
                                         <Spinner color="orange" className="h-14 w-14" />

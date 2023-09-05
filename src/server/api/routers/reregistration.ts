@@ -44,11 +44,17 @@ export const reregistrationRouter = createTRPCRouter({
 
             const appendResult = await sheetsClient.spreadsheets.values.append({
                 spreadsheetId: env.TARGET_SPREADSHEET_ID,
-                range: "FormResponses!A1:D1",
+                range: "DaftarUlang!A1:E1",
                 valueInputOption: "USER_ENTERED",
                 requestBody: {
                     values: [
-                        [input.fullName, input.nim, input.discordUserName, input.discordUserId],
+                        [
+                            input.fullName,
+                            input.nim,
+                            input.discordUserName,
+                            input.discordUserId,
+                            "FALSE",
+                        ],
                     ],
                 },
             })
