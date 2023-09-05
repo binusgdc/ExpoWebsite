@@ -46,7 +46,14 @@ export default function DaftarUlang() {
     })
 
     function isValidNim(str: string) {
-        return str.length === 10 && Array.from(str).every((char) => char >= "0" && char <= "9")
+        return (
+            str.length === 10 &&
+            (str.startsWith("24") ||
+                str.startsWith("25") ||
+                str.startsWith("26") ||
+                str.startsWith("27")) &&
+            Array.from(str).every((char) => char >= "0" && char <= "9")
+        )
     }
 
     function isValidName(str: string) {
