@@ -30,18 +30,32 @@ type FormData = z.infer<typeof formDataSchema>
 export default function DaftarUlang() {
     const { data: sessionData, status: authStatus } = useSession()
 
-    const [hasAttemptedToSubmit, setHasAttemptedToSubmit] = useState(false)
-
-    const [nameError, setNameError] = useState(false)
-    const [nimError, setNimError] = useState(false)
+    const [formData, setFormData] = useState<FormData>({
+        name: "",
+        nim: "",
+    })
 
     const [successDialogOpen, setSuccessDialogOpen] = useState(false)
+
+    const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false)
 
     const submitFormMutation = api.reregistrationRouter.submit.useMutation({
         onSuccess(_data, _variables, _context) {
             setSuccessDialogOpen(true)
         },
     })
+
+    function isValidNim(str: string) {
+        return str.length === 10 && Array.from(str).every((char) => char >= "0" && char <= "9")
+    }
+
+    function isValidName(str: string) {
+        return str !== ""
+    }
+
+    function isValidFormData(input: FormData) {
+        return isValidName(input.name) && isValidNim(input.nim)
+    }
 
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
@@ -50,48 +64,35 @@ export default function DaftarUlang() {
             return
         }
 
-        setNameError(false)
-        setNimError(false)
-
-        setHasAttemptedToSubmit(true)
-
         const data = { ...Object.fromEntries(new FormData(event.target as HTMLFormElement)) }
-        console.log(data)
         const parseResult = formDataSchema.safeParse(data)
 
-        let validationErrorOccurred = false
-
         if (!parseResult.success) {
-            validationErrorOccurred = true
-            const errorPaths = parseResult.error.errors.flatMap((err) => err.path)
-            if (errorPaths.includes("name")) {
-                setNameError(true)
-            }
-            if (errorPaths.includes("nim")) {
-                setNimError(true)
-            }
-        }
-        if (parseResult.success) {
-            if (!Array.from(parseResult.data.nim).every((char) => char >= "0" && char <= "9")) {
-                validationErrorOccurred = true
-                setNimError(true)
-            }
-        }
-
-        if (!parseResult.success || validationErrorOccurred || sessionData === null) {
             return
         }
 
-        submitFormMutation.mutate({
-            fullName: parseResult.data.name,
-            nim: parseResult.data.nim,
-            discordUserName: sessionData.user.name ?? "NO_USERNAME_FOUND",
-            discordUserId: sessionData.user.id,
-        })
+        if (!isValidFormData(parseResult.data)) {
+            return
+        }
+
+        if (sessionData === null) {
+            return
+        }
+
+        setConfirmationDialogOpen(true)
     }
 
     function handleSuccessDialog() {
         //
+    }
+
+    function handleConfirmSubmit() {
+        submitFormMutation.mutate({
+            fullName: formData.name,
+            nim: formData.nim,
+            discordUserName: sessionData?.user.name ?? "NO_USERNAME_FOUND",
+            discordUserId: sessionData?.user.id ?? "NO_USERID_FOUND",
+        })
     }
 
     return (
@@ -99,20 +100,49 @@ export default function DaftarUlang() {
             <main
                 className={`flex min-h-screen w-full min-w-[400px] flex-col items-center bg-magenta py-5`}
             >
+                <Dialog
+                    open={confirmationDialogOpen}
+                    size="xs"
+                    handler={() => setConfirmationDialogOpen((v) => !v)}
+                >
+                    <DialogHeader>
+                        <Typography variant="h4" className="w-full text-center">
+                            Confirmation
+                        </Typography>
+                    </DialogHeader>
+                    <DialogBody divider>
+                        <ul className="flex w-full flex-col items-start gap-2">
+                            <Typography as="li">
+                                {`Full Name: `}
+                                <span className="font-semibold">{`${formData.name}`}</span>
+                            </Typography>
+                            <Typography as="li">
+                                {`NIM: `}
+                                <span className="font-semibold">{`${formData.nim}`}</span>
+                            </Typography>
+                            <Typography as="li">
+                                {`Discord Username: `}
+                                <span className="font-semibold">{`${sessionData?.user.name}`}</span>
+                            </Typography>
+                        </ul>
+                        <br />
+                        <Button
+                            fullWidth
+                            color="deep-orange"
+                            size="lg"
+                            onClick={handleConfirmSubmit}
+                        >
+                            {"I'm Sure"}
+                        </Button>
+                    </DialogBody>
+                </Dialog>
                 <Card
                     className="flex w-[90vw] min-w-[350px] max-w-md flex-col items-center bg-white p-5"
                     color="transparent"
                     shadow={false}
                 >
-                    <div className="flex w-full flex-row-reverse items-center">
-                        <div className="flex-flow flex items-center gap-3">
-                            <Typography>EN</Typography>
-                            <Switch />
-                            <Typography>ID</Typography>
-                        </div>
-                    </div>
                     <Typography variant="h3" color="blue-gray" className="font-serif">
-                        Register
+                        Daftar Ulang
                     </Typography>
                     {authStatus === "authenticated" && sessionData !== null ? (
                         <>
@@ -123,7 +153,6 @@ export default function DaftarUlang() {
                                         {sessionData?.user?.name ?? ""}
                                     </Typography>
                                 </div>
-                                <Typography>user id: {sessionData.user.id}</Typography>
                                 <Button variant="text" onClick={() => void signIn("discord")}>
                                     Not You? Sign In Again
                                 </Button>
@@ -134,32 +163,31 @@ export default function DaftarUlang() {
                                 className="mb-2 mt-4 w-80 max-w-screen-lg sm:w-96"
                             >
                                 <div className="mb-4 flex flex-col gap-6">
-                                    <Alert variant="ghost">
-                                        <Typography variant="small">
-                                            {"Don't forget to fill "}
-                                            <a
-                                                className="text-cyan-90 hover:underline"
-                                                href="https://binusgdc.com/link/daftar"
-                                                target="_blank"
-                                            >
-                                                the Expo Google Form
-                                            </a>
-                                            {". "}
-                                        </Typography>
-                                    </Alert>
                                     <Input
                                         name="name"
                                         variant="static"
                                         size="md"
                                         label="Full Name*"
-                                        error={nameError}
+                                        error={!isValidName(formData.name) && formData.name !== ""}
+                                        onChange={(e) =>
+                                            setFormData({
+                                                ...formData,
+                                                name: e.target.value,
+                                            })
+                                        }
                                     />
                                     <Input
                                         name="nim"
                                         variant="static"
                                         size="md"
                                         label="NIM*"
-                                        error={nimError}
+                                        error={!isValidNim(formData.nim) && formData.nim !== ""}
+                                        onChange={(e) =>
+                                            setFormData({
+                                                ...formData,
+                                                nim: e.target.value,
+                                            })
+                                        }
                                     />
                                 </div>
                                 {submitFormMutation.isLoading ? (
@@ -167,7 +195,13 @@ export default function DaftarUlang() {
                                         <Spinner color="orange" className="h-14 w-14" />
                                     </div>
                                 ) : (
-                                    <Button color="orange" type="submit" className="mt-6" fullWidth>
+                                    <Button
+                                        color={isValidFormData(formData) ? "orange" : "gray"}
+                                        disabled={!isValidFormData(formData)}
+                                        type="submit"
+                                        className="mt-6"
+                                        fullWidth
+                                    >
                                         Complete My Registration
                                     </Button>
                                 )}
