@@ -1,19 +1,13 @@
-import { ExclamationTriangleIcon } from "@heroicons/react/24/solid"
 import {
     Card,
     Input,
-    Checkbox,
     Button,
     Typography,
-    Alert,
     Avatar,
     Dialog,
     DialogHeader,
     DialogBody,
-    Switch,
     Spinner,
-    Select,
-    Option,
 } from "@material-tailwind/react"
 import { signIn, useSession } from "next-auth/react"
 import { type FormEvent, useState } from "react"
@@ -42,6 +36,7 @@ export default function DaftarUlang() {
     const submitFormMutation = api.reregistrationRouter.submit.useMutation({
         onSuccess(_data, _variables, _context) {
             setSuccessDialogOpen(true)
+            setConfirmationDialogOpen(false)
         },
     })
 
@@ -93,6 +88,10 @@ export default function DaftarUlang() {
         //
     }
 
+    function handleConfirmDialog() {
+        //
+    }
+
     function handleConfirmSubmit() {
         submitFormMutation.mutate({
             fullName: formData.name,
@@ -107,11 +106,7 @@ export default function DaftarUlang() {
             <main
                 className={`flex min-h-screen w-full min-w-[400px] flex-col items-center bg-magenta py-5`}
             >
-                <Dialog
-                    open={confirmationDialogOpen}
-                    size="xs"
-                    handler={() => setConfirmationDialogOpen((v) => !v)}
-                >
+                <Dialog open={confirmationDialogOpen} size="xs" handler={handleConfirmDialog}>
                     <DialogHeader>
                         <Typography variant="h4" className="w-full text-center">
                             Confirmation
