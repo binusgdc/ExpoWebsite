@@ -260,7 +260,14 @@ export default function Daftar() {
                                         </div>
                                     </div>
                                 </div>
-                                <Button size="sm" className="flex flex-row items-center gap-2">
+                                <Button
+                                    size="sm"
+                                    className="flex flex-row items-center gap-2"
+                                    onClick={() => {
+                                        void navigator.clipboard.writeText("5272020647")
+                                        toast.success("copied '5272020647'")
+                                    }}
+                                >
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
                                 <a href="https://forms.gle/uXj2MCztyeUE2SFv6" target="_blank">
