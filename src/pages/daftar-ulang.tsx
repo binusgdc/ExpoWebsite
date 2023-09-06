@@ -236,9 +236,26 @@ export default function DaftarUlang() {
                     ) : (
                         <div className="p-5">
                             {authStatus === "unauthenticated" ? (
-                                <Button color="teal" onClick={() => void signIn("discord")}>
-                                    To continue, please sign in with Discord
-                                </Button>
+                                <div className="w-full">
+                                    <Button
+                                        fullWidth
+                                        color="teal"
+                                        onClick={() => void signIn("discord")}
+                                    >
+                                        To continue, please sign in with Discord
+                                    </Button>
+                                    <Alert
+                                        icon={<InfoRounded />}
+                                        variant="filled"
+                                        color="blue"
+                                        className="my-2"
+                                    >
+                                        <Typography variant="small" className="text-xs">
+                                            We need your Discord Username and ID to verify you on
+                                            our Discord server.
+                                        </Typography>
+                                    </Alert>
+                                </div>
                             ) : (
                                 <Spinner className="h-16 w-16" />
                             )}
