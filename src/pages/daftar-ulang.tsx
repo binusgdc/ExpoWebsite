@@ -274,7 +274,13 @@ export default function DaftarUlang() {
                         Registration Complete!{" "}
                     </Typography>{" "}
                 </DialogHeader>
-                <DialogBody className="flex flex-col items-center">
+                <DialogBody className="flex flex-col items-center gap-5">
+                    <div className="flex max-w-lg flex-col items-center">
+                        <Typography color="white" variant="small" className="text-center text-lg">
+                            The verification process happens every day at 9AM and 9PM WIB. Please
+                            make sure you join BGDC server below.
+                        </Typography>
+                    </div>
                     <Button color="orange">
                         <a href="https://binusgdc.com/Discord">Take me to BGDC Server</a>
                     </Button>
