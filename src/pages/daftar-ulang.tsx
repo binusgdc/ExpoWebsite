@@ -276,9 +276,28 @@ export default function DaftarUlang() {
                 </DialogHeader>
                 <DialogBody className="flex flex-col items-center gap-5">
                     <div className="flex max-w-lg flex-col items-center">
-                        <Typography color="white" variant="small" className="text-center text-lg">
-                            The verification process happens every day at 9AM and 9PM WIB. Please
-                            make sure you join BGDC server below.
+                        <Typography
+                            color="white"
+                            variant="small"
+                            className="text-md text-center lg:text-lg"
+                        >
+                            {`Thank you! We're validating the data you sent.`}
+                        </Typography>
+                        <br />
+                        <Typography
+                            color="white"
+                            variant="small"
+                            className="text-md text-center lg:text-lg"
+                        >
+                            {`Access to the server will be given out every day at 9AM and 9PM WIB, so stay tuned!`}
+                        </Typography>
+                        <br />
+                        <Typography
+                            color="white"
+                            variant="small"
+                            className="text-md text-center lg:text-lg"
+                        >
+                            {`Meanwhile, please make sure to join the BGDC discord server below:`}
                         </Typography>
                     </div>
                     <Button color="orange">
