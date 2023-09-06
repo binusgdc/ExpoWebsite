@@ -8,7 +8,9 @@ import {
     DialogHeader,
     DialogBody,
     Spinner,
+    Alert,
 } from "@material-tailwind/react"
+import { InfoRounded } from "@mui/icons-material"
 import { signIn, useSession } from "next-auth/react"
 import { type FormEvent, useState } from "react"
 import { z } from "zod"
@@ -109,7 +111,7 @@ export default function DaftarUlang() {
                 <Dialog open={confirmationDialogOpen} size="xs" handler={handleConfirmDialog}>
                     <DialogHeader>
                         <Typography variant="h4" className="w-full text-center">
-                            Confirmation
+                            Is this correct?
                         </Typography>
                     </DialogHeader>
                     <DialogBody divider>
@@ -130,17 +132,28 @@ export default function DaftarUlang() {
                         <br />
                         {submitFormMutation.isLoading ? (
                             <div className="flex items-center justify-center p-1">
-                                <Spinner color="deep-orange" className="h-14 w-14" />
+                                <Spinner color="orange" className="h-14 w-14" />
                             </div>
                         ) : (
-                            <Button
-                                fullWidth
-                                color="deep-orange"
-                                size="lg"
-                                onClick={handleConfirmSubmit}
-                            >
-                                {"I'm Sure"}
-                            </Button>
+                            <>
+                                <Button
+                                    fullWidth
+                                    color="green"
+                                    size="lg"
+                                    onClick={handleConfirmSubmit}
+                                >
+                                    {"Yes, I'm Sure (Submit)"}
+                                </Button>
+                                <br />
+                                <Button
+                                    fullWidth
+                                    color="deep-orange"
+                                    size="lg"
+                                    onClick={() => setConfirmationDialogOpen(false)}
+                                >
+                                    {"Wait, go back"}
+                                </Button>
+                            </>
                         )}
                     </DialogBody>
                 </Dialog>
@@ -150,7 +163,7 @@ export default function DaftarUlang() {
                     shadow={false}
                 >
                     <Typography variant="h3" color="blue-gray" className="font-serif">
-                        Daftar Ulang
+                        Confirm Registration
                     </Typography>
                     {authStatus === "authenticated" && sessionData !== null ? (
                         <>
@@ -165,6 +178,17 @@ export default function DaftarUlang() {
                                     Not You? Sign In Again
                                 </Button>
                             </div>
+                            <Alert
+                                icon={<InfoRounded />}
+                                variant="filled"
+                                color="blue"
+                                className="my-2"
+                            >
+                                <Typography variant="small" className="text-xs">
+                                    We need your Discord Username and ID to verify you on our
+                                    Discord server.
+                                </Typography>
+                            </Alert>
                             <form
                                 method="post"
                                 onSubmit={handleSubmit}
