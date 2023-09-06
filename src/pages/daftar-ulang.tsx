@@ -251,8 +251,8 @@ export default function DaftarUlang() {
                                         className="my-2"
                                     >
                                         <Typography variant="small" className="text-xs">
-                                            We need your Discord Username and ID to verify you on
-                                            our Discord server.
+                                            This is because we need your Discord Username and ID to
+                                            verify you on our Discord server.
                                         </Typography>
                                     </Alert>
                                 </div>
