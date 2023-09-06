@@ -23,7 +23,7 @@ export const reregistrationRouter = createTRPCRouter({
                 .safeParse(JSON.parse(Buffer.from(env.GSHEETS_JSON_KEY_64, "base64").toString()))
 
             if (!parseCreds.success) {
-                return false
+                throw new Error("Internal Server Error")
             }
 
             const creds = parseCreds.data
@@ -60,7 +60,7 @@ export const reregistrationRouter = createTRPCRouter({
             })
 
             if (appendResult.status !== 200) {
-                return false
+                throw new Error("Google Services Error")
             }
 
             return true
