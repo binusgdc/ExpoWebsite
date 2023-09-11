@@ -161,10 +161,15 @@ export default function Daftar() {
                                         </div>
                                     </div>
                                 </div>
-                                <Button size="sm" className="flex flex-row items-center gap-2">
+                                <Button
+                                    disabled
+                                    size="sm"
+                                    className="flex flex-row items-center gap-2"
+                                >
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
                                 <Button
+                                    disabled
                                     color="deep-purple"
                                     size="lg"
                                     className="flex flex-row items-center gap-2"
@@ -174,7 +179,14 @@ export default function Daftar() {
                             </div>
                         </div>
                     </Card>
-                    <Card className="relative flex min-h-[570px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 shadow-2xl">
+                    <Card className="relative flex min-h-[570px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 opacity-60 shadow-2xl">
+                        <Typography
+                            variant="lead"
+                            color="black"
+                            className="absolute top-1/2 w-full text-center font-serif text-4xl opacity-100"
+                        >
+                            CLOSED
+                        </Typography>
                         <div className="flex h-full w-full flex-col items-center justify-between gap-5">
                             <div className="flex flex-col items-center gap-2">
                                 <Typography
@@ -261,25 +273,20 @@ export default function Daftar() {
                                     </div>
                                 </div>
                                 <Button
+                                    disabled
                                     size="sm"
                                     className="flex flex-row items-center gap-2"
-                                    onClick={() => {
-                                        void navigator.clipboard.writeText("5272020647")
-                                        toast.success("copied '5272020647'")
-                                    }}
                                 >
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
-                                <a href="https://forms.gle/uXj2MCztyeUE2SFv6" target="_blank">
-                                    <Button
-                                        color="deep-purple"
-                                        size="lg"
-                                        className="flex flex-row items-center gap-2"
-                                    >
-                                        Open Registration Form{" "}
-                                        <ArrowUpRightIcon className="h-4 w-4" />
-                                    </Button>
-                                </a>
+                                <Button
+                                    disabled
+                                    color="deep-purple"
+                                    size="lg"
+                                    className="flex flex-row items-center gap-2"
+                                >
+                                    Open Registration Form <ArrowUpRightIcon className="h-4 w-4" />
+                                </Button>
                             </div>
                         </div>
 
