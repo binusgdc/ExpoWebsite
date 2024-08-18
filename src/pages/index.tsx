@@ -799,13 +799,13 @@ export default function Home() {
                                             variant="small"
                                             className="text-center text-gray-200"
                                         >
-                                            GOR Alam Sutera (#35)
+                                            Hello Im Under The Water Please Help Me
                                         </Typography>
                                     </div>
                                     <Carousel className="my-4 w-full">
                                         <Image
                                             className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-as-m.webp"}
+                                            src={"/smurfcat.jpeg"}
                                             alt={"position of BGDC in alam sutera expo"}
                                             width={1267}
                                             height={631}
