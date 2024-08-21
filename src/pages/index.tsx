@@ -32,12 +32,15 @@ import BgdcNav from "~/components/BGDCNav"
 import Link from "next/link"
 import BgdcFooter from "~/components/BGDCFooter"
 import { useState } from "react"
-import { FaCopy, FaDiscord, FaLine } from "react-icons/fa"
+import { FaCopy, FaDiscord, FaLine, FaWhatsapp } from "react-icons/fa"
 import toast, { Toaster } from "react-hot-toast"
 
 export default function Home() {
     const [lineHover, setLineHover] = useState(false)
-    const [discordHover, setDiscordHover] = useState(false)
+    const [whatsAppHover1, setWhatsAppHover1] = useState(false)
+    const [whatsAppHover2, setWhatsAppHover2] = useState(false)
+    const [discordHover1, setDiscordHover1] = useState(false)
+    const [discordHover2, setDiscordHover2] = useState(false)
 
     return (
         <>
@@ -45,22 +48,22 @@ export default function Home() {
                 <Toaster position="bottom-center" />
             </div>
             <BgdcNav />
-            <main>
+            <main id="index">
                 <div
                     id="landing"
-                    className="flex max-h-[110vh] min-h-[900px] flex-col items-center justify-between bg-magenta px-8 pb-16 pt-2 lg:h-[90vh]"
+                    className="flex max-h-[110vh] min-h-[900px] flex-col items-center justify-between px-8 pb-16 pt-2 lg:h-[90vh]"
                 >
                     <div className="flex w-full max-w-5xl flex-col items-center lg:flex-grow lg:flex-row-reverse lg:items-center lg:justify-between">
                         <Image
                             className="hidden object-center lg:block"
-                            src="/expo23totebag.webp"
+                            src="/bgdc90ddeg.png"
                             width={408}
                             height={503}
                             alt={"BGDC sticker"}
                         />
                         <Image
                             className="object-center lg:hidden"
-                            src="/expo23totebag.webp"
+                            src="/bgdc90ddeg.png"
                             width={204}
                             height={501}
                             alt={"BGDC sticker"}
@@ -69,7 +72,7 @@ export default function Home() {
                             <Typography
                                 variant="h1"
                                 color="white"
-                                className="font-serif font-medium lg:text-7xl"
+                                className="font-serif font-medium lg:text-7xl outline-text"
                             >
                                 Games are dreams to life
                             </Typography>
@@ -109,36 +112,37 @@ export default function Home() {
                                     variant="small"
                                     className="mb-1 text-center lg:text-left"
                                 >
-                                    Contact:
+                                    Contact Person:
                                 </Typography>
-                                <div className="flex flex-col items-center gap-2 lg:items-start lg:px-0">
+                            <div className="flex w-full max-w-md flex-row justify-between gap-4">
+                                <div className="flex flex-col items-start gap-2">
                                     <div className="flex flex-row items-center gap-2">
-                                        <FaLine />
+                                        <FaWhatsapp />
                                         <Typography
                                             className={
-                                                lineHover
+                                                whatsAppHover1
                                                     ? "hover:cursor-pointer"
                                                     : "hover:cursor-default"
                                             }
                                             variant="small"
-                                            onMouseEnter={() => setLineHover(true)}
-                                            onMouseLeave={() => setLineHover(false)}
+                                            onMouseEnter={() => setWhatsAppHover1(true)}
+                                            onMouseLeave={() => setWhatsAppHover1(false)}
                                             onClick={async () => {
-                                                if (!lineHover) {
+                                                if (!whatsAppHover1) {
                                                     return
                                                 }
                                                 await navigator.clipboard.writeText(
-                                                    "reynaldochandra61103"
+                                                    "081378633352"
                                                 )
-                                                setLineHover(false)
-                                                toast.success("LINE ID copied")
+                                                setWhatsAppHover1(false)
+                                                toast.success("WhatsApp number copied")
                                             }}
                                         >
-                                            reynaldochandra61103
+                                            Virly: 081378633352
                                         </Typography>
                                         <FaCopy
                                             className={`${
-                                                lineHover ? `opacity-100` : `opacity-0`
+                                                whatsAppHover1 ? `opacity-100` : `opacity-0`
                                             } transition-opacity`}
                                         />
                                     </div>
@@ -146,27 +150,87 @@ export default function Home() {
                                         <FaDiscord />
                                         <Typography
                                             className={
-                                                discordHover
+                                                discordHover1
                                                     ? "hover:cursor-pointer"
                                                     : "hover:cursor-default"
                                             }
                                             variant="small"
-                                            onMouseEnter={() => setDiscordHover(true)}
-                                            onMouseLeave={() => setDiscordHover(false)}
+                                            onMouseEnter={() => setDiscordHover1(true)}
+                                            onMouseLeave={() => setDiscordHover1(false)}
                                             onClick={async () => {
-                                                if (!discordHover) {
+                                                if (!discordHover1) {
                                                     return
                                                 }
-                                                await navigator.clipboard.writeText("greyze")
-                                                setDiscordHover(false)
+                                                await navigator.clipboard.writeText("hina.akhina")
+                                                setDiscordHover1(false)
                                                 toast.success("Discord username copied")
                                             }}
                                         >
-                                            greyze
+                                            hina.akhina
                                         </Typography>
                                         <FaCopy
                                             className={`${
-                                                discordHover ? `opacity-100` : `opacity-0`
+                                                discordHover1 ? `opacity-100` : `opacity-0`
+                                            } transition-opacity`}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex flex-col items-start gap-1">
+                                    <div className="flex flex-row items-center gap-2">
+                                        <FaWhatsapp />
+                                        <Typography
+                                            className={
+                                                whatsAppHover2
+                                                    ? "hover:cursor-pointer"
+                                                    : "hover:cursor-default"
+                                            }
+                                            variant="small"
+                                            onMouseEnter={() => setWhatsAppHover2(true)}
+                                            onMouseLeave={() => setWhatsAppHover2(false)}
+                                            onClick={async () => {
+                                                if (!whatsAppHover2) {
+                                                    return
+                                                }
+                                                await navigator.clipboard.writeText(
+                                                    "085156292898"
+                                                )
+                                                setWhatsAppHover2(false)
+                                                toast.success("WhatsApp number copied")
+                                            }}
+                                        >
+                                            Raul: 085156292898
+                                        </Typography>
+                                        <FaCopy
+                                            className={`${
+                                                whatsAppHover2 ? `opacity-100` : `opacity-0`
+                                            } transition-opacity`}
+                                        />
+                                    </div>
+                                    <div className="flex flex-row items-center gap-2">
+                                        <FaDiscord />
+                                        <Typography
+                                            className={
+                                                discordHover2
+                                                    ? "hover:cursor-pointer"
+                                                    : "hover:cursor-default"
+                                            }
+                                            variant="small"
+                                            onMouseEnter={() => setDiscordHover2(true)}
+                                            onMouseLeave={() => setDiscordHover2(false)}
+                                            onClick={async () => {
+                                                if (!discordHover2) {
+                                                    return
+                                                }
+                                                await navigator.clipboard.writeText("yuukito2")
+                                                setDiscordHover1(false)
+                                                toast.success("Discord username copied")
+                                            }}
+                                        >
+                                            yuukito2
+                                        </Typography>
+                                        <FaCopy
+                                            className={`${
+                                                discordHover2 ? `opacity-100` : `opacity-0`
                                             } transition-opacity`}
                                         />
                                     </div>
@@ -174,6 +238,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
                     <br></br>
                     <Typography
                         variant="h2"
@@ -188,18 +253,18 @@ export default function Home() {
                 </div>
                 <div
                     id="about-bgdc"
-                    className="relative flex flex-col items-center bg-smagenta px-5 py-20"
+                    className="relative flex flex-col items-center px-5 py-20"
                 >
                     <Image
                         className="left-10 top-80 hidden 2xl:absolute 2xl:block"
-                        src={"/PLAYIdolexpobgdc2024.png"}
+                        src={"/IdolPlay.webp"}
                         width={518 / 2}
                         height={705 / 2}
                         alt=""
                     />
                     <Typography
                         variant="h2"
-                        className="text-center font-serif text-5xl font-medium"
+                        className="text-center font-serif text-5xl font-medium outline-text"
                     >
                         About BGDC
                     </Typography>
@@ -212,7 +277,7 @@ export default function Home() {
                             <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
-                                    className="mb-1 text-left font-serif font-medium"
+                                    className="mb-1 text-left font-serif font-medium outline-text"
                                 >
                                     A Passion for Games
                                 </Typography>
@@ -282,7 +347,7 @@ export default function Home() {
                             <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
-                                    className="mb-1 text-left font-serif font-medium"
+                                    className="mb-1 text-left font-serif font-medium outline-text"
                                 >
                                     Community
                                 </Typography>
@@ -298,7 +363,7 @@ export default function Home() {
                             <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
-                                    className="mb-1 text-left font-serif font-medium"
+                                    className="mb-1 text-left font-serif font-medium outline-text"
                                 >
                                     Events
                                 </Typography>
@@ -330,14 +395,13 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-
                 <div
                     id="kelas"
-                    className="relative flex flex-col items-center bg-magenta px-8 py-20"
+                    className="relative flex flex-col items-center px-8 py-20"
                 >
                     <Image
                         className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
-                        src={"/OBSIdolexpobgdc2024.png"}
+                        src={"/IdolObs.webp"}
                         width={518 / 2}
                         height={705 / 2}
                         alt=""
@@ -345,7 +409,7 @@ export default function Home() {
                     <div className="flex max-w-5xl flex-col gap-3">
                         <Typography
                             variant="h2"
-                            className="text-center font-serif text-6xl font-medium"
+                            className="text-center font-serif text-6xl font-medium outline-text"
                         >
                             Skill Up!
                         </Typography>
@@ -454,11 +518,11 @@ export default function Home() {
                 </div>
                 <div
                     id="talent-group"
-                    className="relative flex flex-col items-center bg-[#544e67] px-5 py-20"
+                    className="relative flex flex-col items-center px-5 py-20"
                 >
                     <Image
                         className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
-                        src={"/DEVIdolexpobgdc2024.png"}
+                        src={"/IdolDev.webp"}
                         width={518 / 2}
                         height={705 / 2}
                         alt=""
@@ -466,7 +530,7 @@ export default function Home() {
                     <div className="flex max-w-5xl flex-col gap-3">
                         <Typography
                             variant="h2"
-                            className="text-center font-serif font-medium sm:text-6xl"
+                            className="text-center font-serif font-medium sm:text-6xl outline-text"
                         >
                             Create and Publish Games
                         </Typography>
@@ -534,7 +598,7 @@ export default function Home() {
                                     <div>
                                         <Typography
                                             variant="h3"
-                                            className="text-center font-serif font-medium sm:text-5xl"
+                                            className="text-center font-serif font-medium sm:text-5xl outline-text"
                                         >
                                             {element.gameTitle}
                                         </Typography>
@@ -576,246 +640,7 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-                <div
-                    id="find-us"
-                    className="relative flex flex-col items-center bg-magenta px-5 py-20"
-                >
-                    <div className="w-full max-w-4xl">
-                        <div>
-                            <Typography
-                                variant="h2"
-                                className="text-center font-serif text-5xl font-medium"
-                            >
-                                {"Find Us at Expo!"}
-                            </Typography>
-                        </div>
-                        <Tabs className="my-2" value="Online">
-                            <TabsHeader
-                                className="bg-background"
-                                indicatorProps={{
-                                    className: "bg-cyan-90 shadow-none",
-                                }}
-                            >
-                                {[
-                                    {
-                                        shortLabel: "Online",
-                                        fullLabel: "Online",
-                                    },
-                                    {
-                                        shortLabel: "KMG",
-                                        fullLabel: "Kemanggisan",
-                                    },
-                                    {
-                                        shortLabel: "BDG",
-                                        fullLabel: "Bandung",
-                                    },
-                                    {
-                                        shortLabel: "AS",
-                                        fullLabel: "Alam Sutera",
-                                    },
-                                ].map((element) => (
-                                    <Tab key={element.shortLabel} value={element.shortLabel}>
-                                        <Typography
-                                            variant="h5"
-                                            className="font-2xl font-semibold md:hidden"
-                                        >
-                                            {element.shortLabel}
-                                        </Typography>
-                                        <Typography
-                                            variant="h5"
-                                            className="hidden text-2xl font-semibold md:block"
-                                        >
-                                            {element.fullLabel}
-                                        </Typography>
-                                    </Tab>
-                                ))}
-                            </TabsHeader>
-                            <hr className=" my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
-                            <TabsBody>
-                                <TabPanel value={"Online"} className="p-2">
-                                    <div className="flex flex-col items-center">
-                                        <div className="flex flex-col items-center gap-2">
-                                            <Typography
-                                                variant="h4"
-                                                className="text-center"
-                                                color="white"
-                                            >
-                                                Online
-                                            </Typography>
-                                            <a
-                                                href="https://binusgdc.com/link/events"
-                                                target="_blank"
-                                            >
-                                                <Button
-                                                    size="lg"
-                                                    color="orange"
-                                                    className="m-1 flex items-center gap-1"
-                                                >
-                                                    <MapPinIcon className="h-4 w-4" />
-                                                    BGDC Event Server
-                                                </Button>
-                                            </a>
-                                        </div>
-                                        <Card className="my-4 max-w-lg bg-purple-90 px-5 py-2">
-                                            <Timeline className="my-4">
-                                                {[
-                                                    {
-                                                        title: "Get to Know BGDC",
-                                                        timeSub: "29th August 2023 | 19:00 - 20:30",
-                                                        body: `BGDC-curious? Have all your questions answered in this live online session with us!`,
-                                                    },
-                                                    {
-                                                        title: "Talent Group Showcase I",
-                                                        timeSub: "30th August 2023 | 19:00 - 20:30",
-                                                        body: `Talent Group is BGDC's ultimate game dev program. 
-                                                        Three teams will share how they went from drawing board to finished game in just three months, and how you could do it too. 
-                                                        Ask them anything!`,
-                                                    },
-                                                    {
-                                                        title: "Talent Group Showcase II",
-                                                        timeSub: "31st August 2023 | 19:00 - 20:30",
-                                                        body: `Talent Group is BGDC's ultimate game dev program. 
-                                                        Three teams will share how they went from drawing board to finished game in just three months, and how you could do it too. 
-                                                        Ask them anything!`,
-                                                    },
-                                                    {
-                                                        title: "Coffee Talk",
-                                                        timeSub:
-                                                            "1st September 2023 | 19:00 - 20:30",
-                                                        body: `Grab a coffee (or tea) and tune in to our expo finale. Coffee Talk is a gathering format where we come together to chat, share experiences and have a good time. Come sit with us?`,
-                                                    },
-                                                ].map((element, i, arr) => (
-                                                    <TimelineItem key={i}>
-                                                        {i == arr.length - 1 ? (
-                                                            <></>
-                                                        ) : (
-                                                            <TimelineConnector />
-                                                        )}
-                                                        <TimelineHeader className="h-3">
-                                                            <TimelineIcon />
-                                                            <div>
-                                                                <Typography
-                                                                    variant="h6"
-                                                                    color="white"
-                                                                    className="leading-none"
-                                                                >
-                                                                    {element.title}
-                                                                </Typography>
-                                                            </div>
-                                                        </TimelineHeader>
-                                                        <TimelineBody className="pb-8">
-                                                            <div className="flex flex-col justify-between">
-                                                                <div className="">
-                                                                    <div className="flex flex-row items-center gap-1">
-                                                                        <CalendarDaysIcon
-                                                                            color="white"
-                                                                            className="h-5 w-5 -translate-y-0.5"
-                                                                        />
-                                                                        <Typography
-                                                                            variant="small"
-                                                                            color="white"
-                                                                        >
-                                                                            {element.timeSub}
-                                                                        </Typography>
-                                                                    </div>
-
-                                                                    <Typography
-                                                                        variant="small"
-                                                                        color="white"
-                                                                    >
-                                                                        {element.body}
-                                                                    </Typography>
-                                                                </div>
-                                                            </div>
-                                                        </TimelineBody>
-                                                    </TimelineItem>
-                                                ))}
-                                            </Timeline>
-                                        </Card>
-                                    </div>
-                                </TabPanel>
-                                <TabPanel value={"KMG"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Anggrek Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            Balkon Lantai 3 (#8)
-                                        </Typography>
-                                    </div>
-                                    <Carousel className="my-4 w-full">
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-kmg-m.webp"}
-                                            alt={"position of BGDC in kemanggisan expo"}
-                                            width={1213}
-                                            height={559}
-                                        />
-                                    </Carousel>
-                                </TabPanel>
-                                <TabPanel value={"BDG"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Bandung Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            Atrium Lantai 4 (#23)
-                                        </Typography>
-                                    </div>
-                                    <Carousel className="my-4 w-full">
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-bdg-m.webp"}
-                                            alt={"position of BGDC in bandung expo"}
-                                            width={880}
-                                            height={495}
-                                        />
-                                    </Carousel>
-                                </TabPanel>
-                                <TabPanel value={"AS"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Alam Sutera Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            GOR Alam Sutera (#35)
-                                        </Typography>
-                                    </div>
-                                    <Carousel className="my-4 w-full">
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-as-m.webp"}
-                                            alt={"position of BGDC in alam sutera expo"}
-                                            width={1267}
-                                            height={631}
-                                        />
-                                    </Carousel>
-                                </TabPanel>
-                            </TabsBody>
-                        </Tabs>
-                    </div>
-                </div>
+                
                 <div id="footer"></div>
             </main>
             <BgdcFooter />
