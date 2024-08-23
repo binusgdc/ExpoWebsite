@@ -46,7 +46,7 @@ export default function Faq() {
                     <Typography
                         variant="h1"
                         color="white"
-                        className="mx-auto w-full text-center font-serif font-medium outline-text"
+                        className="mx-auto w-full text-center font-serif font-medium outline-text-3"
                     >
                         Frequently Asked Questions
                     </Typography>

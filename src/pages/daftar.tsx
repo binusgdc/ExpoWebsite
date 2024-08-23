@@ -22,7 +22,7 @@ export default function Daftar() {
             <BgdcNav />
             <main id="daftar" className="flex min-h-screen flex-col items-center gap-5 px-2 py-5">
                 <div className="flex flex-col items-center">
-                    <Typography variant="h1" className="text-center font-serif font-medium">
+                    <Typography variant="h1" className="text-center font-serif font-medium outline-text-3">
                         Level Up with BGDC
                     </Typography>
                     <hr className="mx-auto my-3 h-1 w-full max-w-sm rounded border-0 bg-gray-100" />

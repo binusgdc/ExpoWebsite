@@ -26,6 +26,8 @@ import {
     ChevronDownIcon,
     MapPinIcon,
     CalendarDaysIcon,
+    Squares2X2Icon,
+    WrenchIcon,
 } from "@heroicons/react/24/solid"
 import Image from "next/image"
 import BgdcNav from "~/components/BGDCNav"
@@ -34,6 +36,7 @@ import BgdcFooter from "~/components/BGDCFooter"
 import { useState } from "react"
 import { FaCopy, FaDiscord, FaLine, FaWhatsapp } from "react-icons/fa"
 import toast, { Toaster } from "react-hot-toast"
+import { SquareOutlined } from "@mui/icons-material"
 
 export default function Home() {
     const [lineHover, setLineHover] = useState(false)
@@ -72,14 +75,14 @@ export default function Home() {
                             <Typography
                                 variant="h1"
                                 color="white"
-                                className="font-serif font-medium lg:text-7xl outline-text"
+                                className="font-serif font-medium lg:text-7xl outline-text-3"
                             >
                                 Games are dreams to life
                             </Typography>
                             <Typography
                                 variant="lead"
                                 color="amber"
-                                className="w-full font-semibold"
+                                className="w-full font-semibold outline-text-2"
                             >
                                 Binus Game Development Club
                             </Typography>
@@ -264,7 +267,7 @@ export default function Home() {
                     />
                     <Typography
                         variant="h2"
-                        className="text-center font-serif text-5xl font-medium outline-text"
+                        className="text-center font-serif text-5xl font-medium outline-text-3"
                     >
                         About BGDC
                     </Typography>
@@ -277,7 +280,7 @@ export default function Home() {
                             <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
-                                    className="mb-1 text-left font-serif font-medium outline-text"
+                                    className="mb-1 text-left font-serif font-medium outline-text-3"
                                 >
                                     A Passion for Games
                                 </Typography>
@@ -347,7 +350,7 @@ export default function Home() {
                             <div className="order-last 2xl:order-none">
                                 <Typography
                                     variant="h3"
-                                    className="mb-1 text-left font-serif font-medium outline-text"
+                                    className="mb-1 text-left font-serif font-medium outline-text-3"
                                 >
                                     Community
                                 </Typography>
@@ -359,44 +362,10 @@ export default function Home() {
                             </div>
                         </div>
                         <hr className="mx-auto h-1 w-full max-w-sm rounded border-0 bg-gray-100 2xl:hidden" />
-                        <div className="grid w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
-                            <div className="order-last 2xl:order-none">
-                                <Typography
-                                    variant="h3"
-                                    className="mb-1 text-left font-serif font-medium outline-text"
-                                >
-                                    Events
-                                </Typography>
-                                <Typography variant="paragraph" className="pr-5">
-                                    {`As a Binus UKM, we hold yearly events to further our vision and
-                                    mission, from `}
-                                    <Link
-                                        href="/#talent-group"
-                                        className="underline hover:text-blue-300"
-                                    >
-                                        mentoring programs
-                                    </Link>
-                                    {` to webinars to indie game festivals: our contributions to Indonesia's game development industry.
-                                    For members, it's a fantastic opportunity to level up critical soft skills and hard skills, and to have fun working together.`}
-                                </Typography>
-                            </div>
-                            <div className="mx-auto flex max-h-96 w-full max-w-md flex-col items-stretch gap-2">
-                                <Image
-                                    className="h-full w-full rounded-xl object-cover"
-                                    src="/webinar-igf-2022.png"
-                                    alt="Webinar IGF 2022: Insight on Indonesia's Game Industry"
-                                    width={1080}
-                                    height={720}
-                                />
-                                <Typography variant="small" color="white">
-                                    {"Webinar IGF 2022: Insight on Indonesia's Game Industry"}
-                                </Typography>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div
-                    id="kelas"
+                    id="activities"
                     className="relative flex flex-col items-center px-8 py-20"
                 >
                     <Image
@@ -409,22 +378,15 @@ export default function Home() {
                     <div className="flex max-w-5xl flex-col gap-3">
                         <Typography
                             variant="h2"
-                            className="text-center font-serif text-6xl font-medium outline-text"
+                            className="text-center font-serif text-6xl font-medium outline-text-3"
                         >
-                            Skill Up!
-                        </Typography>
-                        <Typography variant="small" color="light-gray" className="text-center">
-                            Class
+                            Activities!
                         </Typography>
                         <Typography
                             variant="lead"
                             className="my-2 text-center sm:text-3xl lg:text-4xl"
                         >
-                            One-time price. Unlimited access to mentors and classes for{" "}
-                            <strong>all</strong> skillsets, forever*.
-                        </Typography>
-                        <Typography variant="small" className="w-full text-center text-gray-400">
-                            *As long as BGDC exists.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, provident? Nihil enim, harum accusantium qui laudantium esse ratione omnis error soluta nobis magni! Facere illo ut officiis, illum quisquam quod!
                         </Typography>
                         <hr className="mx-auto my-2 h-1 max-w-md rounded border-0 bg-gray-100 md:my-4" />
                         <div className="flex flex-row flex-wrap justify-center gap-10">
@@ -444,6 +406,14 @@ export default function Home() {
                                     lead: "It's Alive!",
                                     description:
                                         "Bring games to life in 2D and 3D with the Unity game engine and the C# programming language.",
+                                },
+                                {
+                                    icon: WrenchIcon,
+                                    title: "OOGP",
+                                    imageRef: "/oogpclass.png",
+                                    lead: "OOGP",
+                                    description:
+                                        "Object Oriented Game Programming",
                                 },
                                 {
                                     icon: PaintBrushIcon,
@@ -517,7 +487,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div
-                    id="talent-group"
+                    id="events"
                     className="relative flex flex-col items-center px-5 py-20"
                 >
                     <Image
@@ -530,67 +500,51 @@ export default function Home() {
                     <div className="flex max-w-5xl flex-col gap-3">
                         <Typography
                             variant="h2"
-                            className="text-center font-serif font-medium sm:text-6xl outline-text"
+                            className="text-center font-serif font-medium sm:text-6xl outline-text-3"
                         >
-                            Create and Publish Games
-                        </Typography>
-                        <Typography variant="small" color="light-gray" className="text-center">
-                            Talent Group
+                            Events
                         </Typography>
                         <Typography
                             variant="lead"
                             className="my-2 text-center sm:text-3xl lg:text-4xl"
                         >
-                            Develop a game with a team from ideation to publishing.{" "}
-                            <span className="underline">No experience required.</span>
+                            Events are the heartbeat of BGDC, bringing together our community in exciting and dynamic ways. Our calendar is packed with opportunities to grow, learn, and celebrate our shared passion for game development.{" "}
                         </Typography>
                     </div>
                     <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+
                     <div className="max-w-3xl">
                         {[
                             {
-                                gameTitle: "Shadow of the Relics",
-                                studioName: "QuantumGlyph Studio",
-                                batch: "6",
+                                eventTitle: "BGDJam",
                                 screenshotRefs: [
-                                    "/relics-1.png",
-                                    "/relics-2.png",
-                                    "/relics-3.png",
-                                    "/relics-4.png",
-                                    "/relics-5.png",
+                                    "/BGDJamPreview.png",
                                 ],
                                 description:
-                                    "In a world of shadows and secrets, meet Ucup — a thief like no other. For years stealing things with finesse has been Ucup's bread & butter. But life takes a twist when he learns that the things he's stolen belong to his master, Lupin.  Yet it was too late to return it since the prized treasures are now in the hands of the Sinister Shadows. For once our main character, who has been stealing all his life, would use his skills for good. Join Ucup's journey to collect the stolen relics in this 2D side-scrolling platforming adventure game.",
-                                itchIoLink: "https://bgdc.itch.io/",
+                                    "BGDjam is a game development competition organized by BGDC, where participants are challenged to create a game within a limited time based on a specific theme. This event encourages creativity, teamwork, and technical skills, providing developers with an opportunity to bring innovative game ideas to life under time constraints.",
                             },
                             {
-                                gameTitle: "Yami Hop",
-                                studioName: "Pink Salamander Productions",
-                                batch: "6",
+                                eventTitle: "Company Visit",
                                 screenshotRefs: [
-                                    "/yami-6.webp",
-                                    "/yami-1.webp",
-                                    "/yami-2.webp",
-                                    "/yami-3.webp",
-                                    "/yami-4.webp",
-                                    "/yami-5.webp",
+                                    "/ComVisPreview1.webp",
+                                    "/ComVisPreview2.webp",
+                                    "/ComVisPreview3.png",
                                 ],
                                 description:
-                                    "In this game, the player takes on the character named Yami. She receives a strange vision that she believes to be her mother calling her to the surface. Before she has a chance to reach out, her vision gets increasingly blurry as she wakes up from her slumber. Determined, she has set a new goal to reach the surface to follow the vision that she saw, as she tries to search for her long-lost mother. She gathers all her items along with her trusty staff to try to escape the underworld.",
-                                itchIoLink: "https://bgdc.itch.io/",
+                                    "Company Visit is an annual event organized by BGDC, where members visit game companies in Indonesia. Last year, we conducted a virtual visit to Glory Jam, and this year, the event will be held offline, allowing participants to visit the companies in person. This activity offers a unique opportunity to gain insights into the game development industry and connect with professionals in the field.",
                             },
                             {
-                                gameTitle: "Highway Core",
-                                studioName: "Lifelessplay Productions",
-                                batch: "5",
+                                eventTitle: "Indienesia Game Festival",
                                 screenshotRefs: [
-                                    "/highway-core-1.png",
-                                    "/highway-core-2.png",
-                                    "/highway-core-3.png",
+                                    "/IGFGloryJam2024.png",
+                                    "/IGFJitok2024.png",
+                                    "/IGFSamudra2024.png",
+                                    "/IGFWebinar2024.png",
+                                    "/IGFWebinar22024.png",
+                                    "/IGFWinners2024.png",
                                 ],
                                 description:
-                                    "You are in the middle of a busy highway filled with trucks and cars. Shoot your way through an infinite horde of enemies with the various weapons that you can use! Can you set the highest score out of everyone else?",
-                                itchIoLink: "https://bgdc.itch.io/highway-core",
+                                    "Indienesia Game Festival (IGF) is BGDC's largest annual event that lasts three days. This virtual festival features game developers from across Indonesia showcasing their games, offering participants the chance to interact directly with the creators. In addition to the exhibition, the event also includes webinars that delve into various aspects of game development.",
                             },
                         ].map((element, i) => (
                             <div key={i}>
@@ -598,14 +552,10 @@ export default function Home() {
                                     <div>
                                         <Typography
                                             variant="h3"
-                                            className="text-center font-serif font-medium sm:text-5xl outline-text"
+                                            className="text-center font-serif font-medium sm:text-5xl outline-text-3"
                                         >
-                                            {element.gameTitle}
+                                            {element.eventTitle}
                                         </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="sm:text-xl"
-                                        >{`${element.studioName} | Batch ${element.batch}`}</Typography>
                                     </div>
                                     <Carousel
                                         className="rounded-xl"
@@ -617,7 +567,7 @@ export default function Home() {
                                             <Image
                                                 key={i}
                                                 src={ssRef}
-                                                alt={`${element.gameTitle}-screenshot${(
+                                                alt={`${element.eventTitle}-screenshot${(
                                                     i + 1
                                                 ).toString()}`}
                                                 className="h-full w-full object-cover"
@@ -629,11 +579,6 @@ export default function Home() {
                                     <Typography variant="paragraph" className="w-full text-left">
                                         {element.description}
                                     </Typography>
-                                    <a href={element.itchIoLink} target="_blank">
-                                        {/* <Button className="my-2" color="orange">
-                                            Try on Itch.io
-                                        </Button> */}
-                                    </a>
                                 </div>
                                 <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
                             </div>

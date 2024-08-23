@@ -54,12 +54,12 @@ export default function FindUs() {
                         <div>
                             <Typography
                                 variant="h2"
-                                className="text-center font-serif text-5xl font-medium outline-text"
+                                className="text-center font-serif text-5xl font-medium outline-text-3"
                             >
                                 {"Find Us at Expo!"}
                             </Typography>
                         </div>
-                        <Tabs className="my-2" value="Online">
+                        <Tabs className="my-2" value="KMG">
                             <TabsHeader
                                 className="bg-background"
                                 indicatorProps={{
@@ -68,15 +68,11 @@ export default function FindUs() {
                             >
                                 {[
                                     {
-                                        shortLabel: "Online",
-                                        fullLabel: "Online",
-                                    },
-                                    {
                                         shortLabel: "KMG",
                                         fullLabel: "Kemanggisan",
                                     },
                                     {
-                                        shortLabel: "BDG",
+                                        shortLabel: "SNY",
                                         fullLabel: "Senayan",
                                     },
                                     {
@@ -93,7 +89,7 @@ export default function FindUs() {
                                         </Typography>
                                         <Typography
                                             variant="h5"
-                                            className="hidden text-2xl font-semibold md:block"
+                                            className="hidden text-2xl font-semibold md:block outline-text-2"
                                         >
                                             {element.fullLabel}
                                         </Typography>
@@ -102,108 +98,6 @@ export default function FindUs() {
                             </TabsHeader>
                             <hr className=" my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
                             <TabsBody>
-                                <TabPanel value={"Online"} className="p-2">
-                                    <div className="flex flex-col items-center">
-                                        <div className="flex flex-col items-center gap-2">
-                                            <Typography
-                                                variant="h4"
-                                                className="text-center"
-                                                color="white"
-                                            >
-                                                Online
-                                            </Typography>
-                                            <a
-                                                href="https://binusgdc.com/link/events"
-                                                target="_blank"
-                                            >
-                                                <Button
-                                                    size="lg"
-                                                    color="orange"
-                                                    className="m-1 flex items-center gap-1"
-                                                >
-                                                    <MapPinIcon className="h-4 w-4" />
-                                                    BGDC Event Server
-                                                </Button>
-                                            </a>
-                                        </div>
-                                        <Card className="my-4 max-w-lg bg-purple-90 px-5 py-2">
-                                            <Timeline className="my-4">
-                                                {[
-                                                    {
-                                                        title: "Get to Know BGDC",
-                                                        timeSub: "29th August 2023 | 19:00 - 20:30",
-                                                        body: `BGDC-curious? Have all your questions answered in this live online session with us!`,
-                                                    },
-                                                    {
-                                                        title: "Talent Group Showcase I",
-                                                        timeSub: "30th August 2023 | 19:00 - 20:30",
-                                                        body: `Talent Group is BGDC's ultimate game dev program. 
-                                                        Three teams will share how they went from drawing board to finished game in just three months, and how you could do it too. 
-                                                        Ask them anything!`,
-                                                    },
-                                                    {
-                                                        title: "Talent Group Showcase II",
-                                                        timeSub: "31st August 2023 | 19:00 - 20:30",
-                                                        body: `Talent Group is BGDC's ultimate game dev program. 
-                                                        Three teams will share how they went from drawing board to finished game in just three months, and how you could do it too. 
-                                                        Ask them anything!`,
-                                                    },
-                                                    {
-                                                        title: "Coffee Talk",
-                                                        timeSub:
-                                                            "1st September 2023 | 19:00 - 20:30",
-                                                        body: `Grab a coffee (or tea) and tune in to our expo finale. Coffee Talk is a gathering format where we come together to chat, share experiences and have a good time. Come sit with us?`,
-                                                    },
-                                                ].map((element, i, arr) => (
-                                                    <TimelineItem key={i}>
-                                                        {i == arr.length - 1 ? (
-                                                            <></>
-                                                        ) : (
-                                                            <TimelineConnector />
-                                                        )}
-                                                        <TimelineHeader className="h-3">
-                                                            <TimelineIcon />
-                                                            <div>
-                                                                <Typography
-                                                                    variant="h6"
-                                                                    color="white"
-                                                                    className="leading-none"
-                                                                >
-                                                                    {element.title}
-                                                                </Typography>
-                                                            </div>
-                                                        </TimelineHeader>
-                                                        <TimelineBody className="pb-8">
-                                                            <div className="flex flex-col justify-between">
-                                                                <div className="">
-                                                                    <div className="flex flex-row items-center gap-1">
-                                                                        <CalendarDaysIcon
-                                                                            color="white"
-                                                                            className="h-5 w-5 -translate-y-0.5"
-                                                                        />
-                                                                        <Typography
-                                                                            variant="small"
-                                                                            color="white"
-                                                                        >
-                                                                            {element.timeSub}
-                                                                        </Typography>
-                                                                    </div>
-
-                                                                    <Typography
-                                                                        variant="small"
-                                                                        color="white"
-                                                                    >
-                                                                        {element.body}
-                                                                    </Typography>
-                                                                </div>
-                                                            </div>
-                                                        </TimelineBody>
-                                                    </TimelineItem>
-                                                ))}
-                                            </Timeline>
-                                        </Card>
-                                    </div>
-                                </TabPanel>
                                 <TabPanel value={"KMG"} className="p-2">
                                     <div className="flex flex-col items-center gap-2">
                                         <Typography
@@ -217,20 +111,18 @@ export default function FindUs() {
                                             variant="small"
                                             className="text-center text-gray-200"
                                         >
-                                            Balkon Lantai 3 (#8)
+                                            Balkon Lantai 3 (#7)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4 w-full">
                                         <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-kmg-m.webp"}
+                                            className="h-full w-full rounded-xl object-scale-down object-center"
+                                            src={"/DenahKMG2024.png"}
                                             alt={"position of BGDC in kemanggisan expo"}
                                             width={1213}
                                             height={559}
                                         />
-                                    </Carousel>
                                 </TabPanel>
-                                <TabPanel value={"BDG"} className="p-2">
+                                <TabPanel value={"SNY"} className="p-2">
                                     <div className="flex flex-col items-center gap-2">
                                         <Typography
                                             variant="h4"
@@ -243,18 +135,16 @@ export default function FindUs() {
                                             variant="small"
                                             className="text-center text-gray-200"
                                         >
-                                            Ur mom (#23)
+                                            Senayan Campus Lantai 3 (#19)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4 w-full">
                                         <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-bdg-m.webp"}
+                                            className="h-full w-full rounded-xl object-center"
+                                            src={"/DenahSNY2024.png"}
                                             alt={"position of BGDC in Senayan expo"}
-                                            width={880}
-                                            height={495}
+                                            width={1000}
+                                            height={816}
                                         />
-                                    </Carousel>
                                 </TabPanel>
                                 <TabPanel value={"AS"} className="p-2">
                                     <div className="flex flex-col items-center gap-2">
@@ -269,18 +159,16 @@ export default function FindUs() {
                                             variant="small"
                                             className="text-center text-gray-200"
                                         >
-                                            GOR Alam Sutera (#35)
+                                            GOR Alam Sutera (#37)
                                         </Typography>
                                     </div>
-                                    <Carousel className="my-4 w-full">
                                         <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center shadow-xl"
-                                            src={"/position-as-m.webp"}
+                                            className="h-full w-full rounded-xl object-scale-down object-center"
+                                            src={"/DenahALS2024.png"}
                                             alt={"position of BGDC in alam sutera expo"}
                                             width={1267}
                                             height={631}
                                         />
-                                    </Carousel>
                                 </TabPanel>
                             </TabsBody>
                         </Tabs>

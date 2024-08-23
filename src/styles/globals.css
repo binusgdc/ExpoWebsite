@@ -11,7 +11,7 @@
     }
 }
 
-.outline-text {
+.outline-text-3 {
     color: white;
     text-shadow: 
         3px 3px 0 black,
@@ -19,9 +19,19 @@
         3px 3px 0 black,
         3px 3px 0 black;
 }
+
+.outline-text-2 {
+    color: white;
+    text-shadow: 
+        2px 2px 0 black,
+        2px 2px 0 black,
+        2px 2px 0 black,
+        2px 2px 0 black;
+}
+
 :root {
     --bg-idolStart: #146d81;
-    --bg-idolEnd: #b1873e;
+    --bg-idolEnd: #908a54;
 }
 
 /* Apply seamless gradient backgrounds to each section */
@@ -40,7 +50,7 @@
 
 #find-us {
     background: linear-gradient(to bottom, var(--bg-idolStart), var(--bg-idolEnd));
-    /* background: var(--bg-idolStart); line kalo mau backgroundnya no gradient */
+    /* background: var(--bg-idolStart) kalo mau backgroundnya no gradient */
 }
 
 
