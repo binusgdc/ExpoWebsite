@@ -257,52 +257,6 @@ export default function Daftar() {
                             </div>
                         </div>
                     </Card>
-                    <Card className="relative flex min-h-[570px] w-[90vw] max-w-sm flex-col items-center gap-5 bg-white p-5 opacity-100 shadow-2xl">
-                        {/* <Typography
-                            variant="lead"
-                            color="black"
-                            className="absolute top-1/2 w-full text-center font-serif text-4xl opacity-100"
-                        >
-                            CLOSED
-                        </Typography> */}
-                        <div className="flex h-full w-full flex-col items-center justify-between gap-5">
-                            <div className="flex flex-col items-center gap-2">
-                                <Typography
-                                    variant="h2"
-                                    color="black"
-                                    className="text-center font-serif text-2xl font-medium"
-                                >
-                                    Feedback
-                                </Typography>
-                            </div>
-                            <div className="flex w-full flex-col items-center gap-2">
-                                <div className="w-full">
-                                    <Typography variant="small" className="my-1 w-full text-left">
-                                    Thank you for visiting our booth! We greatly appreciate your time and interest in BGDC. 
-                                    Your feedback is extremely valuable to us, and we would love to hear your thoughts and suggestions. 
-                                    Please take a moment to fill out our feedback form.
-                                    </Typography>
-                                </div>
-                            </div>
-                            <div className="flex w-full flex-col items-center gap-5">
-                                <a
-                                    href="https://binusgdc.com"
-                                    target="_blank"
-                                >
-                                    <Button
-                                        // disabled
-                                        color="deep-purple"
-                                        size="lg"
-                                        className="flex flex-row items-center gap-2"
-                                    >
-                                        Open Feedback Form <ArrowUpRightIcon className="h-4 w-4" />
-                                    </Button>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="absolute left-0 top-1/2 flex w-full flex-grow items-center justify-center"></div>
-                    </Card>
                 </div>
             </main>
             <BgdcFooter />

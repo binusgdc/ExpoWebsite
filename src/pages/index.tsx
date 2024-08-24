@@ -37,6 +37,7 @@ import { useState } from "react"
 import { FaCopy, FaDiscord, FaLine, FaWhatsapp } from "react-icons/fa"
 import toast, { Toaster } from "react-hot-toast"
 import { SquareOutlined } from "@mui/icons-material"
+import { Hidden } from "@mui/material"
 
 export default function Home() {
     const [lineHover, setLineHover] = useState(false)
@@ -59,14 +60,14 @@ export default function Home() {
                     <div className="flex w-full max-w-5xl flex-col items-center lg:flex-grow lg:flex-row-reverse lg:items-center lg:justify-between">
                         <Image
                             className="hidden object-center lg:block"
-                            src="/bgdc90ddeg.png"
+                            src="/BGDCIdolFront2024.png"
                             width={408}
                             height={503}
                             alt={"BGDC sticker"}
                         />
                         <Image
                             className="object-center lg:hidden"
-                            src="/bgdc90ddeg.png"
+                            src="/BGDCIdolFront2024.png"
                             width={204}
                             height={501}
                             alt={"BGDC sticker"}
@@ -366,7 +367,7 @@ export default function Home() {
                 </div>
                 <div
                     id="activities"
-                    className="relative flex flex-col items-center px-8 py-20"
+                    className="relative flex flex-col items-center px-5 py-20"
                 >
                     <Image
                         className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -388,101 +389,161 @@ export default function Home() {
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, provident? Nihil enim, harum accusantium qui laudantium esse ratione omnis error soluta nobis magni! Facere illo ut officiis, illum quisquam quod!
                         </Typography>
-                        <hr className="mx-auto my-2 h-1 max-w-md rounded border-0 bg-gray-100 md:my-4" />
-                        <div className="flex flex-row flex-wrap justify-center gap-10">
-                            {[
-                                {
-                                    icon: BeakerIcon,
-                                    title: "Game Design",
-                                    imageRef: "/game-design-1.png",
-                                    lead: "Get Creative",
-                                    description:
-                                        "Discover the essence of what makes games great. Learn about mechanics, story, balance and other key design concepts through vivid case studies.",
-                                },
-                                {
-                                    icon: CodeBracketIcon,
-                                    title: "Game Programming",
-                                    imageRef: "/class-prog-1.png",
-                                    lead: "It's Alive!",
-                                    description:
-                                        "Bring games to life in 2D and 3D with the Unity game engine and the C# programming language.",
-                                },
-                                {
-                                    icon: WrenchIcon,
-                                    title: "OOGP",
-                                    imageRef: "/oogpclass.png",
-                                    lead: "OOGP",
-                                    description:
-                                        "Object Oriented Game Programming",
-                                },
-                                {
-                                    icon: PaintBrushIcon,
-                                    title: "2D Art & Animation",
-                                    imageRef: "/2d-art-1.png",
-                                    lead: "Any Pen, Any Paper",
-                                    description:
-                                        "Our 2D class tutors on 2-dimensional fundamentals, background, character design, and implementing them into Unity.",
-                                },
-                                {
-                                    icon: CubeIcon,
-                                    title: "3D Art & Animation",
-                                    imageRef: "/3d-art-1.png",
-                                    lead: "Sculpt the World",
-                                    description:
-                                        "Our 3D class tutors modelling with Blender, from the bottom up! Includes objects, environments, characters, and how to import them in Unity.                                    ",
-                                },
-                                {
-                                    icon: SpeakerWaveIcon,
-                                    title: "Game Sound",
-                                    imageRef: "/sound-1.png",
-                                    lead: "Hey, Listen!",
-                                    description:
-                                        "Compose music and sound effects with Audacity and Ableton. Experiment with various themes and techniques for that immersive player experience.",
-                                },
-                            ].map((element) => {
-                                return (
-                                    <Card
-                                        key={element.title}
-                                        className="w-full max-w-3xl md:flex-row"
-                                    >
-                                        <CardHeader
-                                            shadow={false}
-                                            floated={false}
-                                            className="m-0 w-full flex-grow rounded-lg md:rounded-r-none"
+                        <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                        <div className="justify-center flex">
+                            <div className="max-w-3xl">
+                                <div className="w-full place-items-stretch gap-10 2xl:grid-cols-2">
+                                    <div className="order-last 2xl:order-none">
+                                        <Typography
+                                            variant="h3"
+                                            className="text-center font-serif font-medium sm:text-5xl outline-text-3"
                                         >
+                                            Kelas
+                                        </Typography>
+                                        <Typography variant="paragraph" className="pr-5">
+                                            {`Kelas BGDC lorem`}
+                                        </Typography>
+                                    </div>
+                                    <Carousel
+                                        className="rounded-xl"
+                                        navigation={(_props) => <></>}
+                                        loop
+                                        autoplay
+                                        autoplayDelay={10000}
+                                    >
+                                        <div className="flex-w-3xl">
                                             <Image
-                                                src={element.imageRef}
-                                                alt={element.title}
-                                                className="h-full w-full object-cover object-left"
-                                                width={1920}
-                                                height={1080}
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/2d-art-1.png"
+                                                alt="Kelas 2d art"
+                                                width={1080}
+                                                height={900}
                                             />
-                                        </CardHeader>
-                                        <CardBody className="sm:w-96">
-                                            <div className="mb-4 flex flex-row items-center gap-2">
-                                                <element.icon className="h-5 w-5" />
-                                                <Typography
-                                                    variant="h6"
-                                                    color="gray"
-                                                    className="uppercase"
-                                                >
-                                                    {element.title}
-                                                </Typography>
-                                            </div>
-                                            <Typography
-                                                variant="h4"
-                                                color="blue-gray"
-                                                className="mb-2"
-                                            >
-                                                {element.lead}
+                                            <Typography variant="small" color="white">
+                                                {"Kelas 2d art"}
                                             </Typography>
-                                            <Typography color="gray" className="mb-8 font-normal">
-                                                {element.description}
+                                        </div>
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/3d-art-1.png"
+                                                alt="Kelas 3d art"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas 3d art"}
                                             </Typography>
-                                        </CardBody>
-                                    </Card>
-                                )
-                            })}
+                                        </div>
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/oogpclass.png"
+                                                alt="Kelas OOGP"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas OOGP"}
+                                            </Typography>
+                                        </div>
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/class-prog-1.png"
+                                                alt="Kelas Programming"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas Programming"}
+                                            </Typography>
+                                        </div>
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/game-design-1.png"
+                                                alt="Kelas Game Design"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas Game Design"}
+                                            </Typography>
+                                        </div>
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/sound-1.png"
+                                                alt="Kelas Game Sound"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas Game Sound"}
+                                            </Typography>
+                                        </div>
+                                    </Carousel>
+                                </div>
+                                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                                <div className="w-full place-items-stretch gap-10 2xl:grid-cols-2">
+                                    <div className="order-last 2xl:order-none">
+                                        <Typography
+                                            variant="h3"
+                                            className="text-center font-serif font-medium sm:text-5xl outline-text-3"
+                                        >
+                                            Gathering
+                                        </Typography>
+                                        <Typography variant="paragraph" className="pr-5">
+                                            {`Gathering BGDC lorem`}
+                                        </Typography>
+                                    </div>
+                                    <Carousel
+                                        className="rounded-xl"
+                                        navigation={(_props) => <></>}
+                                        loop
+                                        autoplay
+                                        autoplayDelay={10000}
+                                    >
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/IdolPlay.png"
+                                                alt="Play"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas 2d art"}
+                                            </Typography>
+                                        </div>
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/IdolObs.png"
+                                                alt="Obs"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas 3d art"}
+                                            </Typography>
+                                        </div>
+                                        <div className="flex-w-3xl">
+                                            <Image
+                                                className="h-full w-full rounded-xl object-cover"
+                                                src="/IdolDev.png"
+                                                alt="Dev"
+                                                width={1080}
+                                                height={900}
+                                            />
+                                            <Typography variant="small" color="white">
+                                                {"Kelas OOGP"}
+                                            </Typography>
+                                        </div>
+                                    </Carousel>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -512,7 +573,6 @@ export default function Home() {
                         </Typography>
                     </div>
                     <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-
                     <div className="max-w-3xl">
                         {[
                             {
