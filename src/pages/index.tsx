@@ -34,7 +34,7 @@ import BgdcNav from "~/components/BGDCNav"
 import Link from "next/link"
 import BgdcFooter from "~/components/BGDCFooter"
 import { useState } from "react"
-import { FaCopy, FaDiscord, FaLine, FaWhatsapp } from "react-icons/fa"
+import { FaCopy, FaDiscord, FaLaptop, FaLine, FaWhatsapp } from "react-icons/fa"
 import toast, { Toaster } from "react-hot-toast"
 import { SquareOutlined } from "@mui/icons-material"
 import { Hidden } from "@mui/material"
@@ -60,14 +60,14 @@ export default function Home() {
                     <div className="flex w-full max-w-4xl flex-col items-center lg:flex-grow lg:flex-row-reverse lg:items-center lg:justify-between">
                         <Image
                             className="hidden object-center lg:block"
-                            src="/website_yellow_ishs_outline.png"
+                            src="/BGDCFront.png"
                             width={408}
                             height={503}
                             alt={"BGDC sticker"}
                         />
                         <Image
                             className="object-center lg:hidden"
-                            src="/website_yellow_ishs_outline.png"
+                            src="/BGDCFront.png"
                             width={204}
                             height={501}
                             alt={"BGDC sticker"}
@@ -254,7 +254,7 @@ export default function Home() {
                 </div>
                 <div
                     id="about-bgdc"
-                    className="relative flex flex-col items-center px-5 py-5"
+                    className="relative flex flex-col items-center px-5 pt-5 pb-4"
                 >
                     <Image
                         className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -275,7 +275,7 @@ export default function Home() {
                         <span style={{color: '#f66472'}}>Develop</span>
                     </p>
                     <br />
-                    <div className="w-full max-w-3xl flex-col items-center justify-start gap-14 2xl:gap-10">
+                    <div className="w-full max-w-3xl flex-col items-center justify-start gap-14 2xl:gap-10 pt-10">
                         <div className="grid w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
                             <div className="order-last 2xl:order-none">
                                 <Typography
@@ -291,9 +291,9 @@ export default function Home() {
                                     through education, public events and member activities.
                                 </Typography>
                             </div>
-                            <div className="mx-auto max-h-96 w-full max-w-md rounded-xl bg-[#62afe7]">
+                            <div className="mx-auto max-h-96 w-full max-w-md">
                                 <Image
-                                    className="h-full w-full rounded-xl object-scale-down object-center"
+                                    className="h-flex w-full object-top rounded-xl"
                                     src="/play-observe-develop-1.jpg"
                                     alt="mascots: play, observe, develop"
                                     width={1500}
@@ -301,12 +301,140 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                        <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                        <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-transparent md:my-10" />
+                        <div
+                    id="find-us"
+                    className="relative flex flex-col items-center px-5"
+                    >
+                    <div className="w-full max-w-4xl">
+                        <div>
+                            <Typography
+                                variant="h2"
+                                className="text-center font-serif text-5xl font-medium outline-text-3"
+                            >
+                                {"Find Us at Expo!"}
+                            </Typography>
+                        </div>
+                        <Tabs className="my-2" value="KMG">
+                            <TabsHeader
+                                className="bg-background"
+                                indicatorProps={{
+                                    className: "bg-cyan-90 shadow-none",
+                                }}
+                            >
+                                {[
+                                    {
+                                        shortLabel: "KMG",
+                                        fullLabel: "Kemanggisan",
+                                    },
+                                    {
+                                        shortLabel: "SNY",
+                                        fullLabel: "Senayan",
+                                    },
+                                    {
+                                        shortLabel: "AS",
+                                        fullLabel: "Alam Sutera",
+                                    },
+                                ].map((element) => (
+                                    <Tab key={element.shortLabel} value={element.shortLabel}>
+                                        <Typography
+                                            variant="h5"
+                                            className="font-2xl font-semibold md:hidden"
+                                        >
+                                            {element.shortLabel}
+                                        </Typography>
+                                        <Typography
+                                            variant="h5"
+                                            className="hidden text-2xl font-semibold md:block outline-text-2"
+                                        >
+                                            {element.fullLabel}
+                                        </Typography>
+                                    </Tab>
+                                ))}
+                            </TabsHeader>
+                            <hr className=" my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
+                            <TabsBody>
+                                <TabPanel value={"KMG"} className="p-2">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Typography
+                                            variant="h4"
+                                            className="text-center"
+                                            color="white"
+                                        >
+                                            Anggrek Campus
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="text-center text-gray-200"
+                                        >
+                                            Balkon Lantai 3 (#7)
+                                        </Typography>
+                                    </div>
+                                        <Image
+                                            className="h-full w-full rounded-xl object-scale-down object-center"
+                                            src={"/DenahKMG2024.png"}
+                                            alt={"position of BGDC in kemanggisan expo"}
+                                            width={1213}
+                                            height={559}
+                                        />
+                                </TabPanel>
+                                <TabPanel value={"SNY"} className="p-2">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Typography
+                                            variant="h4"
+                                            className="text-center"
+                                            color="white"
+                                        >
+                                            Senayan Campus
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="text-center text-gray-200"
+                                        >
+                                            Senayan Campus Lantai 3 (#19)
+                                        </Typography>
+                                    </div>
+                                        <Image
+                                            className="h-full w-full rounded-xl object-center"
+                                            src={"/DenahSNY2024.png"}
+                                            alt={"position of BGDC in Senayan expo"}
+                                            width={1000}
+                                            height={816}
+                                        />
+                                </TabPanel>
+                                <TabPanel value={"AS"} className="p-2">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Typography
+                                            variant="h4"
+                                            className="text-center"
+                                            color="white"
+                                        >
+                                            Alam Sutera Campus
+                                        </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="text-center text-gray-200"
+                                        >
+                                            GOR Alam Sutera (#37)
+                                        </Typography>
+                                    </div>
+                                        <Image
+                                            className="h-full w-full rounded-xl object-scale-down object-center"
+                                            src={"/DenahALS2024.png"}
+                                            alt={"position of BGDC in alam sutera expo"}
+                                            width={1267}
+                                            height={631}
+                                        />
+                                </TabPanel>
+                            </TabsBody>
+                        </Tabs>
+                    </div>
+                </div>
                     </div>
                 </div>
                 <div
                     id="class"
-                    className="relative flex flex-col items-center px-5 py-5"
+                    className="relative flex flex-col items-center px-5 pb-5"
                 >
                     <Image
                         className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -315,6 +443,7 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
+                    <hr className="flex max-w-3xl mx-auto my-4 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
                     <div className="flex max-w-3xl flex-col gap-3">
                         <Typography
                             variant="h2"
@@ -332,8 +461,8 @@ export default function Home() {
                         <Typography variant="small" className="w-full text-center text-gray-400">
                             *As long as BGDC exists.
                         </Typography>
-                        <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                        <div className="justify-center flex">
+                        <hr className="mx-auto my-4 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
+                        <div className="justify-center flex pt-10">
                             <div className="max-w-3xl"><div className="flex flex-row flex-wrap justify-center gap-10">
                             {[
                                 {
@@ -375,6 +504,14 @@ export default function Home() {
                                     lead: "Hey, Listen!",
                                     description:
                                         "Compose music and sound effects with Audacity and Ableton. Experiment with various themes and techniques for that immersive player experience.",
+                                },
+                                {
+                                    icon: FaLaptop,
+                                    title: "OOGP",
+                                    imageRef: "/oogpclass.png",
+                                    lead: "Type It Down!",
+                                    description:
+                                        "Master object-oriented principles to create robust game architectures. Design reusable systems for characters, items, and environments.",
                                 },
                             ].map((element) => {
                                 return (
@@ -421,11 +558,12 @@ export default function Home() {
                                 )
                             })}
                             </div>
-                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 md:my-10" />
                         </div>
                         </div>
                     </div>
                 </div>
+                <hr className="flex max-w-3xl mx-auto my-4 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
                 <div
                     id="events"
                     className="relative flex flex-col items-center px-5 py-5"
@@ -437,7 +575,7 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
-                    <div className="flex max-w-3xl flex-col gap-3">
+                    <div className="flex max-w-3xl flex-col gap-3 pb-5">
                         <Typography
                             variant="h2"
                             className="text-center font-serif font-medium sm:text-6xl outline-text-3"
@@ -448,14 +586,14 @@ export default function Home() {
                             variant="lead"
                             className="my-2 text-center sm:text-3xl lg:text-4xl"
                         >
-                            Events are the heartbeat of BGDC, bringing together our community in exciting and dynamic ways. <br />Our calendar is packed with opportunities to grow, learn, and celebrate our shared passion for game development.{" "}
+                            Events are the heartbeat of BGDC, bringing together our community in exciting and dynamic ways.{" "}
                         </Typography>
                     </div>
-                    <hr className="flex max-w-3xl mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                    <div className="max-w-3xl">
+                    <hr className="flex max-w-3xl mx-auto my-5 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
+                    <div className="max-w-3xl pt-10">
                         <Typography
                             variant="h3"
-                            className="flex-col text-center font-serif font-medium sm:text-5xl outline-text-3"
+                            className="flex-col text-center font-serif font-medium sm:text-5xl outline-text-3 pb-10"
                         >
                             Gathering
                         </Typography>
@@ -515,11 +653,11 @@ export default function Home() {
                             </Typography>
                         </div>
                     </Carousel>
-                    <Typography variant="paragraph" className="pr-5">
+                    <Typography variant="paragraph" className="pr-5 pt-5">
                         {`Our club hosts a monthly gathering where members come together to share their passions and have fun. While we often focus on game development, our events cover a wide range of activities—anything that brings joy to our community counts as a gathering. Whether you're here to learn, create, or simply have a good time, there's something for everyone!`}
                     </Typography>
                 </div>
-                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 md:my-10" />
                 <div className="max-w-3xl">
                     {[
                         {
@@ -562,7 +700,10 @@ export default function Home() {
                                 "/DeaDec2024.png",
                             ],
                                 description:
-                                "pkm omg comsrv",
+                                <>
+                                    PKM is an event held by BGDC to raise awareness and teach the masses regarding global and social problems that are prevalent in our everyday life. To achieve this, we develop games that are educational-themed. They can develop soft and hard skills in the field of game development, as well as get <b>Community Service</b> Hours.
+                                </>
+                                ,
                         },
                     ].map((element, i) => (
                         <div key={i}>
@@ -570,7 +711,7 @@ export default function Home() {
                                 <div>
                                     <Typography
                                     variant="h3"
-                                    className="text-center font-serif font-medium sm:text-5xl outline-text-3"
+                                    className="text-center font-serif font-medium sm:text-5xl outline-text-3 pb-7"
                                     >
                                         {element.eventTitle}
                                     </Typography>
@@ -594,11 +735,11 @@ export default function Home() {
                                         />
                                     ))}
                                 </Carousel>
-                                <Typography variant="paragraph" className="w-full text-left">
+                                <Typography variant="paragraph" className="w-full text-left pt-5">
                                     {element.description}
                                 </Typography>
                             </div>
-                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 md:my-10" />
                         </div>
                     ))}
                     </div>

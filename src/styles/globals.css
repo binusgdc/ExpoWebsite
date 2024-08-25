@@ -48,10 +48,10 @@
     background: linear-gradient(to bottom, var(--bg-idolStart), var(--bg-idolEnd));
 }
 
-#find-us {
+/* #find-us {
     background: linear-gradient(to bottom, var(--bg-idolStart), var(--bg-idolEnd));
     /* background: var(--bg-idolStart) kalo mau backgroundnya no gradient */
-}
+
 
 
 
