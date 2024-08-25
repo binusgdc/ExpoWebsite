@@ -24,14 +24,14 @@ export default function Faq() {
                 <div className="relative mt-16 h-full w-full max-w-[1920px] px-5">
                     <Image
                         className="left-5 top-0 hidden translate-y-[100px] 2xl:absolute 2xl:block"
-                        src={"/IdolPlay.webp"}
+                        src={"/IdolPlay.png"}
                         width={518 / 2}
                         height={705 / 2}
                         alt=""
                     />
                     <Image
                         className="right-5 top-0 hidden translate-y-[300px] 2xl:absolute 2xl:block"
-                        src={"/IdolObs.webp"}
+                        src={"/IdolObs.png"}
                         width={518 / 2}
                         height={705 / 2}
                         alt=""

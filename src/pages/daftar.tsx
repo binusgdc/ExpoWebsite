@@ -30,9 +30,9 @@ export default function Daftar() {
                         <Typography variant="small" className="text-center font-semibold">
                             Contact Person:
                         </Typography>
-                        <div className="flex w-full max-w-md flex-row justify-between gap-4">
-                            <div className="flex flex-col items-start gap-1">
-                                <div className="flex flex-row items-center gap-2">
+                        <div className="flex w-full max-w-md flex-row justify-between gap-2 p-1">
+                            <div className="flex flex-col items-start gap-2">
+                                <div className="flex flex-row items-center gap-1">
                                     <FaWhatsapp />
                                     <Typography
                                         className={
@@ -54,7 +54,9 @@ export default function Daftar() {
                                             toast.success("WhatsApp number copied")
                                         }}
                                     >
+                                        <p className="text-xs">
                                         Virly: 081378633352
+                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
@@ -82,7 +84,9 @@ export default function Daftar() {
                                             toast.success("Discord username copied")
                                         }}
                                     >
+                                        <p className="text-xs">
                                         hina.akhina
+                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
@@ -91,8 +95,8 @@ export default function Daftar() {
                                     />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start gap-1">
-                                <div className="flex flex-row items-center gap-2">
+                            <div className="flex flex-col items-start gap-2">
+                                <div className="flex flex-row items-center gap-1">
                                     <FaWhatsapp />
                                     <Typography
                                         className={
@@ -114,7 +118,9 @@ export default function Daftar() {
                                             toast.success("WhatsApp number copied")
                                         }}
                                     >
+                                        <p className="text-xs">
                                         Raul: 085156292898
+                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
@@ -142,7 +148,9 @@ export default function Daftar() {
                                             toast.success("Discord username copied")
                                         }}
                                     >
+                                        <p className="text-xs">
                                         yuukito2
+                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
@@ -155,7 +163,7 @@ export default function Daftar() {
                     </div>
                 </div>
                 <div className="flex flex-row-reverse flex-wrap-reverse justify-center gap-10">
-                    <Card className="relative min-h-[570px] w-[90vw] max-w-sm bg-white opacity-100 shadow-2xl">
+                    <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-100 shadow-2xl">
                         {/* <Typography
                             variant="lead"
                             color="black"
@@ -201,7 +209,6 @@ export default function Daftar() {
                                     </Alert>
                                 </div>
                             </div>
-                            <div className="flex w-full flex-col items-center gap-5"></div>
                             <div className="flex w-full flex-col items-center gap-5">
                                 <div className="w-full">
                                     <Typography variant="small" className="my-1 w-full text-left">

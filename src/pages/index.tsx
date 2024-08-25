@@ -55,19 +55,19 @@ export default function Home() {
             <main id="index">
                 <div
                     id="landing"
-                    className="flex max-h-[110vh] min-h-[900px] flex-col items-center justify-between px-8 pb-16 pt-2 lg:h-[90vh]"
+                    className="flex max-h-[120vh] min-h-[800px] flex-col items-center justify-between px-6 pt-2 lg:h-[90vh]"
                 >
-                    <div className="flex w-full max-w-5xl flex-col items-center lg:flex-grow lg:flex-row-reverse lg:items-center lg:justify-between">
+                    <div className="flex w-full max-w-4xl flex-col items-center lg:flex-grow lg:flex-row-reverse lg:items-center lg:justify-between">
                         <Image
                             className="hidden object-center lg:block"
-                            src="/BGDCIdolFront2024.png"
+                            src="/website_yellow_ishs_outline.png"
                             width={408}
                             height={503}
                             alt={"BGDC sticker"}
                         />
                         <Image
                             className="object-center lg:hidden"
-                            src="/BGDCIdolFront2024.png"
+                            src="/website_yellow_ishs_outline.png"
                             width={204}
                             height={501}
                             alt={"BGDC sticker"}
@@ -91,7 +91,7 @@ export default function Home() {
                                 A community that celebrates games and creative passion.
                             </Typography>
                             <div className="my-1 flex w-full flex-row items-center justify-center gap-x-10 px-10 lg:justify-start lg:px-0 lg:pr-20">
-                                <a href="#find-us" className="flex-grow">
+                                <a href="find-us" className="flex-grow">
                                     <Button fullWidth color="cyan" size="lg" className="sm:text-xl">
                                         Find Us
                                     </Button>
@@ -118,150 +118,147 @@ export default function Home() {
                                 >
                                     Contact Person:
                                 </Typography>
-                            <div className="flex w-full max-w-md flex-row justify-between gap-4">
-                                <div className="flex flex-col items-start gap-2">
-                                    <div className="flex flex-row items-center gap-2">
-                                        <FaWhatsapp />
-                                        <Typography
-                                            className={
-                                                whatsAppHover1
-                                                    ? "hover:cursor-pointer"
-                                                    : "hover:cursor-default"
-                                            }
-                                            variant="small"
-                                            onMouseEnter={() => setWhatsAppHover1(true)}
-                                            onMouseLeave={() => setWhatsAppHover1(false)}
-                                            onClick={async () => {
-                                                if (!whatsAppHover1) {
-                                                    return
+                                <div className="flex w-full max-w-md flex-row justify-left">
+                                    <div className="flex flex-col items-start gap-2">
+                                        <div className="flex flex-row items-center gap-1">
+                                            <FaWhatsapp />
+                                            <Typography
+                                                className={
+                                                    whatsAppHover1
+                                                        ? "hover:cursor-pointer"
+                                                        : "hover:cursor-default"
                                                 }
-                                                await navigator.clipboard.writeText(
-                                                    "081378633352"
-                                                )
-                                                setWhatsAppHover1(false)
-                                                toast.success("WhatsApp number copied")
-                                            }}
-                                        >
-                                            Virly: 081378633352
-                                        </Typography>
-                                        <FaCopy
-                                            className={`${
-                                                whatsAppHover1 ? `opacity-100` : `opacity-0`
-                                            } transition-opacity`}
-                                        />
+                                                onMouseEnter={() => setWhatsAppHover1(true)}
+                                                onMouseLeave={() => setWhatsAppHover1(false)}
+                                                onClick={async () => {
+                                                    if (!whatsAppHover1) {
+                                                        return
+                                                    }
+                                                    await navigator.clipboard.writeText(
+                                                        "081378633352"
+                                                    )
+                                                    setWhatsAppHover1(false)
+                                                    toast.success("WhatsApp number copied")
+                                                }}
+                                            >
+                                                <p className="text-xs">
+                                                Virly: 081378633352
+                                                </p>
+                                            </Typography>
+                                            <FaCopy
+                                                className={`${
+                                                    whatsAppHover1 ? `opacity-100` : `opacity-0`
+                                                } transition-opacity`}
+                                            />
+                                        </div>
+                                        <div className="flex flex-row items-center gap-1">
+                                            <FaDiscord />
+                                            <Typography
+                                                className={
+                                                    discordHover1
+                                                        ? "hover:cursor-pointer"
+                                                        : "hover:cursor-default"
+                                                }
+                                                variant="small"
+                                                onMouseEnter={() => setDiscordHover1(true)}
+                                                onMouseLeave={() => setDiscordHover1(false)}
+                                                onClick={async () => {
+                                                    if (!discordHover1) {
+                                                        return
+                                                    }
+                                                    await navigator.clipboard.writeText("hina.akhina")
+                                                    setDiscordHover1(false)
+                                                    toast.success("Discord username copied")
+                                                }}
+                                            >
+                                                <p className="text-xs">
+                                                hina.akhina
+                                                </p>
+                                            </Typography>
+                                            <FaCopy
+                                                className={`${
+                                                    discordHover1 ? `opacity-100` : `opacity-0`
+                                                } transition-opacity`}
+                                            />
+                                        </div>
                                     </div>
-                                    <div className="flex flex-row items-center gap-2">
-                                        <FaDiscord />
-                                        <Typography
-                                            className={
-                                                discordHover1
-                                                    ? "hover:cursor-pointer"
-                                                    : "hover:cursor-default"
-                                            }
-                                            variant="small"
-                                            onMouseEnter={() => setDiscordHover1(true)}
-                                            onMouseLeave={() => setDiscordHover1(false)}
-                                            onClick={async () => {
-                                                if (!discordHover1) {
-                                                    return
+                                    <div className="flex flex-col items-start gap-2">
+                                        <div className="flex flex-row items-center gap-1">
+                                            <FaWhatsapp />
+                                            <Typography
+                                                className={
+                                                    whatsAppHover2
+                                                        ? "hover:cursor-pointer"
+                                                        : "hover:cursor-default"
                                                 }
-                                                await navigator.clipboard.writeText("hina.akhina")
-                                                setDiscordHover1(false)
-                                                toast.success("Discord username copied")
-                                            }}
-                                        >
-                                            hina.akhina
-                                        </Typography>
-                                        <FaCopy
-                                            className={`${
-                                                discordHover1 ? `opacity-100` : `opacity-0`
-                                            } transition-opacity`}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-start gap-1">
-                                    <div className="flex flex-row items-center gap-2">
-                                        <FaWhatsapp />
-                                        <Typography
-                                            className={
-                                                whatsAppHover2
-                                                    ? "hover:cursor-pointer"
-                                                    : "hover:cursor-default"
-                                            }
-                                            variant="small"
-                                            onMouseEnter={() => setWhatsAppHover2(true)}
-                                            onMouseLeave={() => setWhatsAppHover2(false)}
-                                            onClick={async () => {
-                                                if (!whatsAppHover2) {
-                                                    return
+                                                variant="small"
+                                                onMouseEnter={() => setWhatsAppHover2(true)}
+                                                onMouseLeave={() => setWhatsAppHover2(false)}
+                                                onClick={async () => {
+                                                    if (!whatsAppHover2) {
+                                                        return
+                                                    }
+                                                    await navigator.clipboard.writeText(
+                                                        "085156292898"
+                                                    )
+                                                    setWhatsAppHover2(false)
+                                                    toast.success("WhatsApp number copied")
+                                                }}
+                                            >
+                                                <p className="text-xs">
+                                                Raul: 085156292898
+                                                </p>
+                                            </Typography>
+                                            <FaCopy
+                                                className={`${
+                                                    whatsAppHover2 ? `opacity-100` : `opacity-0`
+                                                } transition-opacity`}
+                                            />
+                                        </div>
+                                        <div className="flex flex-row items-center gap-1">
+                                            <FaDiscord />
+                                            <Typography
+                                                className={
+                                                    discordHover2
+                                                        ? "hover:cursor-pointer"
+                                                        : "hover:cursor-default"
                                                 }
-                                                await navigator.clipboard.writeText(
-                                                    "085156292898"
-                                                )
-                                                setWhatsAppHover2(false)
-                                                toast.success("WhatsApp number copied")
-                                            }}
-                                        >
-                                            Raul: 085156292898
-                                        </Typography>
-                                        <FaCopy
-                                            className={`${
-                                                whatsAppHover2 ? `opacity-100` : `opacity-0`
-                                            } transition-opacity`}
-                                        />
-                                    </div>
-                                    <div className="flex flex-row items-center gap-2">
-                                        <FaDiscord />
-                                        <Typography
-                                            className={
-                                                discordHover2
-                                                    ? "hover:cursor-pointer"
-                                                    : "hover:cursor-default"
-                                            }
-                                            variant="small"
-                                            onMouseEnter={() => setDiscordHover2(true)}
-                                            onMouseLeave={() => setDiscordHover2(false)}
-                                            onClick={async () => {
-                                                if (!discordHover2) {
-                                                    return
-                                                }
-                                                await navigator.clipboard.writeText("yuukito2")
-                                                setDiscordHover1(false)
-                                                toast.success("Discord username copied")
-                                            }}
-                                        >
-                                            yuukito2
-                                        </Typography>
-                                        <FaCopy
-                                            className={`${
-                                                discordHover2 ? `opacity-100` : `opacity-0`
-                                            } transition-opacity`}
-                                        />
+                                                variant="small"
+                                                onMouseEnter={() => setDiscordHover2(true)}
+                                                onMouseLeave={() => setDiscordHover2(false)}
+                                                onClick={async () => {
+                                                    if (!discordHover2) {
+                                                        return
+                                                    }
+                                                    await navigator.clipboard.writeText("yuukito2")
+                                                    setDiscordHover1(false)
+                                                    toast.success("Discord username copied")
+                                                }}
+                                            >
+                                                <p className="text-xs">
+                                                yuukito2
+                                                </p>
+                                            </Typography>
+                                            
+                                            <FaCopy
+                                                className={`${
+                                                    discordHover2 ? `opacity-100` : `opacity-0`
+                                                } transition-opacity`}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    <br></br>
-                    <Typography
-                        variant="h2"
-                        color="white"
-                        className="text-center underline lg:text-5xl"
-                    >
-                        OPEN FOR ALL REGIONS
-                    </Typography>
-                    <a className="hidden" href="#">
-                        <ChevronDownIcon className="h-6 w-6" />
-                    </a>
-                </div>
                 <div
                     id="about-bgdc"
-                    className="relative flex flex-col items-center px-5 py-20"
+                    className="relative flex flex-col items-center px-5 py-5"
                 >
                     <Image
-                        className="left-10 top-80 hidden 2xl:absolute 2xl:block"
-                        src={"/IdolPlay.webp"}
+                        className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
+                        src={"/IdolPlay.png"}
                         width={518 / 2}
                         height={705 / 2}
                         alt=""
@@ -272,11 +269,13 @@ export default function Home() {
                     >
                         About BGDC
                     </Typography>
-                    <Typography variant="small" color="light-gray" className="text-center">
-                        Play. Observe. Develop.
-                    </Typography>
+                    <p className="text-center block antialiased font-sans text-xl leading-relaxed w-full font-semibold outline-text-2">
+                        <span style={{color: '#bdbf48'}}>Play </span> 
+                        <span style={{color: '#ff8c34'}}>Observe </span> 
+                        <span style={{color: '#f66472'}}>Develop</span>
+                    </p>
                     <br />
-                    <div className="flex w-full max-w-3xl flex-col items-center justify-start gap-14 2xl:gap-10">
+                    <div className="w-full max-w-3xl flex-col items-center justify-start gap-14 2xl:gap-10">
                         <div className="grid w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
                             <div className="order-last 2xl:order-none">
                                 <Typography
@@ -302,254 +301,134 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                        <hr className="mx-auto h-1 w-full max-w-sm rounded border-0 bg-gray-100 2xl:hidden" />
-                        <div className="grid h-fit w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
-                            <Carousel
-                                className="mx-auto max-h-96 max-w-md"
-                                navigation={(_props) => <></>}
-                                loop
-                                autoplay
-                                autoplayDelay={10000}
-                            >
-                                <div className="flex h-full w-full flex-col items-stretch gap-2">
-                                    <Image
-                                        className="h-full w-full rounded-xl object-cover"
-                                        src="/boms-polka.png"
-                                        alt="BGDC Minecraft Skyblock"
-                                        width={1080}
-                                        height={720}
-                                    />
-                                    <Typography variant="small" color="white">
-                                        {"BGDC Minecraft Skyblock. Credit: Xevi"}
-                                    </Typography>
-                                </div>
-                                <div className="flex h-full w-full flex-col items-stretch gap-2">
-                                    <Image
-                                        className="h-full w-full rounded-xl object-cover"
-                                        src="/gathering-omega-strikers.png"
-                                        alt="Omega Strikers Gathering"
-                                        width={1080}
-                                        height={720}
-                                    />
-                                    <Typography variant="small" color="white">
-                                        {"Gathering: Omega Strikers"}
-                                    </Typography>
-                                </div>
-                                <div className="flex h-full w-full flex-col items-stretch gap-2">
-                                    <Image
-                                        className="h-full w-full rounded-xl object-cover"
-                                        src="/ikea-raid-1.jpg"
-                                        alt="BGDC Ikea Raid 2022"
-                                        width={1080}
-                                        height={720}
-                                    />
-                                    <Typography variant="small" color="white">
-                                        {"BGDC Ikea Raid 2022"}
-                                    </Typography>
-                                </div>
-                            </Carousel>
-                            <div className="order-last 2xl:order-none">
-                                <Typography
-                                    variant="h3"
-                                    className="mb-1 text-left font-serif font-medium outline-text-3"
-                                >
-                                    Community
-                                </Typography>
-                                <Typography variant="paragraph" className="pr-5">
-                                    {`Community is the lifeblood of BGDC. Join a vibrant and diverse collection of enthusiasts who love to share their many passions. 
-                                        Connect with fellow writers, designers, artists, programmers and more, some of which have industry experience.
-                                        Bond with monthly member gatherings and subcommunities. There's a little something for everyone here.`}
-                                </Typography>
-                            </div>
-                        </div>
-                        <hr className="mx-auto h-1 w-full max-w-sm rounded border-0 bg-gray-100 2xl:hidden" />
+                        <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
                     </div>
                 </div>
                 <div
-                    id="activities"
-                    className="relative flex flex-col items-center px-5 py-20"
+                    id="class"
+                    className="relative flex flex-col items-center px-5 py-5"
                 >
                     <Image
                         className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
-                        src={"/IdolObs.webp"}
+                        src={"/IdolObs.png"}
                         width={518 / 2}
                         height={705 / 2}
                         alt=""
                     />
-                    <div className="flex max-w-5xl flex-col gap-3">
+                    <div className="flex max-w-3xl flex-col gap-3">
                         <Typography
                             variant="h2"
                             className="text-center font-serif text-6xl font-medium outline-text-3"
                         >
-                            Activities!
+                            Class!
                         </Typography>
                         <Typography
                             variant="lead"
                             className="my-2 text-center sm:text-3xl lg:text-4xl"
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, provident? Nihil enim, harum accusantium qui laudantium esse ratione omnis error soluta nobis magni! Facere illo ut officiis, illum quisquam quod!
+                            One-time price. Unlimited access to mentors and classes for{" "}
+                            <strong>all</strong> skillsets, forever*.
+                        </Typography>
+                        <Typography variant="small" className="w-full text-center text-gray-400">
+                            *As long as BGDC exists.
                         </Typography>
                         <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
                         <div className="justify-center flex">
-                            <div className="max-w-3xl">
-                                <div className="w-full place-items-stretch gap-10 2xl:grid-cols-2">
-                                    <div className="order-last 2xl:order-none">
-                                        <Typography
-                                            variant="h3"
-                                            className="text-center font-serif font-medium sm:text-5xl outline-text-3"
-                                        >
-                                            Kelas
-                                        </Typography>
-                                        <Typography variant="paragraph" className="pr-5">
-                                            {`Kelas BGDC lorem`}
-                                        </Typography>
-                                    </div>
-                                    <Carousel
-                                        className="rounded-xl"
-                                        navigation={(_props) => <></>}
-                                        loop
-                                        autoplay
-                                        autoplayDelay={10000}
+                            <div className="max-w-3xl"><div className="flex flex-row flex-wrap justify-center gap-10">
+                            {[
+                                {
+                                    icon: BeakerIcon,
+                                    title: "Game Design",
+                                    imageRef: "/game-design-1.png",
+                                    lead: "Get Creative",
+                                    description:
+                                        "Discover the essence of what makes games great. Learn about mechanics, story, balance and other key design concepts through vivid case studies.",
+                                },
+                                {
+                                    icon: CodeBracketIcon,
+                                    title: "Game Programming",
+                                    imageRef: "/class-prog-1.png",
+                                    lead: "It's Alive!",
+                                    description:
+                                        "Bring games to life in 2D and 3D with the Unity game engine and the C# programming language.",
+                                },
+                                {
+                                    icon: PaintBrushIcon,
+                                    title: "2D Art & Animation",
+                                    imageRef: "/2d-art-1.png",
+                                    lead: "Any Pen, Any Paper",
+                                    description:
+                                        "Our 2D class tutors on 2-dimensional fundamentals, background, character design, and implementing them into Unity.",
+                                },
+                                {
+                                    icon: CubeIcon,
+                                    title: "3D Art & Animation",
+                                    imageRef: "/3d-art-1.png",
+                                    lead: "Sculpt the World",
+                                    description:
+                                        "Our 3D class tutors modelling with Blender, from the bottom up! Includes objects, environments, characters, and how to import them in Unity.                                    ",
+                                },
+                                {
+                                    icon: SpeakerWaveIcon,
+                                    title: "Game Sound",
+                                    imageRef: "/sound-1.png",
+                                    lead: "Hey, Listen!",
+                                    description:
+                                        "Compose music and sound effects with Audacity and Ableton. Experiment with various themes and techniques for that immersive player experience.",
+                                },
+                            ].map((element) => {
+                                return (
+                                    <Card
+                                        key={element.title}
+                                        className="w-full max-w-3xl md:flex-row"
                                     >
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/2d-art-1.png"
-                                                alt="Kelas 2d art"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas 2d art"}
-                                            </Typography>
-                                        </div>
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/3d-art-1.png"
-                                                alt="Kelas 3d art"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas 3d art"}
-                                            </Typography>
-                                        </div>
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/oogpclass.png"
-                                                alt="Kelas OOGP"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas OOGP"}
-                                            </Typography>
-                                        </div>
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/class-prog-1.png"
-                                                alt="Kelas Programming"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas Programming"}
-                                            </Typography>
-                                        </div>
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/game-design-1.png"
-                                                alt="Kelas Game Design"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas Game Design"}
-                                            </Typography>
-                                        </div>
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/sound-1.png"
-                                                alt="Kelas Game Sound"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas Game Sound"}
-                                            </Typography>
-                                        </div>
-                                    </Carousel>
-                                </div>
-                                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
-                                <div className="w-full place-items-stretch gap-10 2xl:grid-cols-2">
-                                    <div className="order-last 2xl:order-none">
-                                        <Typography
-                                            variant="h3"
-                                            className="text-center font-serif font-medium sm:text-5xl outline-text-3"
+                                        <CardHeader
+                                            shadow={false}
+                                            floated={false}
+                                            className="m-0 w-full flex-grow rounded-lg md:rounded-r-none"
                                         >
-                                            Gathering
-                                        </Typography>
-                                        <Typography variant="paragraph" className="pr-5">
-                                            {`Gathering BGDC lorem`}
-                                        </Typography>
-                                    </div>
-                                    <Carousel
-                                        className="rounded-xl"
-                                        navigation={(_props) => <></>}
-                                        loop
-                                        autoplay
-                                        autoplayDelay={10000}
-                                    >
-                                        <div className="flex-w-3xl">
                                             <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/IdolPlay.png"
-                                                alt="Play"
-                                                width={1080}
-                                                height={900}
+                                                src={element.imageRef}
+                                                alt={element.title}
+                                                className="h-full w-full object-cover object-left"
+                                                width={1920}
+                                                height={1280}
                                             />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas 2d art"}
+                                        </CardHeader>
+                                        <CardBody className="sm:w-96">
+                                            <div className="mb-4 flex flex-row items-center gap-2">
+                                                <element.icon className="h-5 w-5" />
+                                                <Typography
+                                                    variant="h6"
+                                                    color="gray"
+                                                    className="uppercase"
+                                                >
+                                                    {element.title}
+                                                </Typography>
+                                            </div>
+                                            <Typography
+                                                variant="h4"
+                                                color="blue-gray"
+                                                className="mb-2"
+                                            >
+                                                {element.lead}
                                             </Typography>
-                                        </div>
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/IdolObs.png"
-                                                alt="Obs"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas 3d art"}
+                                            <Typography color="gray" className="mb-8 font-normal">
+                                                {element.description}
                                             </Typography>
-                                        </div>
-                                        <div className="flex-w-3xl">
-                                            <Image
-                                                className="h-full w-full rounded-xl object-cover"
-                                                src="/IdolDev.png"
-                                                alt="Dev"
-                                                width={1080}
-                                                height={900}
-                                            />
-                                            <Typography variant="small" color="white">
-                                                {"Kelas OOGP"}
-                                            </Typography>
-                                        </div>
-                                    </Carousel>
-                                </div>
+                                        </CardBody>
+                                    </Card>
+                                )
+                            })}
                             </div>
+                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                        </div>
                         </div>
                     </div>
                 </div>
                 <div
                     id="events"
-                    className="relative flex flex-col items-center px-5 py-20"
+                    className="relative flex flex-col items-center px-5 py-5"
                 >
                     <Image
                         className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -558,7 +437,7 @@ export default function Home() {
                         height={705 / 2}
                         alt=""
                     />
-                    <div className="flex max-w-5xl flex-col gap-3">
+                    <div className="flex max-w-3xl flex-col gap-3">
                         <Typography
                             variant="h2"
                             className="text-center font-serif font-medium sm:text-6xl outline-text-3"
@@ -569,83 +448,161 @@ export default function Home() {
                             variant="lead"
                             className="my-2 text-center sm:text-3xl lg:text-4xl"
                         >
-                            Events are the heartbeat of BGDC, bringing together our community in exciting and dynamic ways. Our calendar is packed with opportunities to grow, learn, and celebrate our shared passion for game development.{" "}
+                            Events are the heartbeat of BGDC, bringing together our community in exciting and dynamic ways. <br />Our calendar is packed with opportunities to grow, learn, and celebrate our shared passion for game development.{" "}
                         </Typography>
                     </div>
-                    <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                    <hr className="flex max-w-3xl mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
                     <div className="max-w-3xl">
-                        {[
-                            {
-                                eventTitle: "BGDJam",
-                                screenshotRefs: [
-                                    "/BGDJamPreview.png",
-                                ],
+                        <Typography
+                            variant="h3"
+                            className="flex-col text-center font-serif font-medium sm:text-5xl outline-text-3"
+                        >
+                            Gathering
+                        </Typography>
+                        <Carousel
+                            className="rounded-xl"
+                            navigation={(_props) => <></>}
+                            loop
+                            autoplay
+                            autoplayDelay={10000}
+                        >
+                        <div className="flex-w-3xl">
+                            <Image
+                                className="h-full w-full rounded-xl object-cover"
+                                src="/WhoAmI2024.png"
+                                alt="Who Am I"
+                                width={1280}
+                                height={720}
+                            />
+                            <Typography variant="small" color="white">
+                                {"Gathering Voice Acting (Tebak Orang)"}
+                            </Typography>
+                        </div>
+                        <div className="flex-w-3xl">
+                            <Image
+                                className="h-full w-full rounded-xl object-cover"
+                                src="/DrawBattle2024.png"
+                                alt="DrawBattle"
+                                width={1280}
+                                height={720}
+                            />
+                            <Typography variant="small" color="white">
+                                {"Gathering Tebak Gambar"}
+                            </Typography>
+                        </div>
+                        <div className="flex-w-3xl">
+                            <Image
+                                className="h-full w-full rounded-xl object-cover"
+                                src="/Karaoke1.png"
+                                alt="Karaoke1"
+                                width={1280}
+                                height={720}
+                            />
+                            <Typography variant="small" color="white">
+                                {"Gathering Karaoke"}
+                            </Typography>
+                        </div>
+                        <div className="flex-w-3xl">
+                            <Image
+                                className="h-full w-full rounded-xl object-cover"
+                                src="/Karaoke2.png"
+                                alt="Karaoke2"
+                                width={1280}
+                                height={720}
+                            />
+                            <Typography variant="small" color="white">
+                                {"Gathering Karaoke"}
+                            </Typography>
+                        </div>
+                    </Carousel>
+                    <Typography variant="paragraph" className="pr-5">
+                        {`Our club hosts a monthly gathering where members come together to share their passions and have fun. While we often focus on game development, our events cover a wide range of activities—anything that brings joy to our community counts as a gathering. Whether you're here to learn, create, or simply have a good time, there's something for everyone!`}
+                    </Typography>
+                </div>
+                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                <div className="max-w-3xl">
+                    {[
+                        {
+                            eventTitle: "BGDJam",
+                            screenshotRefs: [
+                                "/BGDJamPreview.png",
+                            ],
+                            description:
+                                "BGDjam is a game development competition organized by BGDC, where participants are challenged to create a game within a limited time based on a specific theme. This event encourages creativity, teamwork, and technical skills, providing developers with an opportunity to bring innovative game ideas to life under time constraints.",
+                        },
+                        {
+                            eventTitle: "Company Visit",
+                            screenshotRefs: [
+                                "/ComVisP12024.png",
+                                "/ComVisP22024.png",
+                                "/ComVisP32024.png",
+                            ],
+                            description:
+                                "Company Visit is an annual event organized by BGDC, where members visit game companies in Indonesia. Last year, we conducted a virtual visit to Glory Jam, and this year, the event will be held offline, allowing participants to visit the companies in person. This activity offers a unique opportunity to gain insights into the game development industry and connect with professionals in the field.",
+                        },
+                        {
+                            eventTitle: "Indienesia Game Festival",
+                            screenshotRefs: [
+                                "/IGFGloryJam2024.png",
+                                "/IGFJitok2024.png",
+                                "/IGFSamudra2024.png",
+                                "/IGFWebinar2024.png",
+                                "/IGFWebinar22024.png",
+                                "/IGFWinners2024.png",
+                            ],
+                            description:
+                                "Indienesia Game Festival (IGF) is BGDC's largest annual event that lasts three days. This virtual festival features game developers from across Indonesia showcasing their games, offering participants the chance to interact directly with the creators. In addition to the exhibition, the event also includes webinars that delve into various aspects of game development.",
+                        },
+                        {
+                            eventTitle: "PKM",
+                            screenshotRefs: [
+                                "/PKM2024.png",
+                                "/LitFli2024.png",
+                                "/ITF2024.png",
+                                "/DeaDec2024.png",
+                            ],
                                 description:
-                                    "BGDjam is a game development competition organized by BGDC, where participants are challenged to create a game within a limited time based on a specific theme. This event encourages creativity, teamwork, and technical skills, providing developers with an opportunity to bring innovative game ideas to life under time constraints.",
-                            },
-                            {
-                                eventTitle: "Company Visit",
-                                screenshotRefs: [
-                                    "/ComVisPreview1.webp",
-                                    "/ComVisPreview2.webp",
-                                    "/ComVisPreview3.png",
-                                ],
-                                description:
-                                    "Company Visit is an annual event organized by BGDC, where members visit game companies in Indonesia. Last year, we conducted a virtual visit to Glory Jam, and this year, the event will be held offline, allowing participants to visit the companies in person. This activity offers a unique opportunity to gain insights into the game development industry and connect with professionals in the field.",
-                            },
-                            {
-                                eventTitle: "Indienesia Game Festival",
-                                screenshotRefs: [
-                                    "/IGFGloryJam2024.png",
-                                    "/IGFJitok2024.png",
-                                    "/IGFSamudra2024.png",
-                                    "/IGFWebinar2024.png",
-                                    "/IGFWebinar22024.png",
-                                    "/IGFWinners2024.png",
-                                ],
-                                description:
-                                    "Indienesia Game Festival (IGF) is BGDC's largest annual event that lasts three days. This virtual festival features game developers from across Indonesia showcasing their games, offering participants the chance to interact directly with the creators. In addition to the exhibition, the event also includes webinars that delve into various aspects of game development.",
-                            },
-                        ].map((element, i) => (
-                            <div key={i}>
-                                <div className="flex flex-col items-center gap-3 text-center">
-                                    <div>
-                                        <Typography
-                                            variant="h3"
-                                            className="text-center font-serif font-medium sm:text-5xl outline-text-3"
-                                        >
-                                            {element.eventTitle}
-                                        </Typography>
-                                    </div>
-                                    <Carousel
-                                        className="rounded-xl"
-                                        autoplayDelay={8000 + i * 1000}
-                                        autoplay
-                                        loop
+                                "pkm omg comsrv",
+                        },
+                    ].map((element, i) => (
+                        <div key={i}>
+                            <div className="flex flex-col items-center gap-3 text-center">
+                                <div>
+                                    <Typography
+                                    variant="h3"
+                                    className="text-center font-serif font-medium sm:text-5xl outline-text-3"
                                     >
-                                        {element.screenshotRefs.map((ssRef, i) => (
-                                            <Image
-                                                key={i}
-                                                src={ssRef}
-                                                alt={`${element.eventTitle}-screenshot${(
-                                                    i + 1
-                                                ).toString()}`}
-                                                className="h-full w-full object-cover"
-                                                width={1200}
-                                                height={720}
-                                            />
-                                        ))}
-                                    </Carousel>
-                                    <Typography variant="paragraph" className="w-full text-left">
-                                        {element.description}
+                                        {element.eventTitle}
                                     </Typography>
                                 </div>
-                                <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                                <Carousel
+                                    className="rounded-xl"
+                                    autoplayDelay={8000 + i * 1000}
+                                    autoplay
+                                    loop
+                                >
+                                    {element.screenshotRefs.map((ssRef, i) => (
+                                        <Image
+                                            key={i}
+                                            src={ssRef}
+                                            alt={`${element.eventTitle}-screenshot${(
+                                                i + 1
+                                            ).toString()}`}
+                                            className="h-full w-full object-cover"
+                                            width={1280}
+                                            height={720}
+                                        />
+                                    ))}
+                                </Carousel>
+                                <Typography variant="paragraph" className="w-full text-left">
+                                    {element.description}
+                                </Typography>
                             </div>
-                        ))}
+                            <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-gray-100 md:my-10" />
+                        </div>
+                    ))}
                     </div>
                 </div>
-                
                 <div id="footer"></div>
             </main>
             <BgdcFooter />
