@@ -164,13 +164,13 @@ export default function Daftar() {
                 </div>
                 <div className="flex flex-row-reverse flex-wrap-reverse justify-center gap-10">
                     <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-100 shadow-2xl">
-                        {/* <Typography
+                        <Typography
                             variant="lead"
                             color="black"
                             className="absolute top-1/2 w-full text-center font-serif text-4xl opacity-100"
                         >
                             CLOSED
-                        </Typography> */}
+                        </Typography>
                         <div className="flex h-full flex-col items-center justify-between gap-5 p-5">
                             <div className="flex flex-col items-center gap-2">
                                 <Typography
@@ -216,7 +216,7 @@ export default function Daftar() {
                                     </Typography>
                                     <div className="flex w-fit flex-col items-stretch text-left">
                                         <div className="flex flex-col text-left">
-                                            <Typography variant="small">
+                                            {/* <Typography variant="small">
                                                 Nominal Transfer:
                                             </Typography>
                                             <Typography variant="small" className="font-bold">
@@ -233,12 +233,12 @@ export default function Daftar() {
                                             <Typography variant="small">Atas Nama:</Typography>
                                             <Typography variant="small" className="font-bold">
                                                 INDRA C D DAN MARCELLO A
-                                            </Typography>
+                                            </Typography> */}
                                         </div>
                                     </div>
                                 </div>
                                 <Button
-                                    // disabled
+                                    disabled
                                     size="sm"
                                     className="flex flex-row items-center gap-2"
                                     onClick={() => {
@@ -253,7 +253,7 @@ export default function Daftar() {
                                     target="_blank"
                                 >
                                 <Button
-                                    // disabled
+                                    disabled
                                     color="deep-purple"
                                     size="lg"
                                     className="flex flex-row items-center gap-2"
