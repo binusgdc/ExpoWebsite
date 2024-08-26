@@ -117,6 +117,12 @@ export default function Home() {
                                 </Typography>
                                 <div className="flex w-full max-w-md flex-row justify-left">
                                     <div className="flex flex-col items-start gap-2">
+                                    <Typography
+                                        variant="small"
+                                        className="text-left"
+                                    >
+                                        Virly:
+                                    </Typography>
                                         <div className="flex flex-row items-center gap-1">
                                             <FaWhatsapp />
                                             <Typography
@@ -139,7 +145,7 @@ export default function Home() {
                                                     toast.success("WhatsApp number copied")
                                                 }}
                                             >
-                                                Virly: 081378633352
+                                                081378633352
                                             </Typography>
                                             <FaCopy
                                                 className={`${
@@ -177,6 +183,12 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-start gap-2">
+                                        <Typography
+                                            variant="small"
+                                            className="text-left"
+                                        >
+                                            Raul:
+                                        </Typography>
                                         <div className="flex flex-row items-center gap-1">
                                             <FaWhatsapp />
                                             <Typography
@@ -199,7 +211,7 @@ export default function Home() {
                                                     toast.success("WhatsApp number copied")
                                                 }}
                                             >
-                                                Raul: 085156292898
+                                                085156292898
                                             </Typography>
                                             <FaCopy
                                                 className={`${
