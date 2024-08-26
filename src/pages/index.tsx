@@ -87,7 +87,7 @@ export default function Home() {
                             <Typography variant="h5" color="white" className="text-2xl font-medium">
                                 A community that celebrates games and creative passion.
                             </Typography>
-                            <div className="my-1 flex w-full flex-row items-center justify-center gap-x-10 px-10 lg:justify-start lg:px-0 lg:pr-20">
+                            <div className="flex w-full flex-row items-center justify-center gap-x-10 px-10 lg:justify-start lg:px-0 lg:pr-20">
                                 <a href="#find-us" className="flex-grow">
                                     <Button fullWidth color="cyan" size="lg" className="sm:text-xl">
                                         Find Us
@@ -244,7 +244,7 @@ export default function Home() {
                 </div>
                 <div
                     id="about-bgdc"
-                    className="relative flex flex-col items-center px-5 pt-5 pb-4"
+                    className="relative flex flex-col items-center px-5 pt-5"
                 >
                     <Image
                         className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -293,138 +293,138 @@ export default function Home() {
                         </div>
                         <hr className="mx-auto my-4 h-1 w-48 rounded border-0 bg-transparent md:my-10" />
                         <div
-                    id="find-us"
-                    className="relative flex flex-col items-center px-5"
-                    >
-                    <div className="w-full max-w-4xl">
-                        <div>
-                            <Typography
-                                variant="h2"
-                                className="text-center font-serif text-5xl font-medium outline-text-3"
+                            id="find-us"
+                            className="relative flex items-top px-5"
                             >
-                                {"Find Us at Expo!"}
-                            </Typography>
+                            <div className="w-full max-w-4xl pt-10">
+                                <div>
+                                    <Typography
+                                        variant="h2"
+                                        className="text-center font-serif text-5xl font-medium outline-text-3"
+                                    >
+                                        {"Find Us at Expo!"}
+                                    </Typography>
+                                </div>
+                                <Tabs className="my-2" value="KMG">
+                                    <TabsHeader
+                                        className="bg-background"
+                                        indicatorProps={{
+                                            className: "bg-cyan-90 shadow-none",
+                                        }}
+                                    >
+                                        {[
+                                            {
+                                                shortLabel: "KMG",
+                                                fullLabel: "Kemanggisan",
+                                            },
+                                            {
+                                                shortLabel: "SNY",
+                                                fullLabel: "Senayan",
+                                            },
+                                            {
+                                                shortLabel: "AS",
+                                                fullLabel: "Alam Sutera",
+                                            },
+                                        ].map((element) => (
+                                            <Tab key={element.shortLabel} value={element.shortLabel}>
+                                                <Typography
+                                                    variant="h5"
+                                                    className="font-2xl font-semibold md:hidden"
+                                                >
+                                                    {element.shortLabel}
+                                                </Typography>
+                                                <Typography
+                                                    variant="h5"
+                                                    className="hidden text-2xl font-semibold md:block outline-text-2"
+                                                >
+                                                    {element.fullLabel}
+                                                </Typography>
+                                            </Tab>
+                                        ))}
+                                    </TabsHeader>
+                                    <hr className="my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
+                                    <TabsBody>
+                                        <TabPanel value={"KMG"} className="p-2">
+                                            <div className="flex flex-col items-center gap-2">
+                                                <Typography
+                                                    variant="h4"
+                                                    className="text-center"
+                                                    color="white"
+                                                >
+                                                    Anggrek Campus
+                                                </Typography>
+                                                <Typography
+                                                    variant="small"
+                                                    className="text-center text-gray-200"
+                                                >
+                                                    Balkon Lantai 3 (#7)
+                                                </Typography>
+                                            </div>
+                                                <Image
+                                                    className="w-full rounded-xl object-scale-down object-center"
+                                                    src={"/DenahKMG2024.png"}
+                                                    alt={"position of BGDC in kemanggisan expo"}
+                                                    width={1213}
+                                                    height={559}
+                                                />
+                                        </TabPanel>
+                                        <TabPanel value={"SNY"} className="p-2">
+                                            <div className="flex flex-col items-center gap-2">
+                                                <Typography
+                                                    variant="h4"
+                                                    className="text-center"
+                                                    color="white"
+                                                >
+                                                    Senayan Campus
+                                                </Typography>
+                                                <Typography
+                                                    variant="small"
+                                                    className="text-center text-gray-200"
+                                                >
+                                                    Senayan Campus Lantai 3 (#19)
+                                                </Typography>
+                                            </div>
+                                                <Image
+                                                    className="h-max w-full rounded-xl object-center"
+                                                    src={"/DenahSNY2024asli.png"}
+                                                    alt={"position of BGDC in Senayan expo"}
+                                                    width={1000}
+                                                    height={816}
+                                                />
+                                        </TabPanel>
+                                        <TabPanel value={"AS"} className="p-2">
+                                            <div className="flex flex-col items-center gap-2">
+                                                <Typography
+                                                    variant="h4"
+                                                    className="text-center"
+                                                    color="white"
+                                                >
+                                                    Alam Sutera Campus
+                                                </Typography>
+                                                <Typography
+                                                    variant="small"
+                                                    className="text-center text-gray-200"
+                                                >
+                                                    GOR Alam Sutera (#37)
+                                                </Typography>
+                                            </div>
+                                                <Image
+                                                    className="h-max w-full rounded-xl object-scale-down object-center"
+                                                    src={"/DenahALS2024.png"}
+                                                    alt={"position of BGDC in alam sutera expo"}
+                                                    width={1267}
+                                                    height={631}
+                                                />
+                                        </TabPanel>
+                                    </TabsBody>
+                                </Tabs>
+                            </div>
                         </div>
-                        <Tabs className="my-2" value="KMG">
-                            <TabsHeader
-                                className="bg-background"
-                                indicatorProps={{
-                                    className: "bg-cyan-90 shadow-none",
-                                }}
-                            >
-                                {[
-                                    {
-                                        shortLabel: "KMG",
-                                        fullLabel: "Kemanggisan",
-                                    },
-                                    {
-                                        shortLabel: "SNY",
-                                        fullLabel: "Senayan",
-                                    },
-                                    {
-                                        shortLabel: "AS",
-                                        fullLabel: "Alam Sutera",
-                                    },
-                                ].map((element) => (
-                                    <Tab key={element.shortLabel} value={element.shortLabel}>
-                                        <Typography
-                                            variant="h5"
-                                            className="font-2xl font-semibold md:hidden"
-                                        >
-                                            {element.shortLabel}
-                                        </Typography>
-                                        <Typography
-                                            variant="h5"
-                                            className="hidden text-2xl font-semibold md:block outline-text-2"
-                                        >
-                                            {element.fullLabel}
-                                        </Typography>
-                                    </Tab>
-                                ))}
-                            </TabsHeader>
-                            <hr className="my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
-                            <TabsBody>
-                                <TabPanel value={"KMG"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Anggrek Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            Balkon Lantai 3 (#7)
-                                        </Typography>
-                                    </div>
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center"
-                                            src={"/DenahKMG2024.png"}
-                                            alt={"position of BGDC in kemanggisan expo"}
-                                            width={1213}
-                                            height={559}
-                                        />
-                                </TabPanel>
-                                <TabPanel value={"SNY"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Senayan Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            Senayan Campus Lantai 3 (#19)
-                                        </Typography>
-                                    </div>
-                                        <Image
-                                            className="h-full w-full rounded-xl object-center"
-                                            src={"/DenahSNY2024.png"}
-                                            alt={"position of BGDC in Senayan expo"}
-                                            width={1000}
-                                            height={816}
-                                        />
-                                </TabPanel>
-                                <TabPanel value={"AS"} className="p-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <Typography
-                                            variant="h4"
-                                            className="text-center"
-                                            color="white"
-                                        >
-                                            Alam Sutera Campus
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="text-center text-gray-200"
-                                        >
-                                            GOR Alam Sutera (#37)
-                                        </Typography>
-                                    </div>
-                                        <Image
-                                            className="h-full w-full rounded-xl object-scale-down object-center"
-                                            src={"/DenahALS2024.png"}
-                                            alt={"position of BGDC in alam sutera expo"}
-                                            width={1267}
-                                            height={631}
-                                        />
-                                </TabPanel>
-                            </TabsBody>
-                        </Tabs>
-                    </div>
-                </div>
                     </div>
                 </div>
                 <div
                     id="class"
-                    className="relative flex flex-col items-center px-5 pb-5"
+                    className="relative flex flex-col items-center px-5 py-5"
                 >
                     <Image
                         className="right-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -434,7 +434,7 @@ export default function Home() {
                         alt=""
                     />
                     <hr className="flex max-w-3xl mx-auto my-4 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
-                    <div className="flex max-w-3xl flex-col gap-3">
+                    <div className="flex max-w-3xl flex-col gap-3 pt-5">
                         <Typography
                             variant="h2"
                             className="text-center font-serif text-6xl font-medium outline-text-3"
@@ -556,7 +556,7 @@ export default function Home() {
                 <hr className="flex max-w-3xl mx-auto my-4 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
                 <div
                     id="events"
-                    className="relative flex flex-col items-center px-5 py-5"
+                    className="relative flex flex-col items-center px-5"
                 >
                     <Image
                         className="left-10 top-1/3 hidden 2xl:absolute 2xl:block"
@@ -643,7 +643,7 @@ export default function Home() {
                             </Typography>
                         </div>
                     </Carousel>
-                    <Typography variant="paragraph" className="pr-5 pt-5">
+                    <Typography variant="paragraph" className="pt-5">
                         {`Our club hosts a monthly gathering where members come together to share their passions and have fun. While we often focus on game development, our events cover a wide range of activities—anything that brings joy to our community counts as a gathering. Whether you're here to learn, create, or simply have a good time, there's something for everyone!`}
                     </Typography>
                 </div>
@@ -756,6 +756,7 @@ export default function Home() {
                                                     src="/ProHyp2024.png"
                                                     alt="Project Hypatios"
                                                     layout="fill"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 />
                                             </div>
                                         </CardHeader>
@@ -784,6 +785,7 @@ export default function Home() {
                                                     src="/AtomTrack2024.png"
                                                     alt="Atom Track"
                                                     layout="fill"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 />
                                             </div>
                                         </CardHeader>
@@ -812,6 +814,7 @@ export default function Home() {
                                                     src="/ChaosWeek2024.png"
                                                     alt="Chaos Weekly"
                                                     layout="fill"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 />
                                             </div>
                                         </CardHeader>
