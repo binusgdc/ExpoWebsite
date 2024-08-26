@@ -125,6 +125,7 @@ export default function Home() {
                                                         ? "hover:cursor-pointer"
                                                         : "hover:cursor-default"
                                                 }
+                                                variant="small"
                                                 onMouseEnter={() => setWhatsAppHover1(true)}
                                                 onMouseLeave={() => setWhatsAppHover1(false)}
                                                 onClick={async () => {
@@ -138,9 +139,7 @@ export default function Home() {
                                                     toast.success("WhatsApp number copied")
                                                 }}
                                             >
-                                                <p className="text-xs">
-                                                    Virly: 081378633352
-                                                </p>
+                                                Virly: 081378633352
                                             </Typography>
                                             <FaCopy
                                                 className={`${
@@ -168,9 +167,7 @@ export default function Home() {
                                                     toast.success("Discord username copied")
                                                 }}
                                             >
-                                                <p className="text-xs">
-                                                    hina.akhina
-                                                </p>
+                                                hina.akhina
                                             </Typography>
                                             <FaCopy
                                                 className={`${
@@ -202,9 +199,7 @@ export default function Home() {
                                                     toast.success("WhatsApp number copied")
                                                 }}
                                             >
-                                                <p className="text-xs">
-                                                    Raul: 085156292898
-                                                </p>
+                                                Raul: 085156292898
                                             </Typography>
                                             <FaCopy
                                                 className={`${
@@ -232,9 +227,7 @@ export default function Home() {
                                                     toast.success("Discord username copied")
                                                 }}
                                             >
-                                                <p className="text-xs">
-                                                    yuukito2
-                                                </p>
+                                                yuukito2
                                             </Typography>
                                             
                                             <FaCopy

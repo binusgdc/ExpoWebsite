@@ -54,9 +54,7 @@ export default function Daftar() {
                                             toast.success("WhatsApp number copied")
                                         }}
                                     >
-                                        <p className="text-xs">
                                         Virly: 081378633352
-                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
@@ -84,9 +82,7 @@ export default function Daftar() {
                                             toast.success("Discord username copied")
                                         }}
                                     >
-                                        <p className="text-xs">
                                         hina.akhina
-                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
@@ -118,9 +114,7 @@ export default function Daftar() {
                                             toast.success("WhatsApp number copied")
                                         }}
                                     >
-                                        <p className="text-xs">
                                         Raul: 085156292898
-                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
@@ -148,9 +142,7 @@ export default function Daftar() {
                                             toast.success("Discord username copied")
                                         }}
                                     >
-                                        <p className="text-xs">
                                         yuukito2
-                                        </p>
                                     </Typography>
                                     <FaCopy
                                         className={`${
