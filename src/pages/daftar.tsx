@@ -163,7 +163,7 @@ export default function Daftar() {
                     </div>
                 </div>
                 <div className="flex flex-row-reverse flex-wrap-reverse justify-center gap-10">
-                    <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-100 shadow-2xl">
+                    <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-70 shadow-2xl">
                         <Typography
                             variant="lead"
                             color="black"
@@ -249,7 +249,7 @@ export default function Daftar() {
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
                                 <a
-                                    href="https://forms.gle/Qhz1QHTHPsMAuquN7"
+                                    // href="https://forms.gle/Qhz1QHTHPsMAuquN7"
                                     target="_blank"
                                 >
                                 <Button

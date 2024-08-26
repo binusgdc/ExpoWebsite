@@ -26,8 +26,6 @@ import {
     ChevronDownIcon,
     MapPinIcon,
     CalendarDaysIcon,
-    Squares2X2Icon,
-    WrenchIcon,
 } from "@heroicons/react/24/solid"
 import Image from "next/image"
 import BgdcNav from "~/components/BGDCNav"
@@ -45,7 +43,6 @@ export default function Home() {
     const [whatsAppHover2, setWhatsAppHover2] = useState(false)
     const [discordHover1, setDiscordHover1] = useState(false)
     const [discordHover2, setDiscordHover2] = useState(false)
-
     return (
         <>
             <div>
@@ -142,7 +139,7 @@ export default function Home() {
                                                 }}
                                             >
                                                 <p className="text-xs">
-                                                Virly: 081378633352
+                                                    Virly: 081378633352
                                                 </p>
                                             </Typography>
                                             <FaCopy
@@ -172,7 +169,7 @@ export default function Home() {
                                                 }}
                                             >
                                                 <p className="text-xs">
-                                                hina.akhina
+                                                    hina.akhina
                                                 </p>
                                             </Typography>
                                             <FaCopy
@@ -206,7 +203,7 @@ export default function Home() {
                                                 }}
                                             >
                                                 <p className="text-xs">
-                                                Raul: 085156292898
+                                                    Raul: 085156292898
                                                 </p>
                                             </Typography>
                                             <FaCopy
@@ -236,7 +233,7 @@ export default function Home() {
                                                 }}
                                             >
                                                 <p className="text-xs">
-                                                yuukito2
+                                                    yuukito2
                                                 </p>
                                             </Typography>
                                             
@@ -274,7 +271,7 @@ export default function Home() {
                         <span style={{color: '#ff8c34'}}>Observe </span> 
                         <span style={{color: '#f66472'}}>Develop</span>
                     </p>
-                    <br />
+                    <br/>
                     <div className="w-full max-w-3xl flex-col items-center justify-start gap-14 2xl:gap-10 pt-10">
                         <div className="grid w-full grid-cols-1 place-items-stretch gap-10 2xl:h-80 2xl:grid-cols-2">
                             <div className="order-last 2xl:order-none">
@@ -352,7 +349,7 @@ export default function Home() {
                                     </Tab>
                                 ))}
                             </TabsHeader>
-                            <hr className=" my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
+                            <hr className="my-2 h-1 w-full rounded border-0 bg-gray-100 md:my-4" />
                             <TabsBody>
                                 <TabPanel value={"KMG"} className="p-2">
                                     <div className="flex flex-col items-center gap-2">
@@ -612,7 +609,7 @@ export default function Home() {
                                 width={1280}
                                 height={720}
                             />
-                            <Typography variant="small" color="white">
+                            <Typography className="pl-1" variant="small" color="white">
                                 {"Gathering Voice Acting (Tebak Orang)"}
                             </Typography>
                         </div>
@@ -624,7 +621,7 @@ export default function Home() {
                                 width={1280}
                                 height={720}
                             />
-                            <Typography variant="small" color="white">
+                            <Typography className="pl-1" variant="small" color="white">
                                 {"Gathering Tebak Gambar"}
                             </Typography>
                         </div>
@@ -636,7 +633,7 @@ export default function Home() {
                                 width={1280}
                                 height={720}
                             />
-                            <Typography variant="small" color="white">
+                            <Typography className="pl-1" variant="small" color="white">
                                 {"Gathering Karaoke"}
                             </Typography>
                         </div>
@@ -648,7 +645,7 @@ export default function Home() {
                                 width={1280}
                                 height={720}
                             />
-                            <Typography variant="small" color="white">
+                            <Typography className="pl-1" variant="small" color="white">
                                 {"Gathering Karaoke"}
                             </Typography>
                         </div>
@@ -742,6 +739,106 @@ export default function Home() {
                             <hr className="mx-auto my-4 h-1 w-48 rounded border-0 md:my-10" />
                         </div>
                     ))}
+                    </div>
+                    <hr className="flex max-w-3xl mx-auto my-5 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
+                    <div className="max-w-3xl pt-10 pb-20 px-5">
+                        <Typography
+                            variant="h3"
+                            className="flex-col text-center font-serif font-medium sm:text-5xl outline-text-3 pb-10"
+                        >
+                            Talent Group
+                        </Typography>
+                        <Typography
+                            variant="lead"
+                            className="my-2 text-center sm:text-3xl lg:text-4xl pb-10">
+                            Develop a game with a team from ideation to publishing. No experience required.
+                        </Typography>
+                            <div className="flex flex-wrap justify-between md:flex-row">
+                                <div className="w-full md:w-1/3 pb-5 px-1">
+                                    <Card className="h-96 rounded-xl overflow-hidden bg-faqbg">
+                                        <CardHeader className="pt-10 bg-faqbg">
+                                            <div className="relative w-full h-44">
+                                                <Image
+                                                    className="absolute rounded-xl w-full h-full object-cover"
+                                                    src="/ProHyp2024.png"
+                                                    alt="Project Hypatios"
+                                                    layout="fill"
+                                                />
+                                            </div>
+                                        </CardHeader>
+                                        <CardBody className="p-4">
+                                            <Typography
+                                                as="a"
+                                                href="https://bgdc.itch.io/project-hypatios"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-500 hover:underline text-lg font-bold"
+                                            >
+                                                Project Hypatios
+                                            </Typography>
+                                            <Typography variant="caption" color="white" className="text-sm">
+                                                Welcome to Project Hypatios, a roguelite shooting game where you will play and face different challenges in a facility filled with enemy robots!
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                                <div className="w-full md:w-1/3 px-1 pb-5">
+                                    <Card className="h-96 rounded-xl overflow-hidden  bg-faqbg">
+                                        <CardHeader className="pt-10  bg-faqbg">
+                                            <div className="relative w-full h-44">
+                                                <Image
+                                                    className="absolute w-full h-full object-cover rounded-xl"
+                                                    src="/AtomTrack2024.png"
+                                                    alt="Atom Track"
+                                                    layout="fill"
+                                                />
+                                            </div>
+                                        </CardHeader>
+                                        <CardBody className="p-4">
+                                            <Typography
+                                                as="a"
+                                                href="https://bgdc.itch.io/atomtrack"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-500 hover:underline text-lg font-bold"
+                                            >
+                                                Atom Track
+                                            </Typography>
+                                            <Typography variant="body2" color="white" className="text-sm">
+                                                Take the wheel and dominate the circuit because this Top-down racing just got a whole lot faster.
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                                <div className="w-full md:w-1/3 px-1 pb-5">
+                                    <Card className="h-96 rounded-xl overflow-hidden bg-faqbg">
+                                        <CardHeader className="pt-10 bg-faqbg">
+                                            <div className="relative w-full h-44">
+                                                <Image
+                                                    className="absolute w-full h-full object-cover rounded-xl"
+                                                    src="/ChaosWeek2024.png"
+                                                    alt="Chaos Weekly"
+                                                    layout="fill"
+                                                />
+                                            </div>
+                                        </CardHeader>
+                                        <CardBody className="p-4">
+                                            <Typography
+                                                as="a"
+                                                href="https://bgdc.itch.io/chaos-weekly"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-500 hover:underline text-lg font-bold"
+                                            >
+                                                Chaos Weekly
+                                            </Typography>
+                                            <Typography variant="body2" color="white" className="text-sm">
+                                                Make the world chaotic with the power of hoax for raking in the cash, but going overboard will get you in trouble!
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                            </div>
                     </div>
                 </div>
                 <div id="footer"></div>
