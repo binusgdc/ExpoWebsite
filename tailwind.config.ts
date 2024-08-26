@@ -13,6 +13,7 @@ export default withMT({
         },
         colors: {
             faqbg: "#193549",
+            alabeyellow: "FFD349",
             magenta: "#423C55",
             smagenta: "#544e67",
             playgreen: "#bdbf48",

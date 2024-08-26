@@ -69,7 +69,7 @@ export default function Faq() {
                             </AccordionHeader>
                             <AccordionBody>
                                 <Card className="bg-faqbg p-5">
-                                    <Typography variant="h5" color="white" className="font-medium">
+                                    <Typography variant="h4" color="white" className="font-medium-bold">
                                         Apa itu BGDC?
                                     </Typography>
                                     <Typography

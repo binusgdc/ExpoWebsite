@@ -88,7 +88,7 @@ export default function Home() {
                                 A community that celebrates games and creative passion.
                             </Typography>
                             <div className="my-1 flex w-full flex-row items-center justify-center gap-x-10 px-10 lg:justify-start lg:px-0 lg:pr-20">
-                                <a href="find-us" className="flex-grow">
+                                <a href="#find-us" className="flex-grow">
                                     <Button fullWidth color="cyan" size="lg" className="sm:text-xl">
                                         Find Us
                                     </Button>
@@ -260,8 +260,8 @@ export default function Home() {
                         About BGDC
                     </Typography>
                     <p className="text-center block antialiased font-sans text-xl leading-relaxed w-full font-semibold outline-text-2">
-                        <span style={{color: '#bdbf48'}}>Play </span> 
-                        <span style={{color: '#ff8c34'}}>Observe </span> 
+                        <span style={{color: '#bdbf48'}}>Play. </span> 
+                        <span style={{color: '#ff8c34'}}>Observe. </span> 
                         <span style={{color: '#f66472'}}>Develop</span>
                     </p>
                     <br/>
@@ -448,9 +448,9 @@ export default function Home() {
                             One-time price. Unlimited access to mentors and classes for{" "}
                             <strong>all</strong> skillsets, forever*.
                         </Typography>
-                        <Typography variant="small" className="w-full text-center text-gray-400">
-                            *As long as BGDC exists.
-                        </Typography>
+                        <p className="text-center block antialiased font-sans text-l leading-relaxed w-full">
+                            <span style={{color: '#FFD349'}}>*As long as BGDC exists. </span>
+                        </p>
                         <hr className="mx-auto my-4 h-1 w-48 rounded border-0 md:my-10 bg-gray-100" />
                         <div className="justify-center flex pt-10">
                             <div className="max-w-3xl"><div className="flex flex-row flex-wrap justify-center gap-10">
