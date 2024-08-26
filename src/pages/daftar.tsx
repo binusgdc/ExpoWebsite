@@ -169,7 +169,7 @@ export default function Daftar() {
                             color="black"
                             className="absolute top-1/2 w-full text-center font-serif text-4xl opacity-100"
                         >
-                            CLOSED
+                            SOON
                         </Typography>
                         <div className="flex h-full flex-col items-center justify-between gap-5 p-5">
                             <div className="flex flex-col items-center gap-2">
