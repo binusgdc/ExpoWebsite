@@ -88,11 +88,11 @@ export default function Home() {
                                 A community that celebrates games and creative passion.
                             </Typography>
                             <div className="flex w-full flex-row items-center justify-center gap-x-10 px-10 lg:justify-start lg:px-0 lg:pr-20">
-                                <a href="/daftar" className="flex-grow">
+                                <Link href="/daftar" className="flex-grow">
                                     <Button fullWidth color="cyan" size="lg" className="sm:text-lg">
                                         Register Now
                                     </Button>
-                                </a>
+                                </Link>
                                 <Link
                                     href="https://bgdc.itch.io/"
                                     className="flex-grow"
