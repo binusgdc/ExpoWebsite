@@ -760,7 +760,7 @@ export default function Home() {
                         </Typography>
                         <p className="text-center block antialiased font-sans text-l leading-relaxed w-full pb-12">
                             <span style={{color: '#FFFFFF'}}>more of our games can be viewed and played on our
-                                <u><a href="https://bgdc.itch.io/" target="_blank">itch.io</a></u>. 
+                                <u><Link href="https://bgdc.itch.io/" target="_blank">itch.io</Link></u>. 
                             </span>
                         </p>
                             <div className="flex flex-wrap justify-between md:flex-row">
