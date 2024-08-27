@@ -755,9 +755,14 @@ export default function Home() {
                         </Typography>
                         <Typography
                             variant="lead"
-                            className="my-2 text-center sm:text-3xl lg:text-4xl pb-10">
+                            className="my-2 text-center sm:text-3xl lg:text-4xl">
                             Develop a game with a team from ideation to publishing. No experience required.
                         </Typography>
+                        <p className="text-center block antialiased font-sans text-l leading-relaxed w-full pb-12">
+                            <span style={{color: '#FFFFFF'}}>more of our games can be viewed and played on our
+                                <u><a href="https://bgdc.itch.io/" target="_blank">itch.io</a></u>. 
+                            </span>
+                        </p>
                             <div className="flex flex-wrap justify-between md:flex-row">
                                 <div className="w-full md:w-1/3 pb-5 px-1">
                                     <Card className="h-96 rounded-xl overflow-hidden bg-faqbg">
