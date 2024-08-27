@@ -57,5 +57,6 @@
 #kelas,
 #talent-group,
 #find-us {
+    min-height:10vh;
     width: 100%;
 }
