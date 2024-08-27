@@ -88,9 +88,9 @@ export default function Home() {
                                 A community that celebrates games and creative passion.
                             </Typography>
                             <div className="flex w-full flex-row items-center justify-center gap-x-10 px-10 lg:justify-start lg:px-0 lg:pr-20">
-                                <a href="#find-us" className="flex-grow">
-                                    <Button fullWidth color="cyan" size="lg" className="sm:text-xl">
-                                        Find Us
+                                <a href="/daftar" className="flex-grow">
+                                    <Button fullWidth color="cyan" size="lg" className="sm:text-lg">
+                                        Register Now
                                     </Button>
                                 </a>
                                 <Link
@@ -102,7 +102,7 @@ export default function Home() {
                                         fullWidth
                                         color="deep-orange"
                                         size="lg"
-                                        className="sm:text-xl"
+                                        className="sm:text-lg"
                                     >
                                         Our Games
                                     </Button>
@@ -111,18 +111,18 @@ export default function Home() {
                             <div className="flex w-full flex-col gap-1">
                                 <Typography
                                     variant="small"
-                                    className="mb-1 text-center lg:text-left"
+                                    className="mb-1 sm:text-left text-center"
                                 >
                                     Contact Person:
                                 </Typography>
-                                <div className="flex w-full max-w-md flex-row justify-left">
+                                <div className="flex w-full max-w-md flex-row justify-center sm:justify-start">
                                     <div className="flex flex-col items-start gap-2">
-                                    <Typography
-                                        variant="small"
-                                        className="text-left"
-                                    >
-                                        Virly:
-                                    </Typography>
+                                        <Typography
+                                            variant="small"
+                                            className="text-left"
+                                        >
+                                            Virly:
+                                        </Typography>
                                         <div className="flex flex-row items-center gap-1">
                                             <FaWhatsapp />
                                             <Typography
