@@ -155,14 +155,14 @@ export default function Daftar() {
                     </div>
                 </div>
                 <div className="flex flex-row-reverse flex-wrap-reverse justify-center gap-10">
-                    <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-70 shadow-2xl">
-                        <Typography
+                    <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-100 shadow-2xl">
+                        {/* <Typography
                             variant="lead"
                             color="black"
                             className="absolute top-1/2 w-full text-center font-serif text-4xl opacity-100"
                         >
                             SOON
-                        </Typography>
+                        </Typography> */}
                         <div className="flex h-full flex-col items-center justify-between gap-5 p-5">
                             <div className="flex flex-col items-center gap-2">
                                 <Typography
