@@ -230,7 +230,7 @@ export default function Daftar() {
                                     </div>
                                 </div>
                                 <Button
-                                    disabled
+                                    // disabled
                                     size="sm"
                                     className="flex flex-row items-center gap-2"
                                     onClick={() => {
@@ -245,7 +245,7 @@ export default function Daftar() {
                                     target="_blank"
                                 >
                                 <Button
-                                    disabled
+                                    // disabled
                                     color="deep-purple"
                                     size="lg"
                                     className="flex flex-row items-center gap-2"
