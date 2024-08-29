@@ -208,7 +208,7 @@ export default function Daftar() {
                                     </Typography>
                                     <div className="flex w-fit flex-col items-stretch text-left">
                                         <div className="flex flex-col text-left">
-                                            {/* <Typography variant="small">
+                                            <Typography variant="small">
                                                 Nominal Transfer:
                                             </Typography>
                                             <Typography variant="small" className="font-bold">
@@ -225,7 +225,7 @@ export default function Daftar() {
                                             <Typography variant="small">Atas Nama:</Typography>
                                             <Typography variant="small" className="font-bold">
                                                 INDRA C D DAN MARCELLO A
-                                            </Typography> */}
+                                            </Typography>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@ export default function Daftar() {
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
                                 <a
-                                    // href="https://forms.gle/Qhz1QHTHPsMAuquN7"
+                                    href="https://forms.gle/Qhz1QHTHPsMAuquN7"
                                     target="_blank"
                                 >
                                 <Button
