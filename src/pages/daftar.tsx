@@ -232,7 +232,7 @@ export default function Daftar() {
                                 <Button
                                     // disabled
                                     size="sm"
-                                    className="flex flex-row items-center gap-2"
+                                    className="flex flex-row items-center gap-2 force-opacity"
                                     onClick={() => {
                                         void navigator.clipboard.writeText("5272071187")
                                         toast.success("copied '5272071187'")
@@ -248,7 +248,7 @@ export default function Daftar() {
                                     // disabled
                                     color="deep-purple"
                                     size="lg"
-                                    className="flex flex-row items-center gap-2"
+                                    className="flex flex-row items-center gap-2 force-opacity"
                                 >
                                     Registration Form B28 <ArrowUpRightIcon className="h-4 w-4" />
                                 </Button>

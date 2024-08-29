@@ -60,3 +60,7 @@
     min-height: 10vh;
     width: 100%;
 }
+
+.force-opacity{
+    opacity: 1! important;
+}
