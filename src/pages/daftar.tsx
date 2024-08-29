@@ -7,6 +7,7 @@ import { FaCopy, FaDiscord, FaLine, FaWhatsapp } from "react-icons/fa"
 import Image from "next/image"
 import BgdcFooter from "~/components/BGDCFooter"
 import BgdcNav from "~/components/BGDCNav"
+import Link from "next/link"
 
 export default function Daftar() {
     const [lineHover, setLineHover] = useState(false)
@@ -240,7 +241,7 @@ export default function Daftar() {
                                 >
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
-                                <a
+                                <Link
                                     href="https://forms.gle/Qhz1QHTHPsMAuquN7"
                                     target="_blank"
                                 >
@@ -252,7 +253,7 @@ export default function Daftar() {
                                 >
                                     Registration Form B28 <ArrowUpRightIcon className="h-4 w-4" />
                                 </Button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </Card>
