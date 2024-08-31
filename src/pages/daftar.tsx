@@ -156,14 +156,14 @@ export default function Daftar() {
                     </div>
                 </div>
                 <div className="flex flex-row-reverse flex-wrap-reverse justify-center gap-10">
-                    <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-100 shadow-2xl">
-                        {/* <Typography
+                    <Card className="relative min-h-[500px] w-[90vw] max-w-sm bg-white opacity-60 shadow-2xl">
+                        <Typography
                             variant="lead"
                             color="black"
                             className="absolute top-1/2 w-full text-center font-serif text-4xl opacity-100"
                         >
-                            SOON
-                        </Typography> */}
+                            CLOSED
+                        </Typography>
                         <div className="flex h-full flex-col items-center justify-between gap-5 p-5">
                             <div className="flex flex-col items-center gap-2">
                                 <Typography
@@ -231,7 +231,7 @@ export default function Daftar() {
                                     </div>
                                 </div>
                                 <Button
-                                    // disabled
+                                    disabled
                                     size="sm"
                                     className="flex flex-row items-center gap-2 force-opacity"
                                     onClick={() => {
@@ -241,19 +241,19 @@ export default function Daftar() {
                                 >
                                     <FaCopy /> Copy Nomor Rekening
                                 </Button>
-                                <Link
+                                {/* <Link
                                     href="https://forms.gle/Qhz1QHTHPsMAuquN7"
                                     target="_blank"
-                                >
+                                > */}
                                 <Button
-                                    // disabled
+                                    disabled
                                     color="deep-purple"
                                     size="lg"
                                     className="flex flex-row items-center gap-2 force-opacity"
                                 >
                                     Registration Form B28 <ArrowUpRightIcon className="h-4 w-4" />
                                 </Button>
-                                </Link>
+                                {/* </Link> */}
                             </div>
                         </div>
                     </Card>
