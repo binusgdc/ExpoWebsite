@@ -229,7 +229,7 @@ export default function Faq() {
                                         Pendaftaran akan dibuka sampai kapan?
                                     </Typography>
                                     <Typography variant="paragraph" color="white">
-                                        Pendaftaran akan dibuka sampai [TBA].
+                                        Pendaftaran akan dibuka sampai 22 September 2024.
                                     </Typography>
                                     <br />
                                     <Typography variant="h5" color="white" className="font-medium-bold">
