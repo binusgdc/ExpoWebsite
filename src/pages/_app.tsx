@@ -34,9 +34,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
                         <link rel="icon" href="/favicon.ico" />
                         <meta
                             name="description"
-                            content="Meet Binus Game Development Club at Expo 2023"
+                            content="Meet Binus Game Development Club at Expo 2024"
                         />
-                        <meta property="og:image" content="/thumb.webp" />
+                        <meta property="og:image" content="/podidolwallpaper2.png" />
                     </Head>
                     <Component {...pageProps} />
                 </ThemeProvider>
